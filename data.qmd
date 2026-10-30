@@ -16,4 +16,5 @@ Every figure on Fianaise is built from public data by code in the [fianaise.ie r
 ## Code
 
 - [`analysis/education_equality`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality): fetches the CSO and Department of Education data and draws the religion and survey figures.
+- [`analysis/charts`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/charts): draws the census, marriage and survey charts in the site's style.
 - [`analysis/charities`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/charities): builds the charities landscape from the Charities Regulator's register.

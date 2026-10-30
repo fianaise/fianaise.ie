@@ -9,6 +9,7 @@ Built with [Quarto](https://quarto.org). Every push to `main` builds the site an
 - `*.qmd`, `religion/*.qmd`: the pages.
 - `figures/`: the interactive figures the pages embed, as standalone HTML. Plotly figures load a shared copy of plotly.js from `figures/lib/` (run `python3 -I tools/slim_plotly.py figures/*.html` after adding one).
 - `analysis/education_equality/`: code and data for the religion and Primary School Survey figures. Moved from [maedbhk/education_equality](https://github.com/maedbhk/education_equality).
+- `analysis/charts/make_charts.py`: redraws the census, marriage and survey bar charts in the site's style, from the same data.
 - `analysis/charities/`: the pipeline for the charities landscape. Moved from [opentalamh/opentalamh.ie](https://github.com/opentalamh/opentalamh.ie).
 
 Text and figures are CC BY 4.0. Code is MIT licensed (see `LICENSE-code`).
