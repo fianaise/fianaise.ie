@@ -1,0 +1,8 @@
+- title: "Religion in Ireland"
+  path: religion/index.qmd
+  image: images/religion-charities.png
+  description: "Who runs Ireland's schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious."
+- title: "Open Talamh"
+  path: https://opentalamh.ie
+  image: images/opentalamh.png
+  description: "An open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State."

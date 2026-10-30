@@ -6,9 +6,9 @@ Every figure on Fianaise is built from public data by code in the [fianaise.ie r
 
 | Dataset | Publisher | Used for | Pulled |
 | --- | --- | --- | --- |
-| [Primary schools enrolment figures](https://www.gov.ie/en/department-of-education/collections/primary-schools-enrolment-figures/) | Department of Education | [School ethos map](religion/index.qmd) | 2024–25 school year |
-| [Marriages by form of ceremony (VSA44)](https://data.cso.ie/table/VSA44) | Central Statistics Office | [Marriages](religion/index.qmd) | 2000 to 2024 |
-| [Religion by age group (F5071)](https://data.cso.ie/table/F5071) | Central Statistics Office | [Census affiliation](religion/index.qmd) | Census 2011, 2016, 2022 |
+| [Primary schools enrolment figures](https://www.gov.ie/en/department-of-education/collections/primary-schools-enrolment-figures/) | Department of Education | [School ethos map](religion/trends.qmd) | 2024–25 school year |
+| [Marriages by form of ceremony (VSA44)](https://data.cso.ie/table/VSA44) | Central Statistics Office | [Marriages](religion/trends.qmd) | 2000 to 2024 |
+| [Religion by age group (F5071)](https://data.cso.ie/table/F5071) | Central Statistics Office | [Census affiliation](religion/trends.qmd) | Census 2011, 2016, 2022 |
 | [Primary School Survey 2025–2026](https://www.gov.ie/en/department-of-education/campaigns/primary-school-survey/) and [results summary report](https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf) | Department of Education and Youth | [Primary School Survey 2026](religion/primary-school-survey.qmd) | June 2026 |
 | [Public Register of Charitable Organisations](https://www.charitiesregulator.ie/en/information-for-the-public/search-the-register-of-charities) | Charities Regulator | [The charities landscape](religion/charities.qmd) | Register of 26 October 2026 |
 | [Data on individual schools](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/) | Department of Education | [The charities landscape](religion/charities.qmd) | 2025–26 school year |

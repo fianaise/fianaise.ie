@@ -1,0 +1,12 @@
+- title: "Primary School Survey 2026"
+  path: primary-school-survey.qmd
+  image: ../images/religion-survey.png
+  description: "What parents, school staff and boards of management told the Department of Education about school ethos."
+- title: "The charities landscape"
+  path: charities.qmd
+  image: ../images/religion-charities.png
+  description: "Every registered charity in Ireland, grouped by purpose, with religion and Catholic-patron schools highlighted."
+- title: "Schools, census and marriages"
+  path: trends.qmd
+  image: ../images/religion-trends.png
+  description: "School ethos across the country, Catholic affiliation by age from the census, and the rise of civil marriage."

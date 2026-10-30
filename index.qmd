@@ -1,35 +1,24 @@
 ---
 title: "Fianaise"
 subtitle: "Evidence on Irish public life, from open data"
+listing:
+  id: projects
+  contents: projects.yml
+  type: grid
+  grid-columns: 2
+  image-height: 100%
+  fields: [image, title, description]
+  sort: false
+  page-size: 50
+  filter-ui: false
+  sort-ui: false
 ---
 
 Ireland publishes a great deal of open data, from the Central Statistics Office, government departments and public registers. Most of it sits in spreadsheets that journalists, policymakers and the public rarely have the time to dig through. Fianaise turns that data into charts, maps and short analysis, with the data and code behind every figure, so anyone can check it, cite it and reuse it.
 
 *Fianaise* is Irish for evidence. The site is independent and unfunded, and everything on it is free to reuse.
 
-## Religion in Ireland
-
-The first topic is the place of religion in Irish public life: who runs the schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.
-
-:::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-### [Overview](religion/index.qmd)
-School ethos, census affiliation by age, and how people marry.
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### [Primary School Survey 2026](religion/primary-school-survey.qmd)
-What parents, staff and boards of management told the Department of Education about school ethos.
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### [The charities landscape](religion/charities.qmd)
-Every registered charity in Ireland, grouped by purpose, with religion and Catholic-patron schools highlighted.
-:::
-
-::::
-
 ## Projects
 
-[Open Talamh](https://opentalamh.ie) is an open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State. See [Projects](projects.qmd).
+:::{#projects}
+:::
