@@ -1,0 +1,27 @@
+/* Project tiles: a large image, then a bold title and a short description, no card frame. */
+.quarto-listing .card {
+  border: 0;
+  background: transparent;
+}
+.quarto-listing .card .card-img-top,
+.quarto-listing .card .listing-item-img-placeholder {
+  aspect-ratio: 3 / 2;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: opacity 0.15s;
+}
+.quarto-listing .card:hover .card-img-top {
+  opacity: 0.85;
+}
+.quarto-listing .card .card-body {
+  padding: 0.75rem 0 0;
+}
+.quarto-listing .card .card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.quarto-listing .card .card-text {
+  color: var(--bs-secondary-color, #555);
+}

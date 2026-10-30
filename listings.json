@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/religion/index.html",
+    "items": [
+      "/religion/primary-school-survey.html",
+      "/religion/charities.html",
+      "/religion/trends.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/religion/index.html"
+    ]
+  }
+]
