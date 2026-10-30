@@ -1,0 +1,47 @@
+# Once a month, check gov.ie for a new or updated "Data on Individual Schools"
+# list, redraw the maps that use it, and open a pull request if anything changed.
+on:
+  schedule:
+    - cron: "0 6 3 * *"   # 06:00 UTC on the 3rd of each month
+  workflow_dispatch:
+
+name: Refresh school data
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 pandas openpyxl numpy plotly==7.1.0
+      - name: Fetch school lists
+        id: fetch
+        run: |
+          python3 tools/fetch_school_lists.py
+          if [ -n "$(git status --porcelain analysis/charts/data/raw)" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      # Plotly gives each figure a fresh id, so only redraw when the data changed.
+      - name: Redraw maps
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          python3 analysis/charts/make_maps.py
+          python3 -I tools/slim_plotly.py figures/ethos_current_config.html figures/map2_current_vs_preference.html figures/map9_parents_vs_staff_board.html
+      - uses: peter-evans/create-pull-request@v7
+        if: steps.fetch.outputs.changed == 'true'
+        with:
+          branch: data/school-lists
+          delete-branch: true
+          title: "Update school lists and maps from gov.ie"
+          commit-message: "Update school lists and maps from gov.ie"
+          body: |
+            The monthly check found a new or changed "Data on Individual Schools" list on
+            [gov.ie](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/)
+            and redrew the maps. Check the school counts and the ethos map caption before merging.
+          add-paths: |
+            analysis/charts/data/raw/*.xlsx
+            figures/*.html
