@@ -1,8 +1,17 @@
-# Once a month, check gov.ie for a new or updated "Data on Individual Schools"
-# list, redraw the maps that use it, and open a pull request if anything changed.
+# Redraw the school maps when a new "Data on Individual Schools" list arrives,
+# and open a pull request with the new figures.
+#
+# gov.ie refuses automated requests from GitHub's servers, so the list comes in
+# one of two ways:
+#   - upload it to analysis/charts/data/raw/ on GitHub (Add file > Upload files);
+#     the push to main starts this workflow.
+#   - run this workflow by hand from the Actions tab; it tries gov.ie and the
+#     data.gov.ie portal, and does nothing if neither has a newer list.
 on:
-  schedule:
-    - cron: "0 6 3 * *"   # 06:00 UTC on the 3rd of each month
+  push:
+    branches: main
+    paths:
+      - "analysis/charts/data/raw/**"
   workflow_dispatch:
 
 name: Refresh school data
@@ -13,6 +22,8 @@ permissions:
 
 jobs:
   refresh:
+    # Merging this workflow's own pull request pushes the list again; skip that.
+    if: ${{ !startsWith(github.event.head_commit.message, 'Redraw school maps') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,6 +34,7 @@ jobs:
       - name: Fetch school lists
         id: fetch
         run: |
+          if [ "${{ github.event_name }}" = "push" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           python3 tools/fetch_school_lists.py
           if [ -n "$(git status --porcelain analysis/charts/data/raw)" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
       # Plotly gives each figure a fresh id, so only redraw when the data changed.
@@ -36,12 +48,11 @@ jobs:
         with:
           branch: data/school-lists
           delete-branch: true
-          title: "Update school lists and maps from gov.ie"
-          commit-message: "Update school lists and maps from gov.ie"
+          title: "Redraw school maps from the latest school list"
+          commit-message: "Redraw school maps from the latest school list"
           body: |
-            The monthly check found a new or changed "Data on Individual Schools" list on
-            [gov.ie](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/)
-            and redrew the maps. Check the school counts and the ethos map caption before merging.
+            A new or changed "Data on Individual Schools" list arrived, and the maps were
+            redrawn from it. Check the school counts and the ethos map before merging.
           add-paths: |
             analysis/charts/data/raw/*.xlsx
             figures/*.html

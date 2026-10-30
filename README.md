@@ -11,7 +11,7 @@ Built with [Quarto](https://quarto.org). Every push to `main` builds the site an
 - `analysis/education_equality/`: code and data for the religion and Primary School Survey figures. Moved from [maedbhk/education_equality](https://github.com/maedbhk/education_equality).
 - `analysis/charts/make_charts.py`: redraws the census, marriage and survey bar charts in the site's style, from the same data.
 - `analysis/charts/make_maps.py`: draws the school ethos and Primary School Survey maps on county outlines (`analysis/charts/data/ireland_counties.geojson`, built by `make_geography.py` from Natural Earth). Inputs are in `analysis/charts/data/raw/`.
-- `tools/fetch_school_lists.py`: downloads new or changed "Data on Individual Schools" lists from gov.ie. The `Refresh school data` workflow runs it on the 3rd of each month and, if a list changed, redraws the maps and opens a pull request. It can also be run by hand from the Actions tab.
+- `tools/fetch_school_lists.py`: downloads new or changed "Data on Individual Schools" lists from gov.ie (or data.gov.ie). gov.ie refuses requests from GitHub's servers, so run it from your own computer, or download the list and upload it to `analysis/charts/data/raw/` on GitHub. Either way, a push of a new list to `main` starts the `Refresh school data` workflow, which redraws the maps and opens a pull request.
 - `analysis/charities/`: the pipeline for the charities landscape. Moved from [opentalamh/opentalamh.ie](https://github.com/opentalamh/opentalamh.ie).
 
 Text and figures are CC BY 4.0. Code is MIT licensed (see `LICENSE-code`).
