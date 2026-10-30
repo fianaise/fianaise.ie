@@ -31,6 +31,7 @@ RAW = os.path.join(ROOT, "analysis", "charts", "data", "raw")
 sys.path.insert(0, os.path.join(ROOT, "analysis", "charts"))
 
 COLLECTION = "https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/"
+CKAN = "https://data.gov.ie/api/3/action/package_search"
 HEADERS = {"User-Agent": "fianaise.ie data refresh (+https://github.com/fianaise/fianaise.ie)"}
 SKIP = re.compile(r"post[- ]?primary|second[- ]level", re.I)
 
@@ -70,14 +71,34 @@ def spreadsheet_links(url, depth=1, seen=None):
     return found
 
 
+def data_gov_ie_links():
+    """The same spreadsheets as listed on data.gov.ie, the national open data portal."""
+    r = get(f'{CKAN}?q="individual schools"&rows=50').json()
+    found = []
+    for pkg in r["result"]["results"]:
+        for res in pkg.get("resources", []):
+            url = res.get("url") or ""
+            if urlparse(url).path.lower().endswith((".xlsx", ".xls")) or (res.get("format") or "").lower() in ("xlsx", "xls"):
+                found.append((url, (f"{res.get('name') or ''} | {os.path.basename(urlparse(url).path)}", pkg.get("title", ""))))
+    return found
+
+
 def main():
     from make_maps import latest_school_list, read_school_list, school_list_year
 
     newest = school_list_year(latest_school_list()).replace("-", "_")
-    links = dict(spreadsheet_links(COLLECTION))
-    print(f"{len(links)} spreadsheets linked from the collection; newest saved list is {newest}")
+    links = {}
+    for name, source in (("gov.ie", lambda: spreadsheet_links(COLLECTION)), ("data.gov.ie", data_gov_ie_links)):
+        try:
+            found = dict(source())
+        except (requests.RequestException, KeyError, ValueError) as e:
+            print(f"{name}: could not read ({e})")
+            continue
+        print(f"{name}: {len(found)} spreadsheets")
+        links.update(found)
+    print(f"Newest saved list is {newest}")
     if not links:
-        sys.exit(f"No spreadsheets found from {COLLECTION}; the page layout may have changed.")
+        sys.exit("No spreadsheets found on gov.ie or data.gov.ie; the pages may have changed.")
     changed = 0
     for href, (link, heading) in links.items():
         # The link's own year wins over the page's: a page can list past years too.
