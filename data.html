@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/">Data on individual schools</a></td>
 <td>Department of Education</td>
 <td><a href="./religion/trends.html">School ethos map</a>, <a href="./religion/primary-school-survey.html">survey school map</a> and <a href="./religion/charities.html">the charities landscape</a></td>
-<td>2025–26 school year (ethos map checked monthly for a new list); 2024–25 for the survey map</td>
+<td>2025–26 school year (ethos map); 2024–25 for the survey map</td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="code">Code</h2>
 <ul>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality"><code>analysis/education_equality</code></a>: fetches the CSO and Department of Education data and draws the religion and survey figures.</li>
-<li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charts"><code>analysis/charts</code></a>: draws the census, marriage and survey charts and maps in the site’s style. <a href="https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_school_lists.py"><code>tools/fetch_school_lists.py</code></a> downloads new school lists from gov.ie, and a monthly GitHub Action uses it to redraw the maps and propose the update.</li>
+<li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charts"><code>analysis/charts</code></a>: draws the census, marriage and survey charts and maps in the site’s style. <a href="https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_school_lists.py"><code>tools/fetch_school_lists.py</code></a> downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.</li>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charities"><code>analysis/charities</code></a>: builds the charities landscape from the Charities Regulator’s register.</li>
 </ul>
 

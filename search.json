@@ -11,7 +11,7 @@
     "href": "religion/trends.html#the-catholic-ethos-enjoys-a-pronounced-hegemony-among-primary-schools-in-ireland",
     "title": "Schools, census and marriages",
     "section": "The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland",
-    "text": "The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland\n\n\nFigure 1. The vast majority of Irish mainstream primary schools have a Catholic ethos, followed by Church of Ireland. A far smaller minority follow an inter- or multi-denominational ethos. Hover over or tap a school for its name and county. Data: Department of Education, data on individual schools, using the latest list published; the map is checked for a new list every month. Code: make_maps.py. Open full screen."
+    "text": "The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland\n\n\nFigure 1. The vast majority of Irish mainstream primary schools have a Catholic ethos, followed by Church of Ireland. A far smaller minority follow an inter- or multi-denominational ethos. Hover over or tap a school for its name and county. Data: Department of Education, data on individual schools, using the latest list published (2025–26). Code: make_maps.py. Open full screen."
   },
   {
     "objectID": "religion/trends.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
@@ -53,28 +53,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence."
-  },
-  {
-    "objectID": "about.html#who-i-am",
-    "href": "about.html#who-i-am",
-    "title": "About",
-    "section": "Who I am",
-    "text": "Who I am\nMy name is Maedbh King. I’m a trained researcher, with a PhD from the University of California, Berkeley and a postdoctoral fellowship at MIT, and I work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time."
-  },
-  {
-    "objectID": "about.html#corrections",
-    "href": "about.html#corrections",
-    "title": "About",
-    "section": "Corrections",
-    "text": "Corrections\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub."
-  },
-  {
-    "objectID": "about.html#reuse",
-    "href": "about.html#reuse",
-    "title": "About",
-    "section": "Reuse",
-    "text": "Reuse\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
   },
   {
     "objectID": "data.html",
@@ -88,7 +67,7 @@
     "href": "data.html#code",
     "title": "Data & code",
     "section": "Code",
-    "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a monthly GitHub Action uses it to redraw the maps and propose the update.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
+    "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
   },
   {
     "objectID": "religion/charities.html",
