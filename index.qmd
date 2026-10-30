@@ -14,7 +14,7 @@ listing:
   sort-ui: false
 ---
 
-Fianaise uses open data to examine Irish cultural, religious and civic life. Ireland publishes a great deal of it, from the Central Statistics Office, government departments and public registers, but most of it sits in spreadsheets that journalists, policymakers and the public rarely have the time to dig through. Fianaise turns that data into charts, maps and short analysis, with the data and code behind every figure, so anyone can check it and use it.
+Fianaise is an independent project analysing open data on Irish cultural, religious and civic life. Ireland publishes a great deal of open data, from the Central Statistics Office, government departments and public registers, but most of it sits in spreadsheets that journalists, policymakers and the public rarely have the time to dig through. Fianaise turns that data into charts, maps and short analysis, with the data and code behind every figure, so anyone can check it and use it.
 
 *Fianaise* is Irish for evidence. You can reach me at [fianaise@proton.me](mailto:fianaise@proton.me).
 
