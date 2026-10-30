@@ -11,15 +11,15 @@ The data comes from the Department of Education and Youth's [2025–2026 Primary
 
 ## There is an unmet demand for multi-denominational primary schools in Ireland
 
-<iframe src="../figures/map2_current_vs_preference.html" width="100%" height="650" style="border:0" title="Map of primary schools: current ethos compared with parents' preferred ethos" loading="lazy"></iframe>
+<iframe src="../figures/map2_current_vs_preference.html" width="100%" height="780" style="border:0" title="Map of primary schools: current ethos compared with parents' preferred ethos" loading="lazy"></iframe>
 
-**Figure 1.** Each primary school's current ethos compared with the ethos its parents said they prefer. Click a school for its survey results. Code: [`plot_survey_geospatial.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/plot_survey_geospatial.py). [Open full screen](../figures/map2_current_vs_preference.html).
+**Figure 1.** Each primary school's current ethos compared with the ethos its parents said they prefer. Hover over or tap a school for its survey results. Code: [`make_maps.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py). [Open full screen](../figures/map2_current_vs_preference.html).
 
 ## Parents want multi-denominational education more than staff and boards of management
 
-<iframe src="../figures/map9_parents_vs_staff_board.html" width="100%" height="650" style="border:0" title="Map: share preferring multi-denominational education by county, parents compared with staff and boards" loading="lazy"></iframe>
+<iframe src="../figures/map9_parents_vs_staff_board.html" width="100%" height="640" style="border:0" title="Map: share preferring multi-denominational education by county, parents compared with staff and boards" loading="lazy"></iframe>
 
-**Figure 2.** Percentage of households (with children in school, and with children not yet in school), and of staff and boards of management, who prefer multi-denominational education, in each county. Code: [`plot_survey_summary.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/plot_survey_summary.py). [Open full screen](../figures/map9_parents_vs_staff_board.html).
+**Figure 2.** Percentage of households (with children in school, and with children not yet in school), and of staff and boards of management, who prefer multi-denominational education, in each county. Use the buttons to switch between household groups. Code: [`make_maps.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py). [Open full screen](../figures/map9_parents_vs_staff_board.html).
 
 ::: {.callout-note collapse="true"}
 ## How the staff and board of management survey was run
