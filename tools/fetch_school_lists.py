@@ -105,6 +105,7 @@ def main():
         year = school_year(link) or school_year(heading)
         context = f"{heading} | {link}"
         if not year or year < newest or SKIP.search(context) or not re.search(r"primary|mainstream", context, re.I):
+            print(f"  skip {year or 'no year'}: {context}")
             continue
         content = get(href).content
         try:
