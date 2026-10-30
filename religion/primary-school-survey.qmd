@@ -3,6 +3,8 @@ title: "Primary School Survey 2026"
 description: "What parents, school staff and boards of management told the Department of Education about primary school ethos."
 ---
 
+Part of [Religion in Ireland](index.qmd).
+
 Over 90% of Irish primary schools are denominational, yet recent survey data (June 2026) shows substantial and widespread parental demand for multi-denominational education. The maps and graphs below explore that gap, school by school and county by county, with a particular focus on how the preferences of parents differ from those of school staff and boards of management.
 
 The data comes from the Department of Education and Youth's [2025–2026 Primary School Survey](https://www.gov.ie/en/department-of-education/campaigns/primary-school-survey/) and its [results summary report](https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf). The results for staff and boards of management are not in the spreadsheet the Department publishes, only in the summary report. The code is [on GitHub](https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality). The figures are interactive.

@@ -3,6 +3,8 @@ title: "The charities landscape"
 description: "Every registered charity in Ireland, grouped by charitable purpose, with religion and Catholic-patron schools highlighted."
 ---
 
+Part of [Religion in Ireland](index.qmd).
+
 Every registered charity in Ireland, grouped by the charitable purposes it registered under, from the Charities Regulator's register (26 October 2026). Charities for the advancement of religion are in orange. Schools with a Catholic ethos in the Department of Education lists are in blue, and community schools with a Catholic bishop or order as joint patron are in light blue. Schools register for education, not religion, so they sit inside the Education cluster. Hover over or tap a dot to read the charity's objects.
 
 <iframe id="charities-landscape" src="../figures/charities_landscape.html" width="100%" height="1400" style="border:0;display:block" title="Registered charities in Ireland by charitable purpose" loading="lazy"></iframe>

@@ -1,30 +1,23 @@
 ---
 title: "Religion in Ireland"
-description: "Statistics and trends on religion in Ireland, from the Central Statistics Office and the Department of Education."
+description: "The place of religion in Irish public life, from open data."
+listing:
+  id: pieces
+  contents: pieces.yml
+  type: grid
+  grid-columns: 3
+  image-height: 100%
+  fields: [image, title, description]
+  sort: false
+  filter-ui: false
+  sort-ui: false
 ---
 
-Keeping track of statistics and trends related to religion in Ireland, with data sourced mainly from the Central Statistics Office and the Department of Education. The code that reproduces every figure is [on GitHub](https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality). The figures are interactive.
+Over 90% of Irish primary schools are run by a religious patron, most of them Catholic, and the State's auditor has found that 85% of schools are built on land owned by patrons or trustees. At the same time, fewer people say they're Catholic at every census, and civil ceremonies are now as common as Catholic weddings.
 
-More on this topic: the [Primary School Survey 2026](primary-school-survey.qmd) and [the charities landscape](charities.qmd).
+This project tracks the place of religion in Irish public life using open data, mainly from the Central Statistics Office, the Department of Education and the Charities Regulator. The code behind every figure is [on GitHub](https://github.com/fianaise/fianaise.ie/tree/main/analysis).
 
-## The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland
+:::{#pieces}
+:::
 
-<iframe src="../figures/ethos_current_config.html" width="100%" height="600" style="border:0" title="Map of Irish primary mainstream schools by ethos, 2024 to 2025" loading="lazy"></iframe>
-
-**Figure 1.** The vast majority of Irish primary mainstream schools (2024–25) have a Catholic ethos, followed by Church of Ireland. A far smaller minority follow an inter- or multi-denominational ethos. Data: Department of Education, [primary schools enrolment figures](https://www.gov.ie/en/department-of-education/collections/primary-schools-enrolment-figures/#20242025). Code: [`plot_ethos_geospatial.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/plot_ethos_geospatial.py). [Open full screen](../figures/ethos_current_config.html).
-
-## Secular shift: Catholic marriages plummet as civil ceremonies surge
-
-<iframe src="../figures/marriage_stats.html" width="100%" height="560" style="border:0" title="Marriages in Ireland by form of ceremony, 2000 to 2024" loading="lazy"></iframe>
-
-**Figure 2.** Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table [VSA44](https://data.cso.ie/table/VSA44). Code: [`fetch_marriage_cso.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/fetch_marriage_cso.py), [`plot_CSO.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/plot_CSO.py).
-
-## Age is no barrier: Catholicism declines as religious non-affiliation increases
-
-<iframe src="../figures/catholic_religion_stats.html" width="100%" height="560" style="border:0" title="Roman Catholic affiliation in Ireland by age group, census 2011, 2016 and 2022" loading="lazy"></iframe>
-
-**Figure 3.** Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was in the 25–29 age group, and the smallest in the 80–84 age group. Data: CSO PxStat table [F5071](https://data.cso.ie/table/F5071).
-
-<iframe src="../figures/no_religion_stats.html" width="100%" height="560" style="border:0" title="No religion in Ireland by age group, census 2011, 2016 and 2022" loading="lazy"></iframe>
-
-**Figure 4.** The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table [F5071](https://data.cso.ie/table/F5071). Code for Figures 3 and 4: [`fetch_religion_cso.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/fetch_religion_cso.py), [`plot_CSO.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/plot_CSO.py).
+Related: [Open Talamh](https://opentalamh.ie) maps the land the Catholic Church and the State own in Ireland.
