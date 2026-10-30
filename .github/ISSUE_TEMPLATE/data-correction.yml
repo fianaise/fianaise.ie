@@ -1,0 +1,22 @@
+name: Data correction
+description: A figure, number or statement on the site is wrong
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page and figure, or a link to it
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A link to the source, or attach files here

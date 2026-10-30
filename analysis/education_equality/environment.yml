@@ -1,0 +1,22 @@
+name: education_equality
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - nbformat>=4.2.0
+  - tabulate
+  - xlrd
+  - folium
+  - bs4
+  - openpyxl
+  - ipykernel
+  - requests
+  - pandas
+  - seaborn
+  - plotly
+  - ruff
+  - altair
+  - pip:
+    - python-dotenv
+    - -e .

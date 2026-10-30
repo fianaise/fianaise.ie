@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "religion/*.qmd"
+  resources:
+    - CNAME
+    - figures/**
+
+website:
+  title: "Fianaise"
+  description: "Evidence on Irish public life, from open data."
+  site-url: "https://fianaise.ie"
+  repo-url: https://github.com/fianaise/fianaise.ie
+  navbar:
+    left:
+      - text: Religion in Ireland
+        menu:
+          - href: religion/index.qmd
+            text: Overview
+          - href: religion/primary-school-survey.qmd
+            text: Primary School Survey 2026
+          - href: religion/charities.qmd
+            text: The charities landscape
+      - href: projects.qmd
+        text: Projects
+      - href: data.qmd
+        text: Data & code
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/fianaise/fianaise.ie
+        aria-label: GitHub
+  page-footer:
+    center: "Fianaise: evidence on Irish public life, from open data · Text and figures CC BY 4.0, code MIT · [Corrections](/about.qmd#corrections)"
+
+format:
+  html:
+    theme: cosmo
+    toc: false

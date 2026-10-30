@@ -1,0 +1,9 @@
+---
+title: "Projects"
+---
+
+Longer pieces of work that have their own site.
+
+## Open Talamh
+
+[opentalamh.ie](https://opentalamh.ie) is an open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and State bodies. Every site traces back to a source record and gets a confidence grade, and anyone can send corrections or new sources. It has its own site so that its method and corrections process stand on their own.
