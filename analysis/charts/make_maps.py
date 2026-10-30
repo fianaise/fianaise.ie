@@ -13,7 +13,7 @@ Inputs in analysis/charts/data/raw/:
   Primary_School_Results_For_All_Primary_Schools.xlsx   2025-26 Primary School Survey
 
 Usage (from the repo root):
-    pip install plotly pandas openpyxl numpy
+    pip install plotly pandas openpyxl numpy folium
     python3 analysis/charts/make_maps.py
     python3 -I tools/slim_plotly.py figures/*.html
 """
