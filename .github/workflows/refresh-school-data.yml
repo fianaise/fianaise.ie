@@ -42,7 +42,7 @@ jobs:
         if: steps.fetch.outputs.changed == 'true'
         run: |
           python3 analysis/charts/make_maps.py
-          python3 -I tools/slim_plotly.py figures/ethos_current_config.html figures/map2_current_vs_preference.html figures/map9_parents_vs_staff_board.html
+          python3 -I tools/slim_plotly.py figures/ethos_current_config.html figures/map2_current_vs_preference.html figures/patronage_maps.html figures/preference_vs_provision.html
       - uses: peter-evans/create-pull-request@v7
         if: steps.fetch.outputs.changed == 'true'
         with:
@@ -56,3 +56,4 @@ jobs:
           add-paths: |
             analysis/charts/data/raw/*.xlsx
             figures/*.html
+            religion/_patronage-stats.md

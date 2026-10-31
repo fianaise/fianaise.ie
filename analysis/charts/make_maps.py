@@ -40,13 +40,11 @@ from make_charts import FONT, GRID, INK, INK_2, INK_3, SURFACE, CONFIG, base_lay
 # the copy in figures/lib/topojson (sane-topojson 4.0.0) instead of its CDN.
 CONFIG["topojsonURL"] = "lib/topojson/"
 import plot_survey_geospatial as survey  # noqa: E402
-from staff_board_data import TABLE_3_PARENT_MULTIDENOM_BY_COUNTY, TABLE_8_STAFF_BOARD_BY_COUNTY  # noqa: E402
 
 GEO = json.load(open(os.path.join(HERE, "data", "ireland_counties.geojson"), encoding="utf-8"))
 COUNTIES = [f["id"] for f in GEO["features"] if f["id"] != "Northern Ireland"]
 LAND = "#f3f2ee"
 BORDER = "#c9c7c0"
-GREENS = ["#e6f2ea", "#bfdcc8", "#8cc2a0", "#55a374", "#2f855a", "#1d5e3c"]
 
 
 def school_list_year(path):
@@ -203,60 +201,148 @@ def survey_school_map():
     save(fig, "map2_current_vs_preference.html")
 
 
-# ── Survey: parents vs staff and boards, by county ──────────────────────────
+# ── Patronage landscape (Schools page) ──────────────────────────────────────
 
-def county_map():
-    parent = TABLE_3_PARENT_MULTIDENOM_BY_COUNTY.set_index("County")
-    staff = TABLE_8_STAFF_BOARD_BY_COUNTY.set_index("County")
-    missing = [c for c in COUNTIES if c not in parent.index or c not in staff.index]
-    assert not missing, f"counties missing from the report tables: {missing}"
-    parent, staff = parent.loc[COUNTIES], staff.loc[COUNTIES]
-    zmax = 60
-    scale = [[i / (len(GREENS) - 1), c] for i, c in enumerate(GREENS)]
-    panels = [
-        ("Parents (all households)", parent["All_households_pct"], "parents"),
-        ("School staff and boards of management", staff["MultiDenom_pref_pct"], "staff and boards"),
-    ]
+# The three patronage groups on the Schools page. Inter-denominational schools
+# are jointly run by two or more churches, so they count as denominational.
+PATRON_GROUPS = [
+    ("catholic", "Catholic", "#2a78d6"),
+    ("other", "Church of Ireland and other faiths", "#eb6834"),
+    ("multi", "Multi-denominational", "#1baf7a"),
+]
+OTHER_FAITHS = ["Church Of Ireland", "Inter Denominational", "Presbyterian", "Methodist", "Quaker", "Jewish", "Muslim"]
+STATS_INCLUDE = os.path.join(ROOT, "religion", "_patronage-stats.md")
+
+
+def pupils_column(df):
+    """Enrolment is 'Enrolment per Return' in some years and 'Total' in others."""
+    col = next(c for c in ("Total", "Enrolment per Return", "Enrolment") if c in df.columns)
+    return pd.to_numeric(df[col], errors="coerce").fillna(0)
+
+
+def patronage_table():
+    """Schools and pupils in each patronage group, from the latest school list."""
+    path = latest_school_list()
+    df = read_school_list(path)
+    df = df[df["Ethos Description"].notna()].copy()
+    df["ethos"] = df["Ethos Description"].astype(str).str.strip()
+    df["pupils"] = pupils_column(df)
+
+    def group(e):
+        if e == "Catholic":
+            return "catholic"
+        if e == "Multi Denominational":
+            return "multi"
+        if e in OTHER_FAITHS:
+            return "other"
+        raise ValueError(f"ethos with no patronage group: {e}")
+
+    df["group"] = df["ethos"].map(group)
+    for c in ("School Latitude", "School Longitude"):
+        df[c] = pd.to_numeric(df[c], errors="coerce")
+    t = df.groupby("group").agg(schools=("ethos", "size"), pupils=("pupils", "sum"))
+    t["schools_pct"] = t["schools"] / t["schools"].sum() * 100
+    t["pupils_pct"] = t["pupils"] / t["pupils"].sum() * 100
+    return df, t, school_list_year(path)
+
+
+def patronage():
+    """Two maps (denominational, multi-denominational) and the headline numbers."""
+    df, t, year = patronage_table()
+    pts = df.dropna(subset=["School Latitude", "School Longitude"])
     fig = make_subplots(rows=1, cols=2, specs=[[{"type": "geo"}, {"type": "geo"}]],
-                        subplot_titles=[p[0] for p in panels], horizontal_spacing=0.02)
-    for i, (name, values, who) in enumerate(panels, start=1):
-        base_geo(fig, row=1, col=i)
-        fig.add_trace(go.Choropleth(
-            geojson=GEO, locations=COUNTIES, z=values.values, zmin=0, zmax=zmax,
-            colorscale=scale, marker_line=dict(color=SURFACE, width=0.8),
-            showscale=(i == 2),
-            colorbar=dict(title=dict(text="Prefer multi-<br>denominational", font=dict(size=12, color=INK_2)),
-                          ticksuffix="%", len=0.6, thickness=12, outlinewidth=0,
-                          tickfont=dict(color=INK_3, size=11), x=1.0),
-            hovertemplate=f"<b>%{{location}}</b><br>%{{z:.1f}}% of {who} prefer multi-denominational<extra></extra>",
-        ), row=1, col=i)
-    # Buttons switch the parents panel between household groups (Table 3).
-    groups = [("All households", "All_households_pct", "parents"),
-              ("Child in school", "Children_in_school_pct", "parents of children in school"),
-              ("Child not yet in school", "Not_yet_in_school_pct", "parents of children not yet in school")]
-    parents_trace = 1  # trace index: [0] base, [1] parents, [2] base, [3] staff
-    buttons = [dict(
-        label=label, method="restyle",
-        args=[{"z": [parent[col].values],
-               "hovertemplate": f"<b>%{{location}}</b><br>%{{z:.1f}}% of {who} prefer multi-denominational<extra></extra>"},
-              [parents_trace]],
-    ) for label, col, who in groups]
-    nat_parent = (parent["All_households_pct"]).median()
-    nat_staff = (staff["MultiDenom_pref_pct"]).median()
+                        subplot_titles=["<b>Denominational</b>", "<b>Multi-denominational</b>"],
+                        horizontal_spacing=0.02)
+    panels = {1: ["catholic", "other"], 2: ["multi"]}
+    for col, keys in panels.items():
+        base_geo(fig, row=1, col=col)
+        for key, label, colour in PATRON_GROUPS:
+            if key not in keys:
+                continue
+            g = pts[pts["group"] == key]
+            fig.add_trace(go.Scattergeo(
+                lon=g["School Longitude"], lat=g["School Latitude"], mode="markers",
+                name=label,
+                marker=dict(color=colour, size=4 if key == "catholic" else 6,
+                            opacity=0.7 if key == "catholic" else 0.95,
+                            line=dict(color=SURFACE, width=0.5)),
+                customdata=np.stack([g["Official Name"], g["County Description"], g["ethos"]], axis=-1),
+                hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]} · %{customdata[2]}<extra></extra>",
+            ), row=1, col=col)
     fig.update_layout(base_layout(
-        title=title("Parents want multi-denominational schools more than staff and boards do",
-                    f"Share preferring multi-denominational education, by county.<br>Median county: parents {nat_parent:.0f}%, staff and boards {nat_staff:.0f}%"),
-        margin=dict(l=10, r=10, t=170, b=10), height=640,
-        updatemenus=[dict(type="buttons", direction="right", x=0, xanchor="left", y=1.1, yanchor="bottom",
-                          buttons=buttons, showactive=True, bgcolor="#f3f2ee", bordercolor=GRID,
-                          font=dict(color=INK, size=12), pad=dict(r=6, t=2, b=2, l=6))],
+        title=title(f"{t.loc['catholic', 'schools_pct']:.1f}% of primary schools have a Catholic patron",
+                    f"Mainstream primary schools by patronage, {year} ({int(t['schools'].sum()):,} schools)"),
+        showlegend=True, legend=legend_top() | dict(y=1.02),
+        margin=dict(l=10, r=10, t=130, b=10), height=640,
     ))
     for a in fig.layout.annotations:
         a.font = dict(color=INK, size=14, family=FONT)
-    save(fig, "map9_parents_vs_staff_board.html")
+        a.y = 0.97
+    save(fig, "patronage_maps.html")
+
+    def card(key, headline, detail, cls):
+        r = t.loc[key]
+        return (f'<div class="stat-card {cls}"><div class="stat-number">{r.schools_pct:.1f}%</div>'
+                f'<div class="stat-text"><strong>{headline}</strong><br>'
+                f'<span>{detail.format(n=int(r.schools), p=int(r.pupils), pp=r.pupils_pct)}</span></div></div>')
+
+    cards = [
+        card("catholic", "of schools have a Catholic patron",
+             "{n:,} schools · {p:,} pupils ({pp:.1f}% of pupils)", "is-catholic"),
+        card("other", "Church of Ireland and other faiths",
+             "Presbyterian, Methodist, Jewish, Muslim, Quaker and inter-denominational · {n:,} schools · {pp:.1f}% of pupils",
+             "is-other"),
+        card("multi", "are multi-denominational",
+             "{n:,} schools · {p:,} pupils ({pp:.1f}% of pupils)", "is-multi"),
+    ]
+    with open(STATS_INCLUDE, "w", encoding="utf-8") as f:
+        f.write("<!-- Written by analysis/charts/make_maps.py from the "
+                f"{year} school list. Don't edit by hand. -->\n")
+        f.write('<div class="stat-cards">\n' + "\n".join(cards) + "\n</div>\n")
+    print("wrote", STATS_INCLUDE)
+    return t
+
+
+def preference_vs_provision(t):
+    """Slide 17: what parents prefer against what exists today."""
+    from staff_board_data import TABLE_2A_NATIONAL_PROPORTIONS as T2A
+    prefer = float(T2A.set_index("household_type").loc["ALL", "multidenom_pct"])
+    rows = [
+        ("Households that prefer a multi-denominational school", prefer, "#eb6834"),
+        ("Pupils in multi-denominational schools today", t.loc["multi", "pupils_pct"], "#1baf7a"),
+        ("Schools that are multi-denominational today", t.loc["multi", "schools_pct"], "#1baf7a"),
+    ]
+    fig = go.Figure()
+    labels = [r[0] for r in rows]
+    fig.add_trace(go.Bar(y=labels, x=[100] * 3, orientation="h", marker=dict(color="#f3f2ee"),
+                         hoverinfo="skip"))
+    fig.add_trace(go.Bar(
+        y=labels, x=[r[1] for r in rows], orientation="h", marker=dict(color=[r[2] for r in rows]),
+        hovertemplate="%{y}: <b>%{x:.1f}%</b><extra></extra>",
+    ))
+    # Labels sit above each bar rather than beside it, so they fit on a phone.
+    for label, value, colour in rows:
+        fig.add_annotation(x=0, y=label, xanchor="left", yanchor="bottom", yshift=16, showarrow=False,
+                           text=label, font=dict(size=14, color=INK))
+        fig.add_annotation(x=100, y=label, xanchor="left", xshift=10, showarrow=False,
+                           text=f"<b>{value:.1f}%</b>", font=dict(size=20, color=colour))
+    fig.update_layout(base_layout(
+        barmode="overlay", bargap=0.6,
+        margin=dict(l=10, r=80, t=30, b=10), height=260,
+        xaxis=axis_plain(range=[0, 100]),
+        yaxis=dict(autorange="reversed", showticklabels=False, showgrid=False, zeroline=False,
+                   showline=False, ticks=""),
+    ))
+    save(fig, "preference_vs_provision.html")
+
+
+def axis_plain(**kw):
+    a = dict(showgrid=False, zeroline=False, showline=False, ticks="", showticklabels=False)
+    a.update(kw)
+    return a
 
 
 if __name__ == "__main__":
     ethos_map()
     survey_school_map()
-    county_map()
+    preference_vs_provision(patronage())

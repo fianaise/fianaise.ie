@@ -1,0 +1,42 @@
+---
+title: "Schools"
+description: "Who runs Ireland's primary schools: the patronage landscape, school by school."
+---
+
+Part of [Religion in Ireland](index.qmd). See also the [Primary School Survey 2026](primary-school-survey.qmd), [census and marriages](census-marriages.qmd) and [the charities landscape](charities.qmd).
+
+## The patronage landscape in Ireland
+
+All primary schools in Ireland are funded by the State, but each one has a patron, and the patron sets the school's ethos. Almost nine in ten have a Catholic patron.
+
+{{< include _patronage-stats.md >}}
+
+<iframe src="../figures/patronage_maps.html" width="100%" height="660" style="border:0" title="Maps of Irish primary schools: denominational and multi-denominational" loading="lazy"></iframe>
+
+**Figure 1.** Mainstream primary schools by patronage. Left: denominational schools, Catholic (blue) and Church of Ireland and other faiths (orange). Right: multi-denominational schools. Hover over or tap a school for its name and county. Inter-denominational schools, run jointly by more than one church, count as denominational. Pupil numbers are each school's enrolment in the same list. Data: Department of Education, [data on individual schools](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/), using the latest list published. Code: [`make_maps.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py). [Open full screen](../figures/patronage_maps.html).
+
+::: {.ethos-cards}
+::: {.ethos-card}
+### Denominational ethos
+
+- Faith formation in the patron's religion during the school day
+- Sacramental preparation in class time (Catholic schools)
+- Ethos integrated across the school day; parents may opt children out of religious instruction
+:::
+
+::: {.ethos-card .is-multi}
+### Multi-denominational ethos
+
+- Ethics and values curriculum (for example Learn Together, or Goodness Me, Goodness You!)
+- Learning about religions and beliefs, not formation in one
+- Faith formation, where offered, outside school hours or by belief groups
+:::
+:::
+
+## Every school by ethos
+
+<iframe src="../figures/ethos_current_config.html" width="100%" height="740" style="border:0" title="Map of Irish primary mainstream schools by ethos" loading="lazy"></iframe>
+
+**Figure 2.** Every mainstream primary school by its ethos as the Department records it. Click a group in the legend to show or hide it. Data: Department of Education, [data on individual schools](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/), using the latest list published. Code: [`make_maps.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py). [Open full screen](../figures/ethos_current_config.html).
+
+What parents say they want is on the [Primary School Survey 2026](primary-school-survey.qmd) page.
