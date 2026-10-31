@@ -1,59 +1,52 @@
 [
   {
-    "objectID": "religion/trends.html",
-    "href": "religion/trends.html",
-    "title": "Schools, census and marriages",
+    "objectID": "religion/schools.html",
+    "href": "religion/schools.html",
+    "title": "Schools",
     "section": "",
-    "text": "Keeping track of statistics and trends related to religion in Ireland, with data sourced mainly from the Central Statistics Office and the Department of Education. The code that reproduces every figure is on GitHub. The figures are interactive.\nPart of Religion in Ireland. See also the Primary School Survey 2026 and the charities landscape."
+    "text": "Part of Religion in Ireland. See also the Primary School Survey 2026, census and marriages and the charities landscape."
   },
   {
-    "objectID": "religion/trends.html#the-catholic-ethos-enjoys-a-pronounced-hegemony-among-primary-schools-in-ireland",
-    "href": "religion/trends.html#the-catholic-ethos-enjoys-a-pronounced-hegemony-among-primary-schools-in-ireland",
-    "title": "Schools, census and marriages",
-    "section": "The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland",
-    "text": "The Catholic ethos enjoys a pronounced hegemony among primary schools in Ireland\n\n\nFigure 1. The vast majority of Irish mainstream primary schools have a Catholic ethos, followed by Church of Ireland. A far smaller minority follow an inter- or multi-denominational ethos. Hover over or tap a school for its name and county. Data: Department of Education, data on individual schools, using the latest list published (2025–26). Code: make_maps.py. Open full screen."
+    "objectID": "religion/schools.html#the-patronage-landscape-in-ireland",
+    "href": "religion/schools.html#the-patronage-landscape-in-ireland",
+    "title": "Schools",
+    "section": "The patronage landscape in Ireland",
+    "text": "The patronage landscape in Ireland\nAll primary schools in Ireland are funded by the State, but each one has a patron, and the patron sets the school’s ethos. Almost nine in ten have a Catholic patron.\n\n\n\n\n88.2%\n\n\nof schools have a Catholic patron2,705 schools · 472,651 pupils (88.2% of pupils)\n\n\n\n\n6.7%\n\n\nChurch of Ireland and other faithsPresbyterian, Methodist, Jewish, Muslim, Quaker and inter-denominational · 206 schools · 3.9% of pupils\n\n\n\n\n5.1%\n\n\nare multi-denominational156 schools · 42,001 pupils (7.8% of pupils)\n\n\n\n\n\nFigure 1. Mainstream primary schools by patronage. Left: denominational schools, Catholic (blue) and Church of Ireland and other faiths (orange). Right: multi-denominational schools. Hover over or tap a school for its name and county. Inter-denominational schools, run jointly by more than one church, count as denominational. Pupil numbers are each school’s enrolment in the same list. Data: Department of Education, data on individual schools, using the latest list published. Code: make_maps.py. Open full screen.\n\n\nDenominational ethos\n\nFaith formation in the patron’s religion during the school day\nSacramental preparation in class time (Catholic schools)\nEthos integrated across the school day; parents may opt children out of religious instruction\n\n\n\nMulti-denominational ethos\n\nEthics and values curriculum (for example Learn Together, or Goodness Me, Goodness You!)\nLearning about religions and beliefs, not formation in one\nFaith formation, where offered, outside school hours or by belief groups"
   },
   {
-    "objectID": "religion/trends.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
-    "href": "religion/trends.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
-    "title": "Schools, census and marriages",
-    "section": "Secular shift: Catholic marriages plummet as civil ceremonies surge",
-    "text": "Secular shift: Catholic marriages plummet as civil ceremonies surge\n\n\nFigure 2. Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table VSA44. Code: fetch_marriage_cso.py, make_charts.py."
-  },
-  {
-    "objectID": "religion/trends.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
-    "href": "religion/trends.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
-    "title": "Schools, census and marriages",
-    "section": "Age is no barrier: Catholicism declines as religious non-affiliation increases",
-    "text": "Age is no barrier: Catholicism declines as religious non-affiliation increases\n\n\nFigure 3. Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was among 25- to 34-year-olds (down 25 points), and the smallest among people aged 85 and over (down 4 points). Data: CSO PxStat table F5071.\n\n\nFigure 4. The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table F5071. Code for Figures 3 and 4: fetch_religion_cso.py, make_charts.py."
+    "objectID": "religion/schools.html#every-school-by-ethos",
+    "href": "religion/schools.html#every-school-by-ethos",
+    "title": "Schools",
+    "section": "Every school by ethos",
+    "text": "Every school by ethos\n\n\nFigure 2. Every mainstream primary school by its ethos as the Department records it. Click a group in the legend to show or hide it. Data: Department of Education, data on individual schools, using the latest list published. Code: make_maps.py. Open full screen.\nWhat parents say they want is on the Primary School Survey 2026 page."
   },
   {
     "objectID": "religion/index.html",
     "href": "religion/index.html",
     "title": "Religion in Ireland",
     "section": "",
-    "text": "Over 90% of Irish primary schools are run by a religious patron, most of them Catholic, and the State’s auditor has found that 85% of schools are built on land owned by patrons or trustees. At the same time, fewer people say they’re Catholic at every census, and civil ceremonies are now as common as Catholic weddings.\nThis project tracks the place of religion in Irish public life using open data, mainly from the Central Statistics Office, the Department of Education and the Charities Regulator. The code behind every figure is on GitHub.\n\n\n\n\n\n\n\n\n\n\nPrimary School Survey 2026\n\n\nWhat parents, school staff and boards of management told the Department of Education about school ethos.\n\n\n\n\n\n\n\n\n\n\n\n\nThe charities landscape\n\n\nEvery registered charity in Ireland, grouped by purpose, with religion and Catholic-patron schools highlighted.\n\n\n\n\n\n\n\n\n\n\n\n\nSchools, census and marriages\n\n\nSchool ethos across the country, Catholic affiliation by age from the census, and the rise of civil marriage.\n\n\n\n\n\nNo matching items\n\nRelated: Open Talamh maps the land the Catholic Church and the State own in Ireland."
+    "text": "Over 90% of Irish primary schools are run by a religious patron, most of them Catholic, and the State’s auditor has found that 85% of schools are built on land owned by patrons or trustees. At the same time, fewer people say they’re Catholic at every census, and civil ceremonies are now as common as Catholic weddings.\nThis project tracks the place of religion in Irish public life using open data, mainly from the Central Statistics Office, the Department of Education and the Charities Regulator. The code behind every figure is on GitHub.\n\n\n\n\n\n\n\n\n\n\nSchools\n\n\nWho runs Ireland’s primary schools: almost nine in ten have a Catholic patron, and one in twenty is multi-denominational.\n\n\n\n\n\n\n\n\n\n\n\n\nPrimary School Survey 2026\n\n\nWhat parents, school staff and boards of management told the Department of Education about school ethos.\n\n\n\n\n\n\n\n\n\n\n\n\nCensus and marriages\n\n\nCatholic affiliation by age from the census, and the rise of civil marriage.\n\n\n\n\n\n\n\n\n\n\n\n\nThe charities landscape\n\n\nEvery registered charity in Ireland, grouped by purpose, with religion and Catholic-patron schools highlighted.\n\n\n\n\n\nNo matching items\n\nRelated: Open Talamh maps the land the Catholic Church and the State own in Ireland."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fianaise",
+    "objectID": "religion/census-marriages.html",
+    "href": "religion/census-marriages.html",
+    "title": "Census and marriages",
     "section": "",
-    "text": "Fianaise is an independent project analysing open data on Irish cultural, religious and civic life. Ireland publishes a great deal of open data, from the Central Statistics Office, government departments and public registers, but most of it sits in spreadsheets that journalists, policymakers and the public rarely have the time to dig through. Fianaise turns that data into charts, maps and short analysis, with the data and code behind every figure, so anyone can check it and use it.\nFianaise is Irish for evidence. You can reach me at fianaise@proton.me."
+    "text": "How religious affiliation and marriage in Ireland are changing, from Central Statistics Office data. The code that reproduces every figure is on GitHub. The figures are interactive.\nPart of Religion in Ireland. See also Schools, the Primary School Survey 2026 and the charities landscape."
   },
   {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "Fianaise",
-    "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\nNo matching items"
+    "objectID": "religion/census-marriages.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
+    "href": "religion/census-marriages.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
+    "title": "Census and marriages",
+    "section": "Secular shift: Catholic marriages plummet as civil ceremonies surge",
+    "text": "Secular shift: Catholic marriages plummet as civil ceremonies surge\n\n\nFigure 1. Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table VSA44. Code: fetch_marriage_cso.py, make_charts.py."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+    "objectID": "religion/census-marriages.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
+    "href": "religion/census-marriages.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
+    "title": "Census and marriages",
+    "section": "Age is no barrier: Catholicism declines as religious non-affiliation increases",
+    "text": "Age is no barrier: Catholicism declines as religious non-affiliation increases\n\n\nFigure 2. Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was among 25- to 34-year-olds (down 25 points), and the smallest among people aged 85 and over (down 4 points). Data: CSO PxStat table F5071.\n\n\nFigure 3. The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table F5071. Code for Figures 2 and 3: fetch_religion_cso.py, make_charts.py."
   },
   {
     "objectID": "data.html",
@@ -70,6 +63,27 @@
     "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fianaise",
+    "section": "",
+    "text": "Fianaise is an independent project analysing open data on Irish cultural, religious and civic life. Ireland publishes a great deal of open data, from the Central Statistics Office, government departments and public registers, but most of it sits in spreadsheets that journalists, policymakers and the public rarely have the time to dig through. Fianaise turns that data into charts, maps and short analysis, with the data and code behind every figure, so anyone can check it and use it.\nFianaise is Irish for evidence. You can reach me at fianaise@proton.me."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Fianaise",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "religion/charities.html",
     "href": "religion/charities.html",
     "title": "The charities landscape",
@@ -81,27 +95,34 @@
     "href": "religion/primary-school-survey.html",
     "title": "Primary School Survey 2026",
     "section": "",
-    "text": "Part of Religion in Ireland.\nOver 90% of Irish primary schools are denominational, yet recent survey data (June 2026) shows substantial and widespread parental demand for multi-denominational education. The maps and graphs below explore that gap, school by school and county by county, with a particular focus on how the preferences of parents differ from those of school staff and boards of management.\nThe data comes from the Department of Education and Youth’s 2025–2026 Primary School Survey and its results summary report. The results for staff and boards of management are not in the spreadsheet the Department publishes, only in the summary report. The code is on GitHub. The figures are interactive."
+    "text": "Part of Religion in Ireland. See also Schools for who runs Ireland’s primary schools today.\nOver 90% of Irish primary schools are denominational, yet recent survey data (June 2026) shows substantial and widespread parental demand for multi-denominational education. The charts and maps below explore that gap, school by school and county by county, with a particular focus on how the preferences of parents differ from those of school staff and boards of management.\nThe data comes from the Department of Education and Youth’s 2025–2026 Primary School Survey and its results summary report. The results for staff and boards of management are not in the spreadsheet the Department publishes, only in the summary report. The code is on GitHub. The figures are interactive."
   },
   {
-    "objectID": "religion/primary-school-survey.html#there-is-an-unmet-demand-for-multi-denominational-primary-schools-in-ireland",
-    "href": "religion/primary-school-survey.html#there-is-an-unmet-demand-for-multi-denominational-primary-schools-in-ireland",
+    "objectID": "religion/primary-school-survey.html#the-first-survey-of-its-kind",
+    "href": "religion/primary-school-survey.html#the-first-survey-of-its-kind",
     "title": "Primary School Survey 2026",
-    "section": "There is an unmet demand for multi-denominational primary schools in Ireland",
-    "text": "There is an unmet demand for multi-denominational primary schools in Ireland\n\n\nFigure 1. Each primary school’s current ethos compared with the ethos its parents said they prefer. Hover over or tap a school for its survey results. Code: make_maps.py. Open full screen."
+    "section": "The first survey of its kind",
+    "text": "The first survey of its kind\nThe Department described the survey as “the largest of its kind ever undertaken in Ireland” (press release, 4 November 2025).\n\n\nWhat the Department set out to do\n“Assess parental demand for different types of primary school provision”: ethos, co-education or single-sex, and English- or Irish-medium.\n\n\nWho was asked\n\nParents of children in primary school, and of children not yet enrolled\nOne response per household, validated by Eircode\nSeparately, school staff and boards of management\n\n\n\n\n\n4 Nov 2025\nSurvey opens online\n\n\n16 Dec 2025\nSurvey closes: 200,381 valid parent and 32,901 staff and board responses\n\n\n7 Apr 2026\nNational parent results published\n\n\nJune 2026\nEach school receives its own report. The summary report adds county results for parents and for staff and boards\n\n\nOct–Nov 2026\nBoards decide whether to act on their results\n\n\nStaff and board results are published nationally and by county, but not school by school, for privacy reasons.\n\nThe survey in numbers\n\n\nFigure 1. Eligible population, responses received and valid responses, for parents and guardians and for school staff and boards of management. Parental response rates by county ran from 31.5% (Louth) to 63.4% (Meath). Source: results summary report (June 2026). Code: make_charts.py."
+  },
+  {
+    "objectID": "religion/primary-school-survey.html#preference-far-exceeds-current-provision",
+    "href": "religion/primary-school-survey.html#preference-far-exceeds-current-provision",
+    "title": "Primary School Survey 2026",
+    "section": "Preference far exceeds current provision",
+    "text": "Preference far exceeds current provision\n\n\nFigure 2. The share of households that prefer a multi-denominational school (all households, results summary report, Table 2a), against the share of pupils and of schools that are multi-denominational today (the Department’s latest school list; see Schools). Code: make_maps.py.\n\n\nFigure 3. Denominational schools where most parents prefer a multi-denominational ethos (orange), against schools that are already multi-denominational (green). Click the legend to show or hide a group, and hover over or tap a school for its survey results. Code: make_maps.py. Open full screen."
   },
   {
     "objectID": "religion/primary-school-survey.html#parents-want-multi-denominational-education-more-than-staff-and-boards-of-management",
     "href": "religion/primary-school-survey.html#parents-want-multi-denominational-education-more-than-staff-and-boards-of-management",
     "title": "Primary School Survey 2026",
     "section": "Parents want multi-denominational education more than staff and boards of management",
-    "text": "Parents want multi-denominational education more than staff and boards of management\n\n\nFigure 2. Percentage of households (with children in school, and with children not yet in school), and of staff and boards of management, who prefer multi-denominational education, in each county. Use the buttons to switch between household groups. Code: make_maps.py. Open full screen.\n\n\n\n\n\n\nNoteHow the staff and board of management survey was run\n\n\n\n\n\nThe school staff and board of management survey was open to primary school staff and members of boards of management nationally. The target population was 84,285 staff and board members. A total of 32,999 responses were submitted, and 32,901 valid responses were kept after validation. That is a validated response rate of 39.0% of the eligible population. (Source: results summary report, section 4.1, p. 25.)"
+    "text": "Parents want multi-denominational education more than staff and boards of management\n\n\n\n34.7%\n\n\nof all staff and board members prefer a multi-denominational ethosParents: 45%\n\n\n\n\n31.6%\n\n\nof those at denominational schoolsParents: 40.2%\n\n\n\n\nAbout 10 points below parentsPublished nationally and by county; not school by school, for privacy\n\n\n\n\n\nFigure 4. Share preferring a multi-denominational school in each county: parents of children not yet in school (dark orange), parents of children in school (light orange), and school staff and boards of management (dark). Counties are sorted by the staff and board figure. The shaded band is the gap between staff and boards and parents. Source: results summary report, Tables 3, 7 and 8; the denominational-school figures are from sections 3.1.2 (p. 14) and 4.3 (p. 26). Code: make_charts.py.\n\n\n\n\n\n\nNoteHow the staff and board of management survey was run\n\n\n\n\n\nThe school staff and board of management survey was open to primary school staff and members of boards of management nationally. The target population was 84,285 staff and board members. A total of 32,999 responses were submitted, and 32,901 valid responses were kept after validation. That is a validated response rate of 39.0% of the eligible population. (Source: results summary report, section 4.1, p. 25.)"
   },
   {
     "objectID": "religion/primary-school-survey.html#there-is-a-mismatch-between-the-schools-parents-want-for-their-children-and-the-schools-available-to-them",
     "href": "religion/primary-school-survey.html#there-is-a-mismatch-between-the-schools-parents-want-for-their-children-and-the-schools-available-to-them",
     "title": "Primary School Survey 2026",
     "section": "There is a mismatch between the schools parents want for their children and the schools available to them",
-    "text": "There is a mismatch between the schools parents want for their children and the schools available to them\n\n\nFigure 3. Stated ethos preference among households with a child not yet in school (n = 56,227), grouped by the type of school they intend to use. Each bar is 100% of the households intending that school type, split by whether they prefer a multi-denominational (green) or denominational (grey) ethos. This isolates demand for change: households intending a denominational school but preferring a multi-denominational one represent unmet demand, while households intending and preferring the same type represent confirmed preference. Percentages are recomputed from raw counts reported in the source, and the base (56,227) can’t be independently checked against the published survey spreadsheet. Source: Department of Education and Youth, Primary School Survey results summary report (June 2026), section 3.1.2, p. 14. Code: make_charts.py."
+    "text": "There is a mismatch between the schools parents want for their children and the schools available to them\n\n\nFigure 5. Stated ethos preference among households with a child not yet in school (n = 56,227), grouped by the type of school they intend to use. Each bar is 100% of the households intending that school type, split by whether they prefer a multi-denominational (green) or denominational (grey) ethos. This isolates demand for change: households intending a denominational school but preferring a multi-denominational one represent unmet demand, while households intending and preferring the same type represent confirmed preference. Percentages are recomputed from raw counts reported in the source, and the base (56,227) can’t be independently checked against the published survey spreadsheet. Source: Department of Education and Youth, Primary School Survey results summary report (June 2026), section 3.1.2, p. 14. Code: make_charts.py."
   }
 ]

@@ -2,9 +2,10 @@
   {
     "listing": "/religion/index.html",
     "items": [
+      "/religion/schools.html",
       "/religion/primary-school-survey.html",
-      "/religion/charities.html",
-      "/religion/trends.html"
+      "/religion/census-marriages.html",
+      "/religion/charities.html"
     ]
   },
   {

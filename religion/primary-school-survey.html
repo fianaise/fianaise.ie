@@ -165,20 +165,93 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Part of <a href="../religion/index.html">Religion in Ireland</a>.</p>
-<p>Over 90% of Irish primary schools are denominational, yet recent survey data (June 2026) shows substantial and widespread parental demand for multi-denominational education. The maps and graphs below explore that gap, school by school and county by county, with a particular focus on how the preferences of parents differ from those of school staff and boards of management.</p>
-<p>The data comes from the Department of Education and Youth’s <a href="https://www.gov.ie/en/department-of-education/campaigns/primary-school-survey/">2025–2026 Primary School Survey</a> and its <a href="https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf">results summary report</a>. The results for staff and boards of management are not in the spreadsheet the Department publishes, only in the summary report. The code is <a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality">on GitHub</a>. The figures are interactive.</p>
-<section id="there-is-an-unmet-demand-for-multi-denominational-primary-schools-in-ireland" class="level2">
-<h2 class="anchored" data-anchor-id="there-is-an-unmet-demand-for-multi-denominational-primary-schools-in-ireland">There is an unmet demand for multi-denominational primary schools in Ireland</h2>
+<p>Part of <a href="../religion/index.html">Religion in Ireland</a>. See also <a href="../religion/schools.html">Schools</a> for who runs Ireland’s primary schools today.</p>
+<p>Over 90% of Irish primary schools are denominational, yet recent survey data (June 2026) shows substantial and widespread parental demand for multi-denominational education. The charts and maps below explore that gap, school by school and county by county, with a particular focus on how the preferences of parents differ from those of school staff and boards of management.</p>
+<p>The data comes from the Department of Education and Youth’s <a href="https://www.gov.ie/en/department-of-education/campaigns/primary-school-survey/">2025–2026 Primary School Survey</a> and its <a href="https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf">results summary report</a>. The results for staff and boards of management are not in the spreadsheet the Department publishes, only in the summary report. The code is <a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis">on GitHub</a>. The figures are interactive.</p>
+<section id="the-first-survey-of-its-kind" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-survey-of-its-kind">The first survey of its kind</h2>
+<p>The Department described the survey as “the largest of its kind ever undertaken in Ireland” (press release, 4 November 2025).</p>
+<div class="ethos-cards">
+<section id="what-the-department-set-out-to-do" class="level3 ethos-card">
+<h3 class="anchored" data-anchor-id="what-the-department-set-out-to-do">What the Department set out to do</h3>
+<p>“Assess parental demand for different types of primary school provision”: ethos, co-education or single-sex, and English- or Irish-medium.</p>
+</section>
+<section id="who-was-asked" class="level3 ethos-card">
+<h3 class="anchored" data-anchor-id="who-was-asked">Who was asked</h3>
+<ul>
+<li>Parents of children <strong>in</strong> primary school, and of children <strong>not yet enrolled</strong></li>
+<li>One response per household, validated by Eircode</li>
+<li>Separately, school staff and boards of management</li>
+</ul>
+</section>
+</div>
+<div class="timeline">
+<div class="timeline-step">
+<p><strong>4 Nov 2025</strong></p>
+<p>Survey opens online</p>
+</div>
+<div class="timeline-step">
+<p><strong>16 Dec 2025</strong></p>
+<p>Survey closes: 200,381 valid parent and 32,901 staff and board responses</p>
+</div>
+<div class="timeline-step">
+<p><strong>7 Apr 2026</strong></p>
+<p>National parent results published</p>
+</div>
+<div class="timeline-step">
+<p><strong>June 2026</strong></p>
+<p>Each school receives its own report. The summary report adds county results for parents and for staff and boards</p>
+</div>
+<div class="timeline-step is-next">
+<p><strong>Oct–Nov 2026</strong></p>
+<p>Boards decide whether to act on their results</p>
+</div>
+</div>
+<p>Staff and board results are published nationally and by county, but not school by school, for privacy reasons.</p>
+<section id="the-survey-in-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="the-survey-in-numbers">The survey in numbers</h3>
+<iframe src="../figures/survey_numbers.html" width="100%" height="480" style="border:0" title="Chart: eligible, received and valid survey responses for parents and for staff and boards" loading="lazy">
+</iframe>
+<p><strong>Figure 1.</strong> Eligible population, responses received and valid responses, for parents and guardians and for school staff and boards of management. Parental response rates by county ran from 31.5% (Louth) to 63.4% (Meath). Source: results summary report (June 2026). Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py"><code>make_charts.py</code></a>.</p>
+</section>
+</section>
+<section id="preference-far-exceeds-current-provision" class="level2">
+<h2 class="anchored" data-anchor-id="preference-far-exceeds-current-provision">Preference far exceeds current provision</h2>
+<iframe src="../figures/preference_vs_provision.html" width="100%" height="270" style="border:0" title="Chart: share of households preferring multi-denominational schools, against the share of pupils and schools that are multi-denominational today" loading="lazy">
+</iframe>
+<p><strong>Figure 2.</strong> The share of households that prefer a multi-denominational school (all households, results summary report, Table 2a), against the share of pupils and of schools that are multi-denominational today (the Department’s latest school list; see <a href="../religion/schools.html">Schools</a>). Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py"><code>make_maps.py</code></a>.</p>
 <iframe src="../figures/map2_current_vs_preference.html" width="100%" height="780" style="border:0" title="Map of primary schools: current ethos compared with parents' preferred ethos" loading="lazy">
 </iframe>
-<p><strong>Figure 1.</strong> Each primary school’s current ethos compared with the ethos its parents said they prefer. Hover over or tap a school for its survey results. Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py"><code>make_maps.py</code></a>. <a href="../figures/map2_current_vs_preference.html">Open full screen</a>.</p>
+<p><strong>Figure 3.</strong> Denominational schools where most parents prefer a multi-denominational ethos (orange), against schools that are already multi-denominational (green). Click the legend to show or hide a group, and hover over or tap a school for its survey results. Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py"><code>make_maps.py</code></a>. <a href="../figures/map2_current_vs_preference.html">Open full screen</a>.</p>
 </section>
 <section id="parents-want-multi-denominational-education-more-than-staff-and-boards-of-management" class="level2">
 <h2 class="anchored" data-anchor-id="parents-want-multi-denominational-education-more-than-staff-and-boards-of-management">Parents want multi-denominational education more than staff and boards of management</h2>
-<iframe src="../figures/map9_parents_vs_staff_board.html" width="100%" height="640" style="border:0" title="Map: share preferring multi-denominational education by county, parents compared with staff and boards" loading="lazy">
+<div class="stat-cards three">
+<div class="stat-card is-multi">
+<div class="stat-number">
+<p>34.7%</p>
+</div>
+<div class="stat-text">
+<p><strong>of all staff and board members prefer a multi-denominational ethos</strong><br>Parents: 45%</p>
+</div>
+</div>
+<div class="stat-card is-multi">
+<div class="stat-number">
+<p>31.6%</p>
+</div>
+<div class="stat-text">
+<p><strong>of those at denominational schools</strong><br>Parents: 40.2%</p>
+</div>
+</div>
+<div class="stat-card is-note">
+<div class="stat-text">
+<p><strong>About 10 points below parents</strong><br>Published nationally and by county; not school by school, for privacy</p>
+</div>
+</div>
+</div>
+<iframe src="../figures/parents_vs_staff_by_county.html" width="100%" height="580" style="border:0" title="Chart: share preferring multi-denominational education by county, parents compared with staff and boards" loading="lazy">
 </iframe>
-<p><strong>Figure 2.</strong> Percentage of households (with children in school, and with children not yet in school), and of staff and boards of management, who prefer multi-denominational education, in each county. Use the buttons to switch between household groups. Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py"><code>make_maps.py</code></a>. <a href="../figures/map9_parents_vs_staff_board.html">Open full screen</a>.</p>
+<p><strong>Figure 4.</strong> Share preferring a multi-denominational school in each county: parents of children not yet in school (dark orange), parents of children in school (light orange), and school staff and boards of management (dark). Counties are sorted by the staff and board figure. The shaded band is the gap between staff and boards and parents. Source: results summary report, Tables 3, 7 and 8; the denominational-school figures are from sections 3.1.2 (p.&nbsp;14) and 4.3 (p.&nbsp;26). Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py"><code>make_charts.py</code></a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -200,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="there-is-a-mismatch-between-the-schools-parents-want-for-their-children-and-the-schools-available-to-them">There is a mismatch between the schools parents want for their children and the schools available to them</h2>
 <iframe src="../figures/vis2_intend_vs_preference.html" width="100%" height="420" style="border:0" title="Chart: ethos preference among households with a child not yet in school, by intended school type" loading="lazy">
 </iframe>
-<p><strong>Figure 3.</strong> Stated ethos preference among households with a child not yet in school (n = 56,227), grouped by the type of school they intend to use. Each bar is 100% of the households intending that school type, split by whether they prefer a multi-denominational (green) or denominational (grey) ethos. This isolates demand for change: households intending a denominational school but preferring a multi-denominational one represent unmet demand, while households intending and preferring the same type represent confirmed preference. Percentages are recomputed from raw counts reported in the source, and the base (56,227) can’t be independently checked against the published survey spreadsheet. Source: Department of Education and Youth, Primary School Survey results summary report (June 2026), section 3.1.2, p.&nbsp;14. Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py"><code>make_charts.py</code></a>.</p>
+<p><strong>Figure 5.</strong> Stated ethos preference among households with a child not yet in school (n = 56,227), grouped by the type of school they intend to use. Each bar is 100% of the households intending that school type, split by whether they prefer a multi-denominational (green) or denominational (grey) ethos. This isolates demand for change: households intending a denominational school but preferring a multi-denominational one represent unmet demand, while households intending and preferring the same type represent confirmed preference. Percentages are recomputed from raw counts reported in the source, and the base (56,227) can’t be independently checked against the published survey spreadsheet. Source: Department of Education and Youth, Primary School Survey results summary report (June 2026), section 3.1.2, p.&nbsp;14. Code: <a href="https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py"><code>make_charts.py</code></a>.</p>
 
 
 </section>
