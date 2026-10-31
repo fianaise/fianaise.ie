@@ -5,7 +5,7 @@ listing:
   id: pieces
   contents: pieces.yml
   type: grid
-  grid-columns: 3
+  grid-columns: 2
   image-height: 100%
   fields: [image, title, description]
   sort: false

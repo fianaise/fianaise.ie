@@ -20,6 +20,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA = os.path.join(ROOT, "analysis", "education_equality", "data")
 FIGURES = os.path.join(ROOT, "figures")
 sys.path.insert(0, os.path.join(ROOT, "analysis", "education_equality"))
+import staff_board_data as report  # noqa: E402
 from staff_board_data import INTEND_TO_ENROL_MULTIDENOM  # noqa: E402
 
 # House style. Categorical slots in fixed order, an ordinal blue ramp for
@@ -220,6 +221,87 @@ def survey_intend_vs_preference():
     save(fig, "vis2_intend_vs_preference.html")
 
 
+def survey_numbers():
+    """Eligible, received and valid responses, parents beside staff and boards."""
+    from plotly.subplots import make_subplots
+    groups = [
+        ("Parents and guardians", report.PARENT_ELIGIBLE, report.PARENT_SUBMITTED_RESPONSES,
+         report.PARENT_VALID_RESPONSES),
+        ("Staff and boards of management", report.STAFF_BOARD_TARGET_POPULATION,
+         report.STAFF_BOARD_SUBMITTED_RESPONSES, report.STAFF_BOARD_VALID_RESPONSES),
+    ]
+    # Stacked rather than side by side, so it still reads on a phone.
+    fig = make_subplots(rows=2, cols=1, subplot_titles=[f"<b>{g[0]}</b>" for g in groups],
+                        vertical_spacing=0.16)
+    colours = [CONTEXT, "#8f9aa0", ORANGE]
+    for i, (name, eligible, received, valid) in enumerate(groups, start=1):
+        labels = ["Eligible",
+                  f"Responses received<br><span style='color:{INK_3};font-size:12px'>{received / eligible * 100:.1f}% of eligible</span>",
+                  f"Valid responses<br><span style='color:{INK_3};font-size:12px'>{valid / eligible * 100:.1f}% of eligible</span>"]
+        values = [eligible, received, valid]
+        fig.add_trace(go.Bar(
+            y=labels, x=values, orientation="h", marker=dict(color=colours),
+            text=[f"{v:,}" for v in values], textposition="outside", cliponaxis=False,
+            textfont=dict(color=INK, size=15),
+            hovertemplate=f"{name}<br>%{{y}}: <b>%{{x:,}}</b><extra></extra>",
+        ), row=i, col=1)
+        fig.update_xaxes(axis(range=[0, eligible * 1.3], showticklabels=False), row=i, col=1)
+        fig.update_yaxes(axis(autorange="reversed", tickfont=dict(color=INK_2, size=13)), row=i, col=1)
+    fig.update_layout(base_layout(
+        bargap=0.3, margin=dict(l=10, r=20, t=40, b=10), height=470,
+    ))
+    for a in fig.layout.annotations:
+        a.font = dict(color=INK, size=14, family=FONT)
+        a.x, a.xanchor = 0, "left"
+    save(fig, "survey_numbers.html")
+
+
+def parents_vs_staff_by_county():
+    """Slide 8: parents (two groups) against staff and boards, county by county."""
+    parent = report.TABLE_3_PARENT_MULTIDENOM_BY_COUNTY.set_index("County")
+    staff = report.TABLE_8_STAFF_BOARD_BY_COUNTY.set_index("County")["MultiDenom_pref_pct"]
+    df = parent.join(staff).sort_values("MultiDenom_pref_pct", ascending=False)
+    counties = list(df.index)
+    top = df[["Children_in_school_pct", "Not_yet_in_school_pct"]].max(axis=1)
+    LIGHT_ORANGE, STAFF = "#f4a582", "#22343c"
+
+    fig = go.Figure()
+    # Grey area up to staff and boards, a peach band from there to the higher parent group.
+    fig.add_trace(go.Scatter(x=counties, y=df["MultiDenom_pref_pct"], mode="lines", line=dict(width=0),
+                             fill="tozeroy", fillcolor="rgba(34,52,60,0.08)", hoverinfo="skip", showlegend=False))
+    fig.add_trace(go.Scatter(x=counties, y=top, mode="lines", line=dict(width=0),
+                             fill="tonexty", fillcolor="rgba(235,104,52,0.15)", hoverinfo="skip", showlegend=False))
+    for c in counties:
+        r = df.loc[c]
+        fig.add_trace(go.Scatter(x=[c, c], y=[r["MultiDenom_pref_pct"], max(r["Children_in_school_pct"], r["Not_yet_in_school_pct"])],
+                                 mode="lines", line=dict(color=INK_3, width=1, dash="dot"), hoverinfo="skip", showlegend=False))
+    series = [
+        ("Parents, child not yet in school", "Not_yet_in_school_pct", ORANGE),
+        ("Parents, child in school", "Children_in_school_pct", LIGHT_ORANGE),
+        ("School staff and boards", "MultiDenom_pref_pct", STAFF),
+    ]
+    for name, col, colour in series:
+        fig.add_trace(go.Scatter(
+            x=counties, y=df[col], mode="markers", name=name, showlegend=True,
+            marker=dict(color=colour, size=11, line=dict(color=SURFACE, width=1.5)),
+            hovertemplate=f"<b>%{{x}}</b><br>{name}: %{{y:.1f}}%<extra></extra>",
+        ))
+    staff_nat = float(report.TABLE_7_STAFF_BOARD_NATIONAL.set_index("preference").loc["MULTI-DENOMINATIONAL", "percentage"])
+    parent_nat = float(report.TABLE_2A_NATIONAL_PROPORTIONS.set_index("household_type").loc["ALL", "multidenom_pct"])
+    fig.update_layout(base_layout(
+        title=title("Parents want multi-denominational schools more than staff and boards do",
+                    f"Share preferring a multi-denominational school, by county. Nationally: parents {parent_nat:.0f}%, staff and boards {staff_nat:.1f}%"),
+        showlegend=True, hovermode="closest",
+        legend=dict(orientation="h", x=0, xanchor="left", y=1.0, yanchor="bottom",
+                    font=dict(color=INK, size=13), itemclick=False, itemdoubleclick=False),
+        margin=dict(l=60, r=20, t=120, b=90), height=560,
+        xaxis=axis(tickangle=-45, tickfont=dict(color=INK_2, size=12)),
+        yaxis=axis(range=[0, 65], dtick=10, showgrid=True, gridcolor=GRID, ticksuffix="%",
+                   title=dict(text="Prefer a multi-denominational school", font=dict(color=INK_3, size=12))),
+    ))
+    save(fig, "parents_vs_staff_by_county.html")
+
+
 if __name__ == "__main__":
     marriages()
     census("Roman Catholic", "catholic_religion_stats.html",
@@ -227,3 +309,5 @@ if __name__ == "__main__":
     census("No religion", "no_religion_stats.html",
            "No religion rose in every age group", "Most among people in their twenties and thirties", 40)
     survey_intend_vs_preference()
+    survey_numbers()
+    parents_vs_staff_by_county()

@@ -8,7 +8,7 @@ Code and data behind the religion and Primary School Survey figures. Moved here 
 | `plot_CSO.py`, `make_html.py` | The census and marriage charts (`figures/catholic_religion_stats.html`, `no_religion_stats.html`, `marriage_stats.html`) |
 | `fetch_school_patronage.py`, `plot_ethos_geospatial.py` | The school ethos map (`figures/ethos_current_config.html`) |
 | `plot_survey_geospatial.py` | The school-level survey maps (`figures/map2_current_vs_preference.html`) |
-| `plot_survey_summary.py`, `staff_board_data.py` | The county and summary survey figures (`figures/map9_parents_vs_staff_board.html`, `vis2_intend_vs_preference.html`) |
+| `plot_survey_summary.py`, `staff_board_data.py` | The county and summary survey figures (`figures/parents_vs_staff_by_county.html`, `survey_numbers.html`, `vis2_intend_vs_preference.html`, drawn by `analysis/charts/make_charts.py`) |
 
 The Department of Education spreadsheets the survey and ethos scripts read are not kept in the repo. Download them from the links in each script.
 

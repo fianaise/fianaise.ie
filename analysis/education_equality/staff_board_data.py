@@ -62,6 +62,15 @@ STAFF_BOARD_SUBMITTED_RESPONSES = 32999
 STAFF_BOARD_VALID_RESPONSES     = 32901   # = final analytical base, 39.0% response rate
 STAFF_BOARD_RESPONSE_RATE_PCT   = 39.0
 
+# Parents and guardians: eligible households, responses received and valid
+# responses after validation (one per household, checked by Eircode), from the
+# same report. Parental response rates by county ranged from 31.5% (Louth) to
+# 63.4% (Meath).
+PARENT_ELIGIBLE            = 485482
+PARENT_SUBMITTED_RESPONSES = 241301
+PARENT_VALID_RESPONSES     = 200381   # = Table 2a 'ALL' responses
+PARENT_RESPONSE_RATE_RANGE = (("Louth", 31.5), ("Meath", 63.4))
+
 # ─────────────────────────────────────────────────────────────────────────
 # Table 8 – "Staff and board of management member preferences by county"
 # (Section 4.4, p.29)

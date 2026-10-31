@@ -1,0 +1,26 @@
+---
+title: "Census and marriages"
+description: "How religious affiliation is changing by age, and how people marry."
+aliases:
+  - trends.html
+---
+
+How religious affiliation and marriage in Ireland are changing, from Central Statistics Office data. The code that reproduces every figure is [on GitHub](https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality). The figures are interactive.
+
+Part of [Religion in Ireland](index.qmd). See also [Schools](schools.qmd), the [Primary School Survey 2026](primary-school-survey.qmd) and [the charities landscape](charities.qmd).
+
+## Secular shift: Catholic marriages plummet as civil ceremonies surge
+
+<iframe src="../figures/marriage_stats.html" width="100%" height="600" style="border:0" title="Marriages in Ireland by form of ceremony, 2000 to 2024" loading="lazy"></iframe>
+
+**Figure 1.** Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table [VSA44](https://data.cso.ie/table/VSA44). Code: [`fetch_marriage_cso.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/fetch_marriage_cso.py), [`make_charts.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py).
+
+## Age is no barrier: Catholicism declines as religious non-affiliation increases
+
+<iframe src="../figures/catholic_religion_stats.html" width="100%" height="660" style="border:0" title="Roman Catholic affiliation in Ireland by age group, census 2011, 2016 and 2022" loading="lazy"></iframe>
+
+**Figure 2.** Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was among 25- to 34-year-olds (down 25 points), and the smallest among people aged 85 and over (down 4 points). Data: CSO PxStat table [F5071](https://data.cso.ie/table/F5071).
+
+<iframe src="../figures/no_religion_stats.html" width="100%" height="660" style="border:0" title="No religion in Ireland by age group, census 2011, 2016 and 2022" loading="lazy"></iframe>
+
+**Figure 3.** The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table [F5071](https://data.cso.ie/table/F5071). Code for Figures 2 and 3: [`fetch_religion_cso.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/education_equality/fetch_religion_cso.py), [`make_charts.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py).
