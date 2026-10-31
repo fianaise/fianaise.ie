@@ -35,6 +35,10 @@
 .stat-cards.two {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+.stat-cards.three {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.stat-cards.three .stat-card { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 .stat-card {
   display: flex;
   align-items: center;

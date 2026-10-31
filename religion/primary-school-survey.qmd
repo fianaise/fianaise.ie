@@ -77,7 +77,7 @@ Staff and board results are published nationally and by county, but not school b
 
 ## Parents want multi-denominational education more than staff and boards of management
 
-::: {.stat-cards .two}
+:::: {.stat-cards .three}
 ::: {.stat-card .is-multi}
 ::: {.stat-number}
 34.7%
@@ -86,16 +86,24 @@ Staff and board results are published nationally and by county, but not school b
 **of all staff and board members prefer a multi-denominational ethos**<br>Parents: 45%
 :::
 :::
+::: {.stat-card .is-multi}
+::: {.stat-number}
+31.6%
+:::
+::: {.stat-text}
+**of those at denominational schools**<br>Parents: 40.2%
+:::
+:::
 ::: {.stat-card .is-note}
 ::: {.stat-text}
 **About 10 points below parents**<br>Published nationally and by county; not school by school, for privacy
 :::
 :::
-:::
+::::
 
 <iframe src="../figures/parents_vs_staff_by_county.html" width="100%" height="580" style="border:0" title="Chart: share preferring multi-denominational education by county, parents compared with staff and boards" loading="lazy"></iframe>
 
-**Figure 4.** Share preferring a multi-denominational school in each county: parents of children not yet in school (dark orange), parents of children in school (light orange), and school staff and boards of management (dark). Counties are sorted by the staff and board figure. The shaded band is the gap between staff and boards and parents. Source: results summary report, Tables 3, 7 and 8. Code: [`make_charts.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py).
+**Figure 4.** Share preferring a multi-denominational school in each county: parents of children not yet in school (dark orange), parents of children in school (light orange), and school staff and boards of management (dark). Counties are sorted by the staff and board figure. The shaded band is the gap between staff and boards and parents. Source: results summary report, Tables 3, 7 and 8; the denominational-school figures are from sections 3.1.2 (p. 14) and 4.3 (p. 26). Code: [`make_charts.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_charts.py).
 
 ::: {.callout-note collapse="true"}
 ## How the staff and board of management survey was run
