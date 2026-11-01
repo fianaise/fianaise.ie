@@ -35,18 +35,18 @@
     "text": "How religious affiliation and marriage in Ireland are changing, from Central Statistics Office data. The code that reproduces every figure is on GitHub. The figures are interactive.\nPart of Religion in Ireland. See also Schools, the Primary School Survey 2026 and the charities landscape."
   },
   {
-    "objectID": "religion/census-marriages.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
-    "href": "religion/census-marriages.html#secular-shift-catholic-marriages-plummet-as-civil-ceremonies-surge",
+    "objectID": "religion/census-marriages.html#catholic-marriages-plummet-as-civil-ceremonies-surge",
+    "href": "religion/census-marriages.html#catholic-marriages-plummet-as-civil-ceremonies-surge",
     "title": "Census and marriages",
-    "section": "Secular shift: Catholic marriages plummet as civil ceremonies surge",
-    "text": "Secular shift: Catholic marriages plummet as civil ceremonies surge\n\n\nFigure 1. Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table VSA44. Code: fetch_marriage_cso.py, make_charts.py."
+    "section": "Catholic marriages plummet as civil ceremonies surge",
+    "text": "Catholic marriages plummet as civil ceremonies surge\n\n\nFigure 1. Opposite-sex marriages registered in Ireland by form of ceremony, 2000 to 2024. In 2000, 80% of marriages were Roman Catholic ceremonies and 16% were civil. By 2024 the two were level, at about 33% each, and Humanist ceremonies made up a further 7%. Data: CSO PxStat table VSA44. Code: fetch_marriage_cso.py, make_charts.py."
   },
   {
-    "objectID": "religion/census-marriages.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
-    "href": "religion/census-marriages.html#age-is-no-barrier-catholicism-declines-as-religious-non-affiliation-increases",
+    "objectID": "religion/census-marriages.html#catholicism-declines-as-religious-non-affiliation-increases",
+    "href": "religion/census-marriages.html#catholicism-declines-as-religious-non-affiliation-increases",
     "title": "Census and marriages",
-    "section": "Age is no barrier: Catholicism declines as religious non-affiliation increases",
-    "text": "Age is no barrier: Catholicism declines as religious non-affiliation increases\n\n\nFigure 2. Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was among 25- to 34-year-olds (down 25 points), and the smallest among people aged 85 and over (down 4 points). Data: CSO PxStat table F5071.\n\n\nFigure 3. The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table F5071. Code for Figures 2 and 3: fetch_religion_cso.py, make_charts.py."
+    "section": "Catholicism declines as religious non-affiliation increases",
+    "text": "Catholicism declines as religious non-affiliation increases\n\n\nFigure 2. Roman Catholic affiliation in Ireland by age group, census years 2011, 2016 and 2022. Affiliation declined in every age group. The steepest decline was among 25- to 34-year-olds (down 25 points), and the smallest among people aged 85 and over (down 4 points). Data: CSO PxStat table F5071.\n\n\nFigure 3. The share of people stating no religion, by age group, census years 2011, 2016 and 2022. Data: CSO PxStat table F5071. Code for Figures 2 and 3: fetch_religion_cso.py, make_charts.py."
   },
   {
     "objectID": "data.html",
