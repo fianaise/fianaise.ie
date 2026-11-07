@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "religion/*.qmd"
+    - "cycling/*.qmd"
   resources:
     - CNAME
     - figures/**
@@ -19,6 +20,8 @@ website:
         menu:
           - href: religion/index.qmd
             text: Religion in Ireland
+          - href: cycling/index.qmd
+            text: Cycling infrastructure in Dublin
           - href: https://opentalamh.ie
             text: Open Talamh
       - href: data.qmd

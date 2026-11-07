@@ -1,0 +1,23 @@
+---
+title: "Cycling infrastructure in Dublin"
+description: "Stretches of Dublin's cycle network that aren't what the map says, and what the council plans to do about them."
+listing:
+  id: pieces
+  contents: pieces.yml
+  type: grid
+  grid-columns: 2
+  image-height: 100%
+  fields: [image, title, description]
+  sort: false
+  filter-ui: false
+  sort-ui: false
+---
+
+Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.
+
+This project documents those gaps, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there's news.
+
+:::{#pieces}
+:::
+
+Spotted a gap that should be here? Email [fianaise@proton.me](mailto:fianaise@proton.me) with a location and, if you can, a photo.

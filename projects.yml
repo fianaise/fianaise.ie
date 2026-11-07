@@ -6,3 +6,7 @@
   path: https://opentalamh.ie
   image: images/opentalamh.png
   description: "An open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State."
+- title: "Cycling infrastructure in Dublin"
+  path: cycling/index.qmd
+  image: images/cycling.jpg
+  description: "Stretches of Dublin's cycle network that aren't what the map says, from a 'bike lane' on a shingle beach to a walled lane too narrow for two bikes."
