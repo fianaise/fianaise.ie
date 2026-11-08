@@ -1,0 +1,40 @@
+---
+title: "Stillorgan village: Old Dublin Road still waiting"
+description: "Stillorgan's 2015 movement plan has been built in phases. The Old Dublin Road phase has slipped to 2027, and the plans we've seen don't include a cycle track."
+date: 2026-11-08
+date-format: "D MMMM YYYY"
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd). See also [Lower Kilmacud Road](kilmacud-road-lower.qmd).
+
+## The plan
+
+DLR consulted on the **Stillorgan Village Area Movement Framework Plan** from 28 October to 9 December 2015. It's being built in phases. Phases 1 and 2, on Lower Kilmacud Road between South Avenue and Kilmacud Crokes, are done.
+
+## Phase 4A: Old Dublin Road
+
+Phase 4A covers the Old Dublin Road from St Lawrence's Park to Stillorgan College of Further Education. The council consulted from 21 May to 18 June 2025 and got 125 submissions, and the report was noted in December 2025.
+
+The published plans are for wider footpaths and public realm work. We couldn't find a cycle track in them.
+
+Construction was due to start in the second quarter of 2026. In January 2026 that moved to the first quarter of 2027.
+
+## The rest
+
+Phases 3 and 4B, covering Lower Kilmacud Road, The Hill and the rest of the Old Dublin Road, have no published timing.
+
+## Questions for the council
+
+1. Does Phase 4A include any cycling provision on the Old Dublin Road? If not, why not?
+2. Is the first quarter of 2027 still the start date for Phase 4A?
+3. When will Phases 3 and 4B be designed and consulted on?
+4. How will the Stillorgan village phases connect to the DLR Connector on Lower Kilmacud Road?
+
+The contact is DLR's Active Travel team, [cycling@dlrcoco.ie](mailto:cycling@dlrcoco.ie).
+
+## Sources
+
+- Dún Laoghaire-Rathdown County Council, [Stillorgan Village Area Movement Framework Plan](https://dlrcoco.citizenspace.com/transportation/stillorgan-village-area-movement-framework-plan-20/), consultation October–December 2015.
+- Dún Laoghaire-Rathdown County Council, [Stillorgan Village Urban Framework Plan Phase 4A consultation](https://dlrcoco.citizenspace.com/transportation/stillorgan-village-urban-framework-plan-phase-4a/), May–June 2025, and [news notice](https://www.dlrcoco.ie/news/general-news/public-consultation-stillorgan-village-urban-framework-plan-phase-4a).
+- Cllr Eoin O'Driscoll, [Council update, January 2026](https://cllreoinodriscoll.substack.com/p/council-update-january-2026).
+- IrishCycle, [Landmark Dublin project offering significant cycling connectivity expected to be submitted to planning board soon](https://irishcycle.com/2026/10/06/landmark-dublin-project-offering-significant-cycling-connectivity-expected-to-be-submitted-to-planning-board-soon/), 6 October 2026.

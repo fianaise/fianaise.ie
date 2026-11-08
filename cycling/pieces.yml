@@ -6,6 +6,30 @@
   path: shankill-killiney.qmd
   image: ../images/cycling-shankill-killiney.jpg
   description: "Google Maps routes bikes along a 'separate bike lane' here. On the ground it's a shingle beach."
+- title: "Coastal Mobility Route"
+  path: coastal-mobility-route.qmd
+  image: ../images/cycling-coastal-mobility-route.png
+  description: "Blackrock to Sandycove. Built as a Covid trial in 2020 and backed for a permanent upgrade in 2023, with no construction date yet."
+- title: "Rock Road to Merrion Gates"
+  path: rock-road-merrion-gates.qmd
+  image: ../images/cycling-rock-road-merrion-gates.png
+  description: "The two-way track ends at Trimleston Avenue, the city boundary. Heading north you're back in traffic."
+- title: "Lower Kilmacud Road"
+  path: kilmacud-road-lower.qmd
+  image: ../images/cycling-kilmacud-road-lower.png
+  description: "The cycle lane stops outside Mount Anville Primary. The DLR Connector would fix it, but not before 2027."
+- title: "Dún Laoghaire Central"
+  path: dun-laoghaire-central.qmd
+  image: ../images/cycling-dun-laoghaire-central.png
+  description: "Kill Avenue, Mounttown Road and Glenageary Road Upper. Finished in October 2026; now to check how it works."
+- title: "Blackrock village"
+  path: blackrock-village.qmd
+  image: ../images/cycling-blackrock-village.png
+  description: "Living Streets works run to early 2027. The Main Street contraflow has been reported closed for months."
+- title: "Stillorgan village"
+  path: stillorgan-village.qmd
+  image: ../images/cycling-stillorgan-village.png
+  description: "The Old Dublin Road phase has slipped to 2027, and its plans don't show a cycle track."
 - title: "DLR cycle counters"
   path: dlr-counters.qmd
   image: ../images/cycling-dlr-counters.png

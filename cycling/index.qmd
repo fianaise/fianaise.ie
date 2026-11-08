@@ -15,7 +15,26 @@ listing:
 
 Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.
 
-This project documents those gaps, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there's news.
+This project documents those gaps, and the routes I cycle regularly, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there's news.
+
+## Where things stand
+
+Last checked 8 November 2026.
+
+| Route | Status |
+|---|---|
+| [Blackrock DART laneway](blackrock-dart-laneway.qmd) | Approved 2024, no objections to the land purchase, construction not yet scheduled |
+| [Shankill to Killiney](shankill-killiney.qmd) | Google Maps shows a bike lane on a shingle beach |
+| [Coastal Mobility Route](coastal-mobility-route.qmd) | Still temporary; permanent version backed in 2023, not yet built |
+| [Rock Road to Merrion Gates](rock-road-merrion-gates.qmd) | Built to Trimleston Avenue in 2023; gap to Merrion Gates on the city side |
+| [Lower Kilmacud Road](kilmacud-road-lower.qmd) | DLR Connector due to go for planning; construction 2027–28 |
+| [Dún Laoghaire Central](dun-laoghaire-central.qmd) | Finished October 2026, snagging in November |
+| [Blackrock village](blackrock-village.qmd) | Works until early 2027; contraflow reported closed |
+| [Stillorgan village](stillorgan-village.qmd) | Old Dublin Road phase delayed to 2027 |
+
+How many people cycle each route is on the [DLR cycle counters](dlr-counters.qmd) page, which updates when the council publishes new data.
+
+## Pages
 
 :::{#pieces}
 :::
