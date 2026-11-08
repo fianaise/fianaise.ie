@@ -6,7 +6,7 @@ date-format: "D MMMM YYYY"
 lightbox: true
 ---
 
-Part of [Cycling infrastructure in Dublin](index.qmd). See also [Shankill to Killiney](shankill-killiney.qmd).
+Part of [Cycling in Dublin](index.qmd). See also [Shankill to Killiney](shankill-killiney.qmd).
 
 ## The problem
 

@@ -1,3 +1,7 @@
+- title: "DLR cycle counters"
+  path: dlr-counters.qmd
+  image: ../images/cycling-dlr-counters.png
+  description: "How many people cycle past each of DLR's permanent bike counters, from the council's open data. Updated when new data comes out."
 - title: "Blackrock DART laneway"
   path: blackrock-dart-laneway.qmd
   image: ../images/cycling-blackrock.jpg
@@ -30,7 +34,3 @@
   path: stillorgan-village.qmd
   image: ../images/cycling-stillorgan-village.png
   description: "The Old Dublin Road phase has slipped to 2027, and its plans don't show a cycle track."
-- title: "DLR cycle counters"
-  path: dlr-counters.qmd
-  image: ../images/cycling-dlr-counters.png
-  description: "How many people cycle past each of DLR's permanent bike counters, from the council's open data. Updated when new data comes out."

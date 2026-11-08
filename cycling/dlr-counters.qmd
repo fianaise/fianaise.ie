@@ -4,11 +4,9 @@ description: "How many people cycle past each of Dún Laoghaire-Rathdown County 
 lightbox: false
 ---
 
-Part of [Cycling infrastructure in Dublin](index.qmd). The Seapoint and People's Park counters are on the [Coastal Mobility Route](coastal-mobility-route.qmd), and the Rock Road counters are just south of the [gap at Merrion Gates](rock-road-merrion-gates.qmd). The [Blackrock DART laneway](blackrock-dart-laneway.qmd) page uses both.
+Part of [Cycling in Dublin](index.qmd). The Seapoint and People's Park counters are on the [Coastal Mobility Route](coastal-mobility-route.qmd), and the Rock Road counters are just south of the [gap at Merrion Gates](rock-road-merrion-gates.qmd). The [Blackrock DART laneway](blackrock-dart-laneway.qmd) page uses both.
 
 Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as [open data](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr). This page turns them into charts. It checks for new data every week and updates itself when there is some.
-
-{{< include _dlr-counter-stats.md >}}
 
 ## Where the counters are
 
@@ -41,6 +39,10 @@ Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on
 **Figure 5.** Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. [Open full screen](../figures/cycling_dlr_counter_weekdays.html).
 
 {{< include _dlr-counter-patterns.md >}}
+
+## All counters
+
+{{< include _dlr-counter-stats.md >}}
 
 ## About the data
 
