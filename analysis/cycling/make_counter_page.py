@@ -13,6 +13,8 @@ Usage (from the repo root):
     python3 analysis/cycling/make_counter_page.py
     python3 -I tools/slim_plotly.py figures/cycling_*.html
 """
+import html
+import json
 import os
 import sys
 
@@ -130,17 +132,31 @@ def trends(day):
             line=dict(color=BLUE, width=2), connectgaps=False,
             hovertemplate=f"{label}<br>%{{x|%B %Y}}: <b>%{{y:,.0f}}</b> a day<extra></extra>",
         ))
-    buttons = [dict(label=COUNTERS[k][0], method="update",
-                    args=[{"visible": [j == i for j in range(len(order))]}])
-               for i, k in enumerate(order)]
     fig.update_layout(**base_layout(
-        title=title("Cyclists a day, by month", "Average per day. Pick a counter. Gaps are counter faults."),
+        title=title("Cyclists a day, by month", "Average per day. Gaps are counter faults."),
         xaxis=axis(), yaxis=axis(showgrid=True, gridcolor=GRID, rangemode="tozero", tickformat=","),
-        updatemenus=[dict(buttons=buttons, direction="down", x=0, xanchor="left", y=1.02, yanchor="bottom",
-                          bgcolor="white", bordercolor=GRID, font=dict(color=INK, size=13), showactive=True)],
         margin=dict(l=60, r=30, t=130, b=40),
     ))
-    save(fig, "cycling_dlr_counter_trends.html")
+    # A native <select> rather than a Plotly dropdown: Plotly's menu is clipped
+    # inside the page's iframe and hard to use on phones.
+    options = "".join(f'<option value="{i}">{html.escape(COUNTERS[k][0])}</option>'
+                      for i, k in enumerate(order))
+    picker = f"""
+var gd = document.getElementById('{{plot_id}}');
+var sel = document.createElement('select');
+sel.setAttribute('aria-label', 'Pick a counter');
+sel.innerHTML = {json.dumps(options)};
+sel.style.cssText = 'position:absolute;left:60px;top:78px;z-index:10;font:14px Inter,system-ui,sans-serif;' +
+  'color:{INK};background:#fff;border:1px solid #c9c8c3;border-radius:6px;padding:6px 8px;max-width:calc(100% - 90px);';
+gd.parentNode.style.position = 'relative';
+gd.parentNode.appendChild(sel);
+sel.addEventListener('change', function () {{
+  var n = gd.data.length, v = +sel.value, vis = [];
+  for (var i = 0; i < n; i++) vis.push(i === v);
+  Plotly.restyle(gd, {{visible: vis}});
+}});
+"""
+    save(fig, "cycling_dlr_counter_trends.html", post_script=picker)
 
 
 def stats_md(df, end):

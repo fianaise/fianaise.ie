@@ -66,10 +66,10 @@ def axis(**kw):
     return a
 
 
-def save(fig, name):
+def save(fig, name, post_script=None):
     path = os.path.join(FIGURES, name)
     fig.write_html(path, config=CONFIG, include_plotlyjs=True, full_html=True,
-                   default_width="100%", default_height="100%")
+                   default_width="100%", default_height="100%", post_script=post_script)
     print("wrote", path)
 
 
