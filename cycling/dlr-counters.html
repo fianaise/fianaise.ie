@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../cycling/index.html">
- <span class="dropdown-text">Cycling infrastructure in Dublin</span></a>
+ <span class="dropdown-text">Cycling in Dublin</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://opentalamh.ie">
@@ -170,8 +170,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Part of <a href="../cycling/index.html">Cycling infrastructure in Dublin</a>. The Seapoint and People’s Park counters are on the <a href="../cycling/coastal-mobility-route.html">Coastal Mobility Route</a>, and the Rock Road counters are just south of the <a href="../cycling/rock-road-merrion-gates.html">gap at Merrion Gates</a>. The <a href="../cycling/blackrock-dart-laneway.html">Blackrock DART laneway</a> page uses both.</p>
+<p>Part of <a href="../cycling/index.html">Cycling in Dublin</a>. The Seapoint and People’s Park counters are on the <a href="../cycling/coastal-mobility-route.html">Coastal Mobility Route</a>, and the Rock Road counters are just south of the <a href="../cycling/rock-road-merrion-gates.html">gap at Merrion Gates</a>. The <a href="../cycling/blackrock-dart-laneway.html">Blackrock DART laneway</a> page uses both.</p>
 <p>Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as <a href="https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr">open data</a>. This page turns them into charts. It checks for new data every week and updates itself when there is some.</p>
+<section id="where-the-counters-are" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-counters-are">Where the counters are</h2>
+<iframe src="../figures/cycling_dlr_counter_map.html" width="100%" height="560" style="border:0" title="Map of DLR's bicycle counters, sized by average cyclists a day" loading="lazy">
+</iframe>
+<p><strong>Figure 1.</strong> DLR’s bicycle counters. Where several counters stand together, such as the three on Rock Road, the circle shows their combined total. Hover over or tap a circle for each counter. Data: DLR, <a href="https://data.smartdublin.ie/dataset/bicycle-counter-locations-dlr">counter locations</a> and <a href="https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr">bicycle counts</a> (CC BY). Map tiles: © OpenStreetMap contributors, © CARTO. <a href="../figures/cycling_dlr_counter_map.html">Open full screen</a>.</p>
+</section>
+<section id="busiest-counters" class="level2">
+<h2 class="anchored" data-anchor-id="busiest-counters">Busiest counters</h2>
+<iframe src="../figures/cycling_dlr_counter_ranking.html" width="100%" height="560" style="border:0" title="Average cyclists a day at each DLR counter over the last 12 months" loading="lazy">
+</iframe>
+<p><strong>Figure 2.</strong> Average cyclists per day over the last 12 months, all days of the week. Counters with fewer than 180 working days in that time are left out. <a href="../figures/cycling_dlr_counter_ranking.html">Open full screen</a>.</p>
+</section>
+<section id="each-counter-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="each-counter-over-time">Each counter over time</h2>
+<iframe src="../figures/cycling_dlr_counter_trends.html" width="100%" height="520" style="border:0" title="Monthly average cyclists a day at a chosen DLR counter" loading="lazy">
+</iframe>
+<p><strong>Figure 3.</strong> Average cyclists per day in each month. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. <a href="../figures/cycling_dlr_counter_trends.html">Open full screen</a>.</p>
+</section>
+<section id="time-of-year" class="level2">
+<h2 class="anchored" data-anchor-id="time-of-year">Time of year</h2>
+<iframe src="../figures/cycling_dlr_counter_seasons.html" width="100%" height="520" style="border:0" title="Average cyclists a day in each month of the year at a chosen DLR counter" loading="lazy">
+</iframe>
+<p><strong>Figure 4.</strong> Average cyclists per day in each calendar month, over the last three years of data. Use the menu to pick a counter. <a href="../figures/cycling_dlr_counter_seasons.html">Open full screen</a>.</p>
+</section>
+<section id="day-of-the-week" class="level2">
+<h2 class="anchored" data-anchor-id="day-of-the-week">Day of the week</h2>
+<iframe src="../figures/cycling_dlr_counter_weekdays.html" width="100%" height="520" style="border:0" title="Average cyclists a day on each day of the week at a chosen DLR counter" loading="lazy">
+</iframe>
+<p><strong>Figure 5.</strong> Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. <a href="../figures/cycling_dlr_counter_weekdays.html">Open full screen</a>.</p>
+<p><strong>Days of the week.</strong> On a typical counter the busiest weekdays are Wednesday and Tuesday. Compared with the weekday average, Tuesday is 9% above, Thursday is 2% below and Friday is 17% below.</p>
+<p>Weekends are quieter at most counters, most of all on commuter routes: N11 Stillorgan Road, Montrose (-63%) and N11 before UCD (-60%) compared with weekdays. The exception is People’s Park (+21%), which is busier at weekends.</p>
+<p><strong>Time of year.</strong> All 12 counters are quietest in December or January. Routes along the coast and through parks are busiest in July or August: Seapoint (Coastal Mobility Route) (Jul), People’s Park (Jul), York Road (Aug), Rock Road park path (Jul), Wyattville Road, park gates (Aug). The commuter routes peak in September, when college and school are back: Clonskeagh Road (Sep), Rock Road bus lane (Sep), N11 before UCD (Sep), N11 Stillorgan Road, inbound (Sep). On a typical counter the busiest month has about 2.2 times as many cyclists a day as the quietest.</p>
+</section>
+<section id="all-counters" class="level2">
+<h2 class="anchored" data-anchor-id="all-counters">All counters</h2>
 <p>Data to <strong>30 September 2026</strong>, from 16 counters. Counting started in 2010.</p>
 <table class="table-striped table-hover caption-top table">
 <caption>Average cyclists a day at each DLR counter. A dash means the counter had fewer than 180 working days in that period.</caption>
@@ -325,38 +360,6 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>* Readings at The Metals jump between about 100 and 900 a day from one month to the next since late 2024, which looks like a counter fault. Treat its numbers with caution.</p>
-<section id="where-the-counters-are" class="level2">
-<h2 class="anchored" data-anchor-id="where-the-counters-are">Where the counters are</h2>
-<iframe src="../figures/cycling_dlr_counter_map.html" width="100%" height="560" style="border:0" title="Map of DLR's bicycle counters, sized by average cyclists a day" loading="lazy">
-</iframe>
-<p><strong>Figure 1.</strong> DLR’s bicycle counters. Where several counters stand together, such as the three on Rock Road, the circle shows their combined total. Hover over or tap a circle for each counter. Data: DLR, <a href="https://data.smartdublin.ie/dataset/bicycle-counter-locations-dlr">counter locations</a> and <a href="https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr">bicycle counts</a> (CC BY). Map tiles: © OpenStreetMap contributors, © CARTO. <a href="../figures/cycling_dlr_counter_map.html">Open full screen</a>.</p>
-</section>
-<section id="busiest-counters" class="level2">
-<h2 class="anchored" data-anchor-id="busiest-counters">Busiest counters</h2>
-<iframe src="../figures/cycling_dlr_counter_ranking.html" width="100%" height="560" style="border:0" title="Average cyclists a day at each DLR counter over the last 12 months" loading="lazy">
-</iframe>
-<p><strong>Figure 2.</strong> Average cyclists per day over the last 12 months, all days of the week. Counters with fewer than 180 working days in that time are left out. <a href="../figures/cycling_dlr_counter_ranking.html">Open full screen</a>.</p>
-</section>
-<section id="each-counter-over-time" class="level2">
-<h2 class="anchored" data-anchor-id="each-counter-over-time">Each counter over time</h2>
-<iframe src="../figures/cycling_dlr_counter_trends.html" width="100%" height="520" style="border:0" title="Monthly average cyclists a day at a chosen DLR counter" loading="lazy">
-</iframe>
-<p><strong>Figure 3.</strong> Average cyclists per day in each month. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. <a href="../figures/cycling_dlr_counter_trends.html">Open full screen</a>.</p>
-</section>
-<section id="time-of-year" class="level2">
-<h2 class="anchored" data-anchor-id="time-of-year">Time of year</h2>
-<iframe src="../figures/cycling_dlr_counter_seasons.html" width="100%" height="520" style="border:0" title="Average cyclists a day in each month of the year at a chosen DLR counter" loading="lazy">
-</iframe>
-<p><strong>Figure 4.</strong> Average cyclists per day in each calendar month, over the last three years of data. Use the menu to pick a counter. <a href="../figures/cycling_dlr_counter_seasons.html">Open full screen</a>.</p>
-</section>
-<section id="day-of-the-week" class="level2">
-<h2 class="anchored" data-anchor-id="day-of-the-week">Day of the week</h2>
-<iframe src="../figures/cycling_dlr_counter_weekdays.html" width="100%" height="520" style="border:0" title="Average cyclists a day on each day of the week at a chosen DLR counter" loading="lazy">
-</iframe>
-<p><strong>Figure 5.</strong> Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. <a href="../figures/cycling_dlr_counter_weekdays.html">Open full screen</a>.</p>
-<p><strong>Days of the week.</strong> On a typical counter the busiest weekdays are Wednesday and Tuesday. Compared with the weekday average, Tuesday is 9% above, Thursday is 2% below and Friday is 17% below.</p>
-<p>Weekends are quieter at most counters, most of all on commuter routes: N11 Stillorgan Road, Montrose (-63%) and N11 before UCD (-60%) compared with weekdays. The exception is People’s Park (+21%), which is busier at weekends.</p>
-<p><strong>Time of year.</strong> All 12 counters are quietest in December or January. Routes along the coast and through parks are busiest in July or August: Seapoint (Coastal Mobility Route) (Jul), People’s Park (Jul), York Road (Aug), Rock Road park path (Jul), Wyattville Road, park gates (Aug). The commuter routes peak in September, when college and school are back: Clonskeagh Road (Sep), Rock Road bus lane (Sep), N11 before UCD (Sep), N11 Stillorgan Road, inbound (Sep). On a typical counter the busiest month has about 2.2 times as many cyclists a day as the quietest.</p>
 </section>
 <section id="about-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="about-the-data">About the data</h2>

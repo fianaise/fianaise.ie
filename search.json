@@ -67,7 +67,7 @@
     "href": "cycling/shankill-killiney.html",
     "title": "Shankill to Killiney: a bike lane that’s a beach",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway."
+    "text": "Part of Cycling in Dublin. See also the Blackrock DART laneway."
   },
   {
     "objectID": "cycling/shankill-killiney.html#what-the-map-says",
@@ -109,7 +109,7 @@
     "href": "cycling/kilmacud-road-lower.html",
     "title": "Lower Kilmacud Road: the lane that ends at a school gate",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also Stillorgan village."
+    "text": "Part of Cycling in Dublin. See also Stillorgan village."
   },
   {
     "objectID": "cycling/kilmacud-road-lower.html#the-gap",
@@ -151,7 +151,7 @@
     "href": "cycling/dun-laoghaire-central.html",
     "title": "Dún Laoghaire Central: finished, now does it work?",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin."
+    "text": "Part of Cycling in Dublin."
   },
   {
     "objectID": "cycling/dun-laoghaire-central.html#the-scheme",
@@ -193,7 +193,7 @@
     "href": "cycling/coastal-mobility-route.html",
     "title": "Coastal Mobility Route: six years on, still temporary",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. Usage on this route is tracked on the DLR cycle counters page."
+    "text": "Part of Cycling in Dublin. Usage on this route is tracked on the DLR cycle counters page."
   },
   {
     "objectID": "cycling/coastal-mobility-route.html#whats-there-now",
@@ -235,7 +235,7 @@
     "href": "cycling/blackrock-dart-laneway.html",
     "title": "The Blackrock DART laneway",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also Shankill to Killiney."
+    "text": "Part of Cycling in Dublin. See also Shankill to Killiney."
   },
   {
     "objectID": "cycling/blackrock-dart-laneway.html#the-problem",
@@ -284,7 +284,7 @@
     "href": "cycling/blackrock-village.html",
     "title": "Blackrock village: Living Streets works and the closed contraflow",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway and the Coastal Mobility Route."
+    "text": "Part of Cycling in Dublin. See also the Blackrock DART laneway and the Coastal Mobility Route."
   },
   {
     "objectID": "cycling/blackrock-village.html#the-scheme",
@@ -319,7 +319,7 @@
     "href": "cycling/dlr-counters.html",
     "title": "DLR cycle counters",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. The Seapoint and People’s Park counters are on the Coastal Mobility Route, and the Rock Road counters are just south of the gap at Merrion Gates. The Blackrock DART laneway page uses both.\nDún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as open data. This page turns them into charts. It checks for new data every week and updates itself when there is some.\nData to 30 September 2026, from 16 counters. Counting started in 2010.\n* Readings at The Metals jump between about 100 and 900 a day from one month to the next since late 2024, which looks like a counter fault. Treat its numbers with caution."
+    "text": "Part of Cycling in Dublin. The Seapoint and People’s Park counters are on the Coastal Mobility Route, and the Rock Road counters are just south of the gap at Merrion Gates. The Blackrock DART laneway page uses both.\nDún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as open data. This page turns them into charts. It checks for new data every week and updates itself when there is some."
   },
   {
     "objectID": "cycling/dlr-counters.html#where-the-counters-are",
@@ -357,6 +357,13 @@
     "text": "Day of the week\n\n\nFigure 5. Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. Open full screen.\nDays of the week. On a typical counter the busiest weekdays are Wednesday and Tuesday. Compared with the weekday average, Tuesday is 9% above, Thursday is 2% below and Friday is 17% below.\nWeekends are quieter at most counters, most of all on commuter routes: N11 Stillorgan Road, Montrose (-63%) and N11 before UCD (-60%) compared with weekdays. The exception is People’s Park (+21%), which is busier at weekends.\nTime of year. All 12 counters are quietest in December or January. Routes along the coast and through parks are busiest in July or August: Seapoint (Coastal Mobility Route) (Jul), People’s Park (Jul), York Road (Aug), Rock Road park path (Jul), Wyattville Road, park gates (Aug). The commuter routes peak in September, when college and school are back: Clonskeagh Road (Sep), Rock Road bus lane (Sep), N11 before UCD (Sep), N11 Stillorgan Road, inbound (Sep). On a typical counter the busiest month has about 2.2 times as many cyclists a day as the quietest."
   },
   {
+    "objectID": "cycling/dlr-counters.html#all-counters",
+    "href": "cycling/dlr-counters.html#all-counters",
+    "title": "DLR cycle counters",
+    "section": "All counters",
+    "text": "All counters\nData to 30 September 2026, from 16 counters. Counting started in 2010.\n\nAverage cyclists a day at each DLR counter. A dash means the counter had fewer than 180 working days in that period.\n\n\n\n\n\n\n\n\n\n\nCounter\nArea\nCounts\nCyclists a day, last 12 months\nPrevious 12 months\nChange\n\n\n\n\nClonskeagh Road\nClonskeagh\ntwo-way\n1,773\n1,401\n+27%\n\n\nSeapoint (Coastal Mobility Route)\nDún Laoghaire\ntwo-way, shared path\n1,053\n1,021\n+3%\n\n\nPeople’s Park\nDún Laoghaire\ntwo-way, shared path\n794\n836\n-5%\n\n\nN11 Stillorgan Road, Montrose\nStillorgan Road\ntwo-way cycle track\n656\n–\n–\n\n\nRock Road cycle track\nBooterstown\ncycle track (inbound only before 2026)\n630\n620\n+2%\n\n\nRock Road park path\nBooterstown\ntwo-way, shared path\n540\n522\n+3%\n\n\nRock Road bus lane\nBooterstown\none-way\n454\n484\n-6%\n\n\nN11 before UCD\nStillorgan Road\ntwo-way\n445\n447\n0%\n\n\nN11 Stillorgan Road, inbound\nStillorgan Road\ninbound\n382\n369\n+4%\n\n\nThe Metals, Glenageary DART*\nGlenageary\ntwo-way, shared path\n176\n619\n-72%\n\n\nWyattville Road, park gates\nLoughlinstown\ntwo-way, shared path\n82\n–\n–\n\n\nWyattville Road, towards N11\nLoughlinstown\none-way\n71\n64\n+11%\n\n\nWyattville Road, from N11\nLoughlinstown\none-way\n69\n62\n+11%\n\n\nYork Road\nDún Laoghaire\ntwo-way\n–\n776\n–\n\n\nGrange Road\nRathfarnham\none-way\n–\n227\n–\n\n\nWyattville Road, steps (closed)\nLoughlinstown\ntwo-way, shared path\n–\n–\n–\n\n\n\n* Readings at The Metals jump between about 100 and 900 a day from one month to the next since late 2024, which looks like a counter fault. Treat its numbers with caution."
+  },
+  {
     "objectID": "cycling/dlr-counters.html#about-the-data",
     "href": "cycling/dlr-counters.html#about-the-data",
     "title": "DLR cycle counters",
@@ -366,30 +373,23 @@
   {
     "objectID": "cycling/index.html",
     "href": "cycling/index.html",
-    "title": "Cycling infrastructure in Dublin",
+    "title": "Cycling in Dublin",
     "section": "",
-    "text": "Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.\nThis project documents those gaps, and the routes I cycle regularly, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there’s news."
+    "text": "The DLR cycle counters page charts every one of the council’s permanent bike counters, by month, by time of year and by day of the week, and updates itself when the council publishes new data.\nSome of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.\nThis project documents those gaps, and the routes I cycle regularly, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there’s news."
   },
   {
     "objectID": "cycling/index.html#where-things-stand",
     "href": "cycling/index.html#where-things-stand",
-    "title": "Cycling infrastructure in Dublin",
+    "title": "Cycling in Dublin",
     "section": "Where things stand",
-    "text": "Where things stand\nLast checked 8 November 2026.\n\n\n\nRoute\nStatus\n\n\n\n\nBlackrock DART laneway\nApproved 2024, no objections to the land purchase, construction not yet scheduled\n\n\nShankill to Killiney\nGoogle Maps shows a bike lane on a shingle beach\n\n\nCoastal Mobility Route\nStill temporary; permanent version backed in 2023, not yet built\n\n\nRock Road to Merrion Gates\nBuilt to Trimleston Avenue in 2023; gap to Merrion Gates on the city side\n\n\nLower Kilmacud Road\nDLR Connector due to go for planning; construction 2027–28\n\n\nDún Laoghaire Central\nFinished October 2026, snagging in November\n\n\nBlackrock village\nWorks until early 2027; contraflow reported closed\n\n\nStillorgan village\nOld Dublin Road phase delayed to 2027\n\n\n\nHow many people cycle each route is on the DLR cycle counters page, which updates when the council publishes new data."
-  },
-  {
-    "objectID": "cycling/index.html#pages",
-    "href": "cycling/index.html#pages",
-    "title": "Cycling infrastructure in Dublin",
-    "section": "Pages",
-    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nBlackrock DART laneway\n\n\nA walled lane about 1.2 metres wide on the Coastal Mobility Route. A wider replacement was approved in 2024, but work has not started.\n\n\n\n\n\n\n\n\n\n\n\n\nShankill to Killiney\n\n\nGoogle Maps routes bikes along a ‘separate bike lane’ here. On the ground it’s a shingle beach.\n\n\n\n\n\n\n\n\n\n\n\n\nCoastal Mobility Route\n\n\nBlackrock to Sandycove. Built as a Covid trial in 2020 and backed for a permanent upgrade in 2023, with no construction date yet.\n\n\n\n\n\n\n\n\n\n\n\n\nRock Road to Merrion Gates\n\n\nThe two-way track ends at Trimleston Avenue, the city boundary. Heading north you’re back in traffic.\n\n\n\n\n\n\n\n\n\n\n\n\nLower Kilmacud Road\n\n\nThe cycle lane stops outside Mount Anville Primary. The DLR Connector would fix it, but not before 2027.\n\n\n\n\n\n\n\n\n\n\n\n\nDún Laoghaire Central\n\n\nKill Avenue, Mounttown Road and Glenageary Road Upper. Finished in October 2026; now to check how it works.\n\n\n\n\n\n\n\n\n\n\n\n\nBlackrock village\n\n\nLiving Streets works run to early 2027. The Main Street contraflow has been reported closed for months.\n\n\n\n\n\n\n\n\n\n\n\n\nStillorgan village\n\n\nThe Old Dublin Road phase has slipped to 2027, and its plans don’t show a cycle track.\n\n\n\n\n\n\n\n\n\n\n\n\nDLR cycle counters\n\n\nHow many people cycle past each of DLR’s permanent bike counters, from the council’s open data. Updated when new data comes out.\n\n\n\n\n\nNo matching items\n\nSpotted a gap that should be here? Email fianaise@proton.me with a location and, if you can, a photo."
+    "text": "Where things stand\nLast checked 8 November 2026.\n\n\n\nRoute\nStatus\n\n\n\n\nBlackrock DART laneway\nApproved 2024, no objections to the land purchase, construction not yet scheduled\n\n\nShankill to Killiney\nGoogle Maps shows a bike lane on a shingle beach\n\n\nCoastal Mobility Route\nStill temporary; permanent version backed in 2023, not yet built\n\n\nRock Road to Merrion Gates\nBuilt to Trimleston Avenue in 2023; gap to Merrion Gates on the city side\n\n\nLower Kilmacud Road\nDLR Connector due to go for planning; construction 2027–28\n\n\nDún Laoghaire Central\nFinished October 2026, snagging in November\n\n\nBlackrock village\nWorks until early 2027; contraflow reported closed\n\n\nStillorgan village\nOld Dublin Road phase delayed to 2027\n\n\n\nHow many people cycle each route is on the DLR cycle counters page, which updates when the council publishes new data.\nSpotted a gap that should be here? Email fianaise@proton.me with a location and, if you can, a photo."
   },
   {
     "objectID": "cycling/rock-road-merrion-gates.html",
     "href": "cycling/rock-road-merrion-gates.html",
     "title": "Rock Road: the cycle track that stops at the county boundary",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. Usage here is tracked on the DLR cycle counters page. See also the Coastal Mobility Route."
+    "text": "Part of Cycling in Dublin. Usage here is tracked on the DLR cycle counters page. See also the Coastal Mobility Route."
   },
   {
     "objectID": "cycling/rock-road-merrion-gates.html#what-was-built",
@@ -431,7 +431,7 @@
     "href": "cycling/stillorgan-village.html",
     "title": "Stillorgan village: Old Dublin Road still waiting",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also Lower Kilmacud Road."
+    "text": "Part of Cycling in Dublin. See also Lower Kilmacud Road."
   },
   {
     "objectID": "cycling/stillorgan-village.html#the-plan",
@@ -480,7 +480,7 @@
     "href": "index.html#projects",
     "title": "Fianaise",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\n\n\n\n\n\n\n\nCycling infrastructure in Dublin\n\n\nStretches of Dublin’s cycle network that aren’t what the map says, from a ‘bike lane’ on a shingle beach to a walled lane too narrow for two bikes.\n\n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\n\n\n\n\n\n\n\nCycling in Dublin\n\n\nHow many people cycle Dublin’s southside routes, from the council’s own counters, and the stretches of the network that aren’t what the map says.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "religion/charities.html",
