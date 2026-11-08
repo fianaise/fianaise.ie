@@ -1,0 +1,363 @@
+{
+  "type" : "FeatureCollection",
+  "crs" : {
+    "type" : "name",
+    "properties" : {
+      "name" : "EPSG:2157"
+    }
+  },
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 0,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          725164.5,
+          727314
+        ]
+      },
+      "properties" : {
+        "FID" : 0,
+        "SITES" : "The Metals, Glenageary Dart Station",
+        "EASTING" : 725164.5,
+        "NORTHING" : 727314,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.281353220500002,
+        "Long" : -6.1230367723699999,
+        "Date_of_op" : 1290556800000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          720274.09020000044,
+          730174.01249999925
+        ]
+      },
+      "properties" : {
+        "FID" : 1,
+        "SITES" : "Rock Road Totem",
+        "EASTING" : 720274.09019999998,
+        "NORTHING" : 730174.01249999995,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.3081747867,
+        "Long" : -6.1952497167400002,
+        "Date_of_op" : 1331078400000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          720240.61340000015,
+          730216.65709999949
+        ]
+      },
+      "properties" : {
+        "FID" : 2,
+        "SITES" : "Rock Road Bus lane",
+        "EASTING" : 720240.61340000003,
+        "NORTHING" : 730216.65709999995,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.308565439500001,
+        "Long" : -6.1957356190599997,
+        "Date_of_op" : 1327449600000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          719103,
+          729946
+        ]
+      },
+      "properties" : {
+        "FID" : 3,
+        "SITES" : "N11 Stillorgan Road Totem",
+        "EASTING" : 719103,
+        "NORTHING" : 729946,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.306391129300003,
+        "Long" : -6.2128984304100001,
+        "Date_of_op" : 1294876800000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          719083,
+          730004
+        ]
+      },
+      "properties" : {
+        "FID" : 4,
+        "SITES" : "N11 Montrose cycle track",
+        "EASTING" : 719083,
+        "NORTHING" : 730004,
+        "Type" : "cyclists",
+        "Info" : "2 way",
+        "Lat" : 53.3069166151,
+        "Long" : -6.2131766062100002,
+        "Date_of_op" : 1327449600000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          717494,
+          729899
+        ]
+      },
+      "properties" : {
+        "FID" : 5,
+        "SITES" : "Clonskeagh Road Totem",
+        "EASTING" : 717494,
+        "NORTHING" : 729899,
+        "Type" : "cyclists",
+        "Info" : "2 way",
+        "Lat" : 53.306328090800001,
+        "Long" : -6.2370457359199998,
+        "Date_of_op" : 1336003200000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          722595.24349999987,
+          729046.25549999997
+        ]
+      },
+      "properties" : {
+        "FID" : 6,
+        "SITES" : "Dun Laogaire @ Seapoint Beach",
+        "EASTING" : 722595.24349999998,
+        "NORTHING" : 729046.25549999997,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.297513000000002,
+        "Long" : -6.1608749999999999,
+        "Date_of_op" : 1598918400000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          714844.27489999961,
+          727619.91200000048
+        ]
+      },
+      "properties" : {
+        "FID" : 7,
+        "SITES" : "Grange Road Totem",
+        "EASTING" : 714844.27489999996,
+        "NORTHING" : 727619.91200000001,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.286436000000002,
+        "Long" : -6.2776079999999999,
+        "Date_of_op" : 1411689600000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          724565.94149999972,
+          723889.57530000061
+        ]
+      },
+      "properties" : {
+        "FID" : 8,
+        "SITES" : "Wyattville Rd - Bicycles From N11",
+        "EASTING" : 724565.94149999996,
+        "NORTHING" : 723889.57530000003,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.250734999999999,
+        "Long" : -6.1333479999999998,
+        "Date_of_op" : 1519344000000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          724571.66390000004,
+          723851.98379999958
+        ]
+      },
+      "properties" : {
+        "FID" : 9,
+        "SITES" : "Wyattville Rd - Bicycles Towards N11",
+        "EASTING" : 724571.66390000004,
+        "NORTHING" : 723851.98380000005,
+        "Type" : "cyclists",
+        "Info" : "1 way",
+        "Lat" : 53.250396000000002,
+        "Long" : -6.1332769999999996,
+        "Date_of_op" : 1526256000000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          724753.35059999954,
+          728436.87680000067
+        ]
+      },
+      "properties" : {
+        "FID" : 10,
+        "SITES" : "Dun Laoghaire @ Peoples Park",
+        "EASTING" : 724753.35060000001,
+        "NORTHING" : 728436.87679999997,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.291536000000001,
+        "Long" : -6.1287580000000004,
+        "Date_of_op" : 1598918400000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          723814.04860000033,
+          728926.82469999976
+        ]
+      },
+      "properties" : {
+        "FID" : 11,
+        "SITES" : "Dun Laoghaire @ York Road",
+        "EASTING" : 723814.04859999998,
+        "NORTHING" : 728926.8247,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.296157000000001,
+        "Long" : -6.1426480000000003,
+        "Date_of_op" : 1598832000000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          719282.92819999997,
+          729754.66750000045
+        ]
+      },
+      "properties" : {
+        "FID" : 12,
+        "SITES" : "N11 Before UCD",
+        "EASTING" : 719282.92819999997,
+        "NORTHING" : 729754.66749999998,
+        "Type" : "cyclists",
+        "Info" : "2 way",
+        "Lat" : 53.304631999999998,
+        "Long" : -6.2102719999999998,
+        "Date_of_op" : 1623715200000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          724591.66339999996,
+          723942.68349999934
+        ]
+      },
+      "properties" : {
+        "FID" : 13,
+        "SITES" : "Wyattville Rd At Park Gates",
+        "EASTING" : 724591.66339999996,
+        "NORTHING" : 723942.68350000004,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.251206000000003,
+        "Long" : -6.1329419999999999,
+        "Date_of_op" : 1519344000000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          724622.57760000043,
+          723937.59060000069
+        ]
+      },
+      "properties" : {
+        "FID" : 14,
+        "SITES" : "Wyattville Road At Steps",
+        "EASTING" : 724622.57759999996,
+        "NORTHING" : 723937.5906,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.251153000000002,
+        "Long" : -6.1324810000000003,
+        "Date_of_op" : 1519344000000
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          720237.5,
+          730245.5
+        ]
+      },
+      "properties" : {
+        "FID" : 15,
+        "SITES" : "Rock Road Park (new counter)",
+        "EASTING" : 720237.5,
+        "NORTHING" : 730245.5,
+        "Type" : "cyclists and pedestrians",
+        "Info" : "2 way",
+        "Lat" : 53.308825228000003,
+        "Long" : -6.1957713855099996,
+        "Date_of_op" : 1327363200000
+      }
+    }
+  ]
+}
