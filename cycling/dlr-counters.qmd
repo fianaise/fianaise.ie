@@ -30,9 +30,6 @@ Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on
 
 ## About the data
 
-- **What's counted.** Most counters count bikes only. Where a counter sits on a shared path, DLR publishes the bike count separately. One-way counters only see one direction, so they show roughly half the traffic of a two-way counter on the same road.
-- **Faults.** Counters break, lose power or get their batteries changed, which shows up as days of zero or near zero. Days with fewer than 22 hours of data, a total of zero, or a total under a quarter of that counter's median over the surrounding four weeks are left out. Months with fewer than 10 good days are left blank.
-- **Updates.** DLR updates the dataset roughly monthly, and sometimes publishes a year's counts in one go. A weekly check downloads any new files and redraws this page.
-- **Code and data.** [`fetch_cycle_counts.py`](https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_cycle_counts.py) downloads the counts. [`make_counter_page.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/cycling/make_counter_page.py) draws this page. The monthly averages and summary are in [`analysis/cycling/data`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/cycling/data) as CSV.
+**Code and data.** [`fetch_cycle_counts.py`](https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_cycle_counts.py) downloads the counts. [`make_counter_page.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/cycling/make_counter_page.py) draws this page. The monthly averages and summary are in [`analysis/cycling/data`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/cycling/data) as CSV.
 
 Source: Dún Laoghaire-Rathdown County Council, [Bicycle Counts DLR](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr) and [Bicycle/Pedestrian Counter Locations DLR](https://data.smartdublin.ie/dataset/bicycle-counter-locations-dlr), via Smart Dublin, Creative Commons Attribution.
