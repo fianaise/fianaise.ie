@@ -34,10 +34,11 @@ def main():
         r = requests.get(API, params={"id": ds}, headers=HEADERS, timeout=60)
         r.raise_for_status()
         for res in r.json()["result"]["resources"]:
-            if (res.get("format") or "").lower() not in FORMATS:
-                continue
             name = os.path.basename(urlparse(res["url"]).path)
-            if not name:
+            fmt = (res.get("format") or "").lower()
+            ext = name.rsplit(".", 1)[-1].lower() if "." in name else ""
+            if not name or not ({fmt, ext} & FORMATS or "csv" in fmt):
+                print("skipped", res.get("name"), fmt, res["url"])
                 continue
             body = requests.get(res["url"], headers=HEADERS, timeout=300)
             body.raise_for_status()
