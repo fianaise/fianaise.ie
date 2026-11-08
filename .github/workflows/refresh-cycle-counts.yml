@@ -1,22 +1,28 @@
-# Download DLR's open bicycle counter data from Smart Dublin.
+# Keep the cycling pages up to date with DLR's open bicycle counter data.
 #
-# On main (monthly, or by hand from the Actions tab) it opens a pull request
-# when the council has published new counts. On any other branch, a push that
-# changes the fetch script commits the data straight back to that branch.
+# Every Monday (or by hand from the Actions tab) this downloads DLR's counts
+# from Smart Dublin. If any file is new or changed, it redraws the cycling
+# charts, commits the data and figures to the branch it ran on, and, on main,
+# republishes the site. (A push made by this workflow doesn't start the
+# "Publish site" workflow, so it publishes itself.)
 on:
   schedule:
-    - cron: "0 6 3 * *"
+    - cron: "0 6 * * 1"
   workflow_dispatch:
   push:
     paths:
       - "tools/fetch_cycle_counts.py"
+      - "analysis/cycling/*.py"
       - ".github/workflows/refresh-cycle-counts.yml"
 
 name: Refresh cycle counts
 
 permissions:
   contents: write
-  pull-requests: write
+
+concurrency:
+  group: refresh-cycle-counts-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -26,21 +32,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
-      - run: python3 tools/fetch_cycle_counts.py
-      - name: Commit to this branch
-        if: github.ref != 'refs/heads/main'
+      - run: pip install requests pandas plotly==7.1.0
+      - name: Fetch counts
+        id: fetch
+        run: |
+          python3 tools/fetch_cycle_counts.py
+          if [ -n "$(git status --porcelain analysis/cycling/data/raw)" ] || [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Redraw charts
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          python3 analysis/cycling/make_counter_page.py
+          python3 analysis/cycling/make_cycling_charts.py
+          python3 -I tools/slim_plotly.py figures/cycling_*.html
+      - name: Commit
+        id: commit
+        if: steps.fetch.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analysis/cycling/data/raw
-          git diff --cached --quiet || git commit -m "Update DLR cycle counter data" && git push
-      - uses: peter-evans/create-pull-request@v7
-        if: github.ref == 'refs/heads/main'
+          git add analysis/cycling/data figures/cycling_*.html cycling/_dlr-counter-stats.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed"
+          else
+            git commit -m "Update DLR cycle counter data and charts"
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: quarto-dev/quarto-actions/setup@v2
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
+      - uses: quarto-dev/quarto-actions/publish@v2
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
         with:
-          branch: data/cycle-counts
-          delete-branch: true
-          title: "Update DLR cycle counter data"
-          commit-message: "Update DLR cycle counter data"
-          body: DLR published new or changed bicycle counter data on Smart Dublin.
-          add-paths: analysis/cycling/data/raw/*
+          target: gh-pages

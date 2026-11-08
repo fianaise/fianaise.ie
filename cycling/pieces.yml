@@ -6,3 +6,7 @@
   path: shankill-killiney.qmd
   image: ../images/cycling-shankill-killiney.jpg
   description: "Google Maps routes bikes along a 'separate bike lane' here. On the ground it's a shingle beach."
+- title: "DLR cycle counters"
+  path: dlr-counters.qmd
+  image: ../images/cycling-dlr-counters.png
+  description: "How many people cycle past each of DLR's permanent bike counters, from the council's open data. Updated when new data comes out."
