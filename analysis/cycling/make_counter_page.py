@@ -5,6 +5,9 @@ writes:
   figures/cycling_dlr_counter_map.html      map of counters, sized by use
   figures/cycling_dlr_counter_ranking.html  average cyclists a day, last 12 months
   figures/cycling_dlr_counter_trends.html   monthly averages, one counter at a time
+  figures/cycling_dlr_counter_seasons.html  average by month of the year
+  figures/cycling_dlr_counter_weekdays.html average by day of the week
+  cycling/_dlr-counter-patterns.md          sentences on the weekly and yearly patterns
   cycling/_dlr-counter-stats.md             data date and the summary table
   analysis/cycling/data/dlr_counter_*.csv   the numbers behind them
 
@@ -26,7 +29,7 @@ sys.path.insert(0, HERE)
 from dlr_counts import COUNTERS, ROOT, clean_daily, load_hourly  # noqa: E402
 
 sys.path.insert(0, os.path.join(ROOT, "analysis", "charts"))
-from make_charts import BLUE, GRID, INK, INK_2, INK_3, axis, base_layout, save, title  # noqa: E402
+from make_charts import BLUE, GRID, ORANGE, INK, INK_2, INK_3, axis, base_layout, save, title  # noqa: E402
 
 OUT = os.path.join(ROOT, "analysis", "cycling", "data")
 STATS = os.path.join(ROOT, "cycling", "_dlr-counter-stats.md")
@@ -118,6 +121,30 @@ def counter_map(df, end):
     save(fig, "cycling_dlr_counter_map.html")
 
 
+def picker_script(order):
+    """A native <select> that shows one trace at a time.
+
+    Used rather than a Plotly dropdown, whose menu is clipped inside the
+    page's iframe and hard to use on phones."""
+    options = "".join(f'<option value="{i}">{html.escape(COUNTERS[k][0])}</option>'
+                      for i, k in enumerate(order))
+    return f"""
+var gd = document.getElementById('{{plot_id}}');
+var sel = document.createElement('select');
+sel.setAttribute('aria-label', 'Pick a counter');
+sel.innerHTML = {json.dumps(options)};
+sel.style.cssText = 'position:absolute;left:60px;top:78px;z-index:10;font:14px Inter,system-ui,sans-serif;' +
+  'color:{INK};background:#fff;border:1px solid #c9c8c3;border-radius:6px;padding:6px 8px;max-width:calc(100% - 90px);';
+gd.parentNode.style.position = 'relative';
+gd.parentNode.appendChild(sel);
+sel.addEventListener('change', function () {{
+  var n = gd.data.length, v = +sel.value, vis = [];
+  for (var i = 0; i < n; i++) vis.push(i === v);
+  Plotly.restyle(gd, {{visible: vis}});
+}});
+"""
+
+
 def trends(day):
     m = day.resample("MS").mean().where(day.resample("MS").count() >= MIN_MONTH).round()
     m = m[[k for k in COUNTERS if m[k].notna().any()]]
@@ -137,26 +164,119 @@ def trends(day):
         xaxis=axis(), yaxis=axis(showgrid=True, gridcolor=GRID, rangemode="tozero", tickformat=","),
         margin=dict(l=60, r=30, t=130, b=40),
     ))
-    # A native <select> rather than a Plotly dropdown: Plotly's menu is clipped
-    # inside the page's iframe and hard to use on phones.
-    options = "".join(f'<option value="{i}">{html.escape(COUNTERS[k][0])}</option>'
-                      for i, k in enumerate(order))
-    picker = f"""
-var gd = document.getElementById('{{plot_id}}');
-var sel = document.createElement('select');
-sel.setAttribute('aria-label', 'Pick a counter');
-sel.innerHTML = {json.dumps(options)};
-sel.style.cssText = 'position:absolute;left:60px;top:78px;z-index:10;font:14px Inter,system-ui,sans-serif;' +
-  'color:{INK};background:#fff;border:1px solid #c9c8c3;border-radius:6px;padding:6px 8px;max-width:calc(100% - 90px);';
-gd.parentNode.style.position = 'relative';
-gd.parentNode.appendChild(sel);
-sel.addEventListener('change', function () {{
-  var n = gd.data.length, v = +sel.value, vis = [];
-  for (var i = 0; i < n; i++) vis.push(i === v);
-  Plotly.restyle(gd, {{visible: vis}});
-}});
-"""
-    save(fig, "cycling_dlr_counter_trends.html", post_script=picker)
+    save(fig, "cycling_dlr_counter_trends.html", post_script=picker_script(order))
+
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+SEASON_YEARS = 3  # years of data averaged in the time-of-year chart
+
+
+def busiest_first(table):
+    """Counters with data in every column, busiest overall first."""
+    table = table[[k for k in table.columns if table[k].notna().all()]]
+    return table, table.mean().sort_values(ascending=False).index.tolist()
+
+
+def bar_picker(table, labels, colours, name, chart_title, subtitle, hover):
+    table, order = busiest_first(table)
+    fig = go.Figure()
+    for i, key in enumerate(order):
+        label = COUNTERS[key][0]
+        fig.add_trace(go.Bar(
+            x=labels, y=table[key].values, name=label, visible=(i == 0), marker_color=colours,
+            hovertemplate=f"{label}<br>{hover}: <b>%{{y:,.0f}}</b> a day<extra></extra>",
+        ))
+    fig.update_layout(**base_layout(
+        title=title(chart_title, subtitle),
+        xaxis=axis(type="category"), yaxis=axis(showgrid=True, gridcolor=GRID, rangemode="tozero", tickformat=","),
+        margin=dict(l=60, r=30, t=130, b=40), bargap=0.25, showlegend=False,
+    ))
+    save(fig, name, post_script=picker_script(order))
+    return table, order
+
+
+def seasons(day):
+    end = day.index.max()
+    window = day[end - pd.DateOffset(years=SEASON_YEARS) + pd.Timedelta(days=1):end]
+    good = window.groupby(window.index.month).count()
+    table = window.groupby(window.index.month).mean().where(good >= MIN_MONTH * SEASON_YEARS // 2).round()
+    table = table.reindex(range(1, 13))
+    start = end - pd.DateOffset(years=SEASON_YEARS) + pd.Timedelta(days=1)
+    table, order = bar_picker(
+        table, MONTHS, BLUE, "cycling_dlr_counter_seasons.html", "Cyclists a day, by time of year",
+        f"Average per day, {start:%b %Y} to {end:%b %Y}.", "%{x}")
+    out = table[order].rename(columns={k: COUNTERS[k][0] for k in order})
+    out.index = MONTHS
+    out.to_csv(os.path.join(OUT, "dlr_counter_by_month_of_year.csv"), index_label="month")
+    return out
+
+
+def weekdays(day):
+    end = day.index.max()
+    last = day[end - pd.Timedelta(days=364):end]
+    good = last.groupby(last.index.dayofweek).count()
+    table = last.groupby(last.index.dayofweek).mean().where(good >= MIN_DAYS // 7).round()
+    table = table.reindex(range(7))
+    colours = [BLUE] * 5 + [ORANGE] * 2
+    table, order = bar_picker(
+        table, DAYS, colours, "cycling_dlr_counter_weekdays.html", "Cyclists a day, by day of the week",
+        f"Average per day, 12 months to {end:%-d %B %Y}. Weekends in orange.", "%{x}")
+    out = table[order].rename(columns={k: COUNTERS[k][0] for k in order})
+    out.index = DAYS
+    out.to_csv(os.path.join(OUT, "dlr_counter_by_day_of_week.csv"), index_label="day")
+    return out
+
+
+def patterns_md(season, week):
+    """A few sentences on the patterns, regenerated with the data."""
+    keep = [c for c in week.columns if c not in {COUNTERS[k][0] for k in NOTES}]
+    week, season = week[keep], season[[c for c in season.columns if c not in {COUNTERS[k][0] for k in NOTES}]]
+    full = dict(zip(DAYS, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]))
+    wk = week.loc[DAYS[:5]] / week.loc[DAYS[:5]].mean()
+    typical = wk.median(axis=1)
+    order = typical.sort_values(ascending=False).index
+
+    def vs(d):
+        p = round((typical[d] - 1) * 100)
+        return "about average" if p == 0 else (f"{p}% above" if p > 0 else f"{-p}% below")
+
+    weekend = week.loc[["Sat", "Sun"]].mean() / week.loc[DAYS[:5]].mean() - 1
+    busier = weekend[weekend > 0].sort_values(ascending=False)
+    quieter = weekend.sort_values().head(2)
+    peak = season.idxmax()
+    low = season.idxmin()
+    winter = int(low.isin(["Dec", "Jan"]).sum())
+    ratio = (season.max() / season.min()).median()
+    n = week.shape[1]
+
+    def names_month(peaks, months):
+        hit = peaks[peaks.isin(months)]
+        return ", ".join(f"{c} ({m})" for c, m in hit.items()) or "none this year"
+
+    def names(series):
+        return " and ".join(f"{c} ({v:+.0%})" for c, v in series.items())
+
+    lines = [
+        f"**Days of the week.** On a typical counter the busiest weekdays are {full[order[0]]} and "
+        f"{full[order[1]]}. Compared with the weekday average, Tuesday is {vs('Tue')}, Thursday is "
+        f"{vs('Thu')} and Friday is {vs('Fri')}.",
+        "",
+        f"Weekends are quieter at most counters, most of all on commuter routes: {names(quieter)} "
+        f"compared with weekdays. "
+        + (f"The exception{'s are' if len(busier) > 1 else ' is'} {names(busier)}, "
+           f"which {'are' if len(busier) > 1 else 'is'} busier at weekends." if len(busier) else ""),
+        "",
+        f"**Time of year.** {f'All {n} counters are' if winter == n else f'{winter} of the {n} counters are'} "
+        f"quietest in December or January. Routes along the coast and through parks are busiest in July or "
+        f"August: {names_month(peak, ['Jul', 'Aug'])}. The commuter routes peak in September, when college "
+        f"and school are back: {names_month(peak, ['Sep'])}. "
+        f"On a typical counter the busiest month has about {ratio:.1f} times as many cyclists a day "
+        f"as the quietest.",
+        "",
+    ]
+    with open(os.path.join(ROOT, "cycling", "_dlr-counter-patterns.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
 
 
 def stats_md(df, end):
@@ -193,6 +313,7 @@ def main():
     ranking(df, end)
     counter_map(df, end)
     trends(day)
+    patterns_md(seasons(day), weekdays(day))
     stats_md(df, end)
     print(df[["counter", "avg_last_12m", "avg_prev_12m", "change_pct", "good_days_last_12m"]].to_string(index=False))
 
