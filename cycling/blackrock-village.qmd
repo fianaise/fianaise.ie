@@ -1,0 +1,37 @@
+---
+title: "Blackrock village: Living Streets works and the closed contraflow"
+description: "Blackrock's Covid-era layout is being made permanent, with works due to finish in early 2027. Meanwhile the contraflow cycle lane through the village has been reported closed for months."
+date: 2026-11-08
+date-format: "D MMMM YYYY"
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd). See also the [Blackrock DART laneway](blackrock-dart-laneway.qmd) and the [Coastal Mobility Route](coastal-mobility-route.qmd).
+
+## The scheme
+
+In 2020 Blackrock Main Street got a temporary layout with more space for walking and a southbound contraflow cycle lane outside the library. The contraflow links the village to Maretimo Villas and on to the Coastal Mobility Route, so you can ride south through the village without going round the one-way system.
+
+The council's **Living Streets: Blackrock Village** scheme makes that layout permanent. Consultation closed on 10 June 2023. Clonmel Enterprises won the contract, and works started in October 2025. It costs about €6.3 million excluding VAT, of which more than €3 million is from the NTA. Substantial completion is expected in the first quarter of 2027.
+
+## During the works
+
+A reader comment on IrishCycle on 3 August 2026 said the "contra flow lane has been closed for months". We haven't found an official notice of the closure or of a signed diversion, and we'd like the council to confirm.
+
+The council's latest updates say resurfacing will happen in the New Year (update of 20 October 2026), and there was night work at the Rock Road and Rock Hill junction on 3 November 2026, from 7pm to 11pm.
+
+## Questions for the council
+
+1. Is the Main Street contraflow cycle lane currently closed? If so, since when, and when will it reopen?
+2. What's the signed diversion for people cycling south through the village while it's closed?
+3. Is the scheme still on track for substantial completion in the first quarter of 2027?
+4. Will the finished contraflow be physically protected from traffic and parking?
+
+The contact is DLR's Active Travel team, [cycling@dlrcoco.ie](mailto:cycling@dlrcoco.ie).
+
+## Sources
+
+- Dún Laoghaire-Rathdown County Council, [Living Streets: Blackrock Village](https://www.dlrcoco.ie/active-travel/living-streets-blackrock-village) (project page and updates, including 20 October 2026).
+- Dún Laoghaire-Rathdown County Council, [Traffic and roadworks update, 31 October to 6 November 2026](https://www.dlrcoco.ie/news/general-news/traffic-and-roadworks-update-31-october-6-november-2026).
+- IrishCycle, [Living Streets Blackrock project to make Covid redesign permanent and add cycling connection](https://irishcycle.com/2023/05/02/living-streets-blackrock-project-make-covid-redesign-permanent-add-cycling-connection/), 2 May 2023.
+- IrishCycle, [Work to start to give Blackrock village's temporary Covid project a longer-term makeover](https://irishcycle.com/2025/09/29/work-to-start-to-give-blackrock-villages-temporary-covid-project-a-longer-term-makeover/), 29 September 2025.
+- Lovin Dublin, [Completion of Blackrock village's €6m Living Streets project expected early next year](https://lovindublin.com/news/completion-of-blackrock-villages-e6m-living-streets-project-expected-early-next-year-177733).

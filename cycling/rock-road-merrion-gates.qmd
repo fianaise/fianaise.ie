@@ -1,0 +1,42 @@
+---
+title: "Rock Road: the cycle track that stops at the county boundary"
+description: "DLR extended the two-way track along Rock Road to Trimleston Avenue in 2023. Heading north, it ends at the city boundary and you're back on Merrion Road with traffic."
+date: 2026-11-08
+date-format: "D MMMM YYYY"
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd). Usage here is tracked on the [DLR cycle counters](dlr-counters.qmd) page. See also the [Coastal Mobility Route](coastal-mobility-route.qmd).
+
+## What was built
+
+DLR consulted on extending the Coastal Mobility Route from Blackrock Park to Trimleston Avenue from 6 to 27 April 2022. It got 260 submissions: 59% supported it as proposed and another 21% supported it with changes.
+
+Actavo built it between October 2022 and June 2023: about 400–450 m of two-way cycle track on the seaward side of Rock Road, planned at a minimum of 3 m wide. It was nearly open by July 2023, and it's a good stretch of track.
+
+## Where it stops
+
+The track ends at Trimleston Avenue, which is where Dún Laoghaire-Rathdown meets Dublin City. North of there, towards Merrion Gates and Strand Road, is Dublin City Council's road. Heading north you have to cross over and mix with traffic on Merrion Road. Dublin City's own plans for this stretch were tied up with the Strand Road cycle route and its court case.
+
+When it consulted in 2022, DLR said feedback about the city side would be passed on to Dublin City Council.
+
+## How many people use it
+
+The three Rock Road counters at Booterstown averaged about **1,620 cyclists a day** between them in the 12 months to September 2026: 630 on the cycle track, 454 in the bus lane and 540 on the park path. Every one of those riders heading for the city reaches the end of the track.
+
+## Questions for the council
+
+1. What has DLR heard back from Dublin City Council about continuing the track from Trimleston Avenue to Merrion Gates?
+2. Is there a joint DLR and DCC plan or timeline for that link?
+3. Can the crossing at the end of the track be improved in the meantime, so northbound riders aren't left on Merrion Road with traffic?
+4. The Rock Road cycle track counter was inbound only until 2026. Does it now count both directions, and from what date?
+
+The contact is DLR's Active Travel team, [cycling@dlrcoco.ie](mailto:cycling@dlrcoco.ie).
+
+## Sources
+
+- Dún Laoghaire-Rathdown County Council, [Blackrock Park to Trimleston Avenue sustainable transport improvements consultation](https://dlrcoco.citizenspace.com/transportation/blackrock-park-to-trimelston-avenue-sustainable-tr/), April 2022.
+- IrishCycle, [80% of respondents support DLR Coastal Mobility Route extension to county boundary](https://irishcycle.com/2022/05/26/80-of-respondents-support-dlr-coastal-mobility-route-extention-to-county-boundary/), 26 May 2022.
+- IrishCycle, [Work advancing on two-way cycle path on Rock Road](https://irishcycle.com/2023/04/17/work-advancing-on-two-way-cycle-path-on-rock-road/), 17 April 2023.
+- IrishCycle, [Preview: Coastal Mobility Route cycle path extension to Dublin City boundary](https://irishcycle.com/2023/07/09/preview-coastal-mobility-route-cycle-path-extension-to-dublin-city-boundary/), 9 July 2023.
+- Actavo, [Rock Road Sustainable Transport Improvements Scheme](https://actavo.com/projects/rock-road-sustainable-transport-improvements-scheme/).
+- Dún Laoghaire-Rathdown County Council, [Bicycle Counts DLR](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr), Smart Dublin open data, CC BY, to September 2026.

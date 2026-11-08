@@ -1,0 +1,53 @@
+---
+title: "Dún Laoghaire Central: finished, now does it work?"
+description: "New cycle lanes on Kill Avenue, Mounttown Road and Glenageary Road Upper were finished in October 2026. The 2022 concerns about narrow lanes and pinch points are worth checking on the ground."
+date: 2026-11-08
+date-format: "D MMMM YYYY"
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd).
+
+## The scheme
+
+The **Dún Laoghaire Central** active travel scheme covers about 3 km of Kill Avenue, Mounttown Road Lower and Upper, and Glenageary Road Upper. The council consulted from 25 August to 6 October 2022 and got 358 submissions. Clonmel Enterprises won the contract in December 2024 and work started in February 2025.
+
+## Timeline
+
+| Date | What happened |
+|---|---|
+| Aug–Oct 2022 | Public consultation, 358 submissions |
+| Dec 2024 | Contract signed with Clonmel Enterprises |
+| Feb 2025 | Construction starts |
+| 17 Jul 2026 | Mounttown Road Upper complete, according to the council |
+| 14 Oct 2026 | Mounttown Road Lower reopens |
+| 23 Oct 2026 | Final works finished; snagging and landscaping in November |
+
+An IrishCycle photo piece in August 2026 described parts of the route as unfinished at a time when the council said Mounttown Road Upper was complete. We've gone with the council's dates.
+
+## What to check now it's open
+
+In 2022 IrishCycle and submissions to the consultation raised:
+
+- one-way cycle lanes only 1.5 m wide in places;
+- pinch points where the lanes narrow or stop;
+- how the lanes handle bus stops.
+
+These are the things to look at now the scheme is finished. Photos from the route are welcome.
+
+## Questions for the council
+
+1. Has a stage 3 or stage 4 road safety audit been done on the finished scheme, and will it be published?
+2. Where on the finished route are cycle lanes narrower than 2 m, and why?
+3. How are cyclists and bus passengers kept apart at bus stops?
+4. Will a permanent counter be installed, so the council can show how use changes now the route is finished?
+5. When is snagging due to finish, and how can people report problems?
+
+The contact is DLR's Active Travel team, [cycling@dlrcoco.ie](mailto:cycling@dlrcoco.ie).
+
+## Sources
+
+- Dún Laoghaire-Rathdown County Council, [Dún Laoghaire Central](https://www.dlrcoco.ie/environment-climate-change/active-travel/dun-laoghaire-central) (project page and updates, July–November 2026).
+- Dún Laoghaire-Rathdown County Council, [Active travel improvements: DLR Central consultation](https://dlrcoco.citizenspace.com/infrastructure-climate-change/active-travel-improvements-dlr-central/), August–October 2022.
+- IrishCycle, [New cycle paths proposed for around Dún Laoghaire](https://irishcycle.com/2022/08/26/new-cycle-paths-proposed-for-around-dun-laoghaire/), 26 August 2022.
+- IrishCycle, [DLR Central active travel project to soon go to construction as contracts signed](https://irishcycle.com/2024/12/20/dlr-central-active-travel-project-to-soon-go-to-construction-as-contracts-signed/), 20 December 2024.
+- IrishCycle, [In images: Dún Laoghaire Central active travel route now partly open](https://irishcycle.com/2026/08/01/in-images-dun-laoghaire-central-active-travel-route-now-partly-open/), 1 August 2026.

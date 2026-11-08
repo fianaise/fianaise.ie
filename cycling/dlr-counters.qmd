@@ -1,0 +1,38 @@
+---
+title: "DLR cycle counters"
+description: "How many people cycle past each of Dún Laoghaire-Rathdown County Council's permanent bike counters, updated when the council publishes new data."
+lightbox: false
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd). The Seapoint and People's Park counters are on the [Coastal Mobility Route](coastal-mobility-route.qmd), and the Rock Road counters are just south of the [gap at Merrion Gates](rock-road-merrion-gates.qmd). The [Blackrock DART laneway](blackrock-dart-laneway.qmd) page uses both.
+
+Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as [open data](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr). This page turns them into charts. It checks for new data every week and updates itself when there is some.
+
+{{< include _dlr-counter-stats.md >}}
+
+## Where the counters are
+
+<iframe src="../figures/cycling_dlr_counter_map.html" width="100%" height="560" style="border:0" title="Map of DLR's bicycle counters, sized by average cyclists a day" loading="lazy"></iframe>
+
+**Figure 1.** DLR's bicycle counters. Where several counters stand together, such as the three on Rock Road, the circle shows their combined total. Hover over or tap a circle for each counter. Data: DLR, [counter locations](https://data.smartdublin.ie/dataset/bicycle-counter-locations-dlr) and [bicycle counts](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr) (CC BY). Map tiles: © OpenStreetMap contributors, © CARTO. [Open full screen](../figures/cycling_dlr_counter_map.html).
+
+## Busiest counters
+
+<iframe src="../figures/cycling_dlr_counter_ranking.html" width="100%" height="560" style="border:0" title="Average cyclists a day at each DLR counter over the last 12 months" loading="lazy"></iframe>
+
+**Figure 2.** Average cyclists per day over the last 12 months, all days of the week. Counters with fewer than 180 working days in that time are left out. [Open full screen](../figures/cycling_dlr_counter_ranking.html).
+
+## Each counter over time
+
+<iframe src="../figures/cycling_dlr_counter_trends.html" width="100%" height="520" style="border:0" title="Monthly average cyclists a day at a chosen DLR counter" loading="lazy"></iframe>
+
+**Figure 3.** Average cyclists per day in each month. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. [Open full screen](../figures/cycling_dlr_counter_trends.html).
+
+## About the data
+
+- **What's counted.** Most counters count bikes only. Where a counter sits on a shared path, DLR publishes the bike count separately. One-way counters only see one direction, so they show roughly half the traffic of a two-way counter on the same road.
+- **Faults.** Counters break, lose power or get their batteries changed, which shows up as days of zero or near zero. Days with fewer than 22 hours of data, a total of zero, or a total under a quarter of that counter's median over the surrounding four weeks are left out. Months with fewer than 10 good days are left blank.
+- **Updates.** DLR updates the dataset roughly monthly, and sometimes publishes a year's counts in one go. A weekly check downloads any new files and redraws this page.
+- **Code and data.** [`fetch_cycle_counts.py`](https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_cycle_counts.py) downloads the counts. [`make_counter_page.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/cycling/make_counter_page.py) draws this page. The monthly averages and summary are in [`analysis/cycling/data`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/cycling/data) as CSV.
+
+Source: Dún Laoghaire-Rathdown County Council, [Bicycle Counts DLR](https://data.smartdublin.ie/dataset/bicycle-traffic-counts-dlr) and [Bicycle/Pedestrian Counter Locations DLR](https://data.smartdublin.ie/dataset/bicycle-counter-locations-dlr), via Smart Dublin, Creative Commons Attribution.

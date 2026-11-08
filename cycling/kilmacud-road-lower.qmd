@@ -1,0 +1,43 @@
+---
+title: "Lower Kilmacud Road: the lane that ends at a school gate"
+description: "The cycle lane on Lower Kilmacud Road stops outside Mount Anville Primary School. The planned DLR Connector would fix it, but construction isn't due until 2027."
+date: 2026-11-08
+date-format: "D MMMM YYYY"
+---
+
+Part of [Cycling infrastructure in Dublin](index.qmd). See also [Stillorgan village](stillorgan-village.qmd).
+
+## The gap
+
+In the words of local councillor Eoin O'Driscoll, the "existing cycle lane currently comes to an end outside Mount Anville Primary School". From there you're in traffic, on a road busy with school runs and through traffic heading for the N11.
+
+## What's planned
+
+The fix is the **DLR Connector**, an 8–8.5 km active travel route from Nutgrove to Dún Laoghaire, about 6 km of it new. It's estimated at about €45 million and funded by the National Transport Authority (NTA). It would carry a continuous cycle track along Lower Kilmacud Road and across the N11.
+
+Public consultation ran from 3 June to 15 July 2025. The council planned to apply for planning permission by the end of 2025. That slipped: in October 2026 the application was expected to go to An Coimisiún Pleanála in the third or fourth quarter of 2026. Construction is pencilled in for 2027 to the end of 2028.
+
+## Concerns raised
+
+IrishCycle and others welcomed the route but flagged:
+
+- cycle tracks of 2 m in places, which is tight for a main route;
+- a weak link to the Dodder greenway at the western end;
+- the N11 junction, where there were three fatal collisions between 2005 and 2016.
+
+## Questions for the council
+
+1. Has the DLR Connector been submitted to An Coimisiún Pleanála? If not, when will it be?
+2. What's the current timeline for construction on the Lower Kilmacud Road section?
+3. Until then, can anything be done at the end of the existing lane outside Mount Anville Primary, for example a protected transition or a lower speed limit at school times?
+4. What changes were made to the design after the 2025 consultation, particularly track widths and the N11 junction?
+5. Will the route include a permanent counter?
+
+The contact is DLR's Active Travel team, [cycling@dlrcoco.ie](mailto:cycling@dlrcoco.ie).
+
+## Sources
+
+- Dún Laoghaire-Rathdown County Council, [DLR Connector](https://www.dlrcoco.ie/active-travel/dlr-connector) and [DLR Connector FAQs](https://www.dlrcoco.ie/sites/dlrcoco/files/2025-07/DLR%20Connector%20FAQs_updated%20July%2025_1.pdf), updated July 2025.
+- IrishCycle, [Dún Laoghaire-Rathdown to seek public input to DLR Connector active travel route](https://irishcycle.com/2025/05/30/dun-laoghaire-rathdown-to-seek-public-input-to-dlr-connector-active-travel-route/), 30 May 2025.
+- IrishCycle, [DLR Connector: how well will it connect?](https://irishcycle.com/2025/07/15/dlr-connector-how-well-will-it-connect-better-than-most-projects-but-not-all-if-it-doesnt-get-the-support-it-needs/), 15 July 2025.
+- IrishCycle, [Landmark Dublin project offering significant cycling connectivity expected to be submitted to planning board soon](https://irishcycle.com/2026/10/06/landmark-dublin-project-offering-significant-cycling-connectivity-expected-to-be-submitted-to-planning-board-soon/), 6 October 2026, including the quote from Cllr Eoin O'Driscoll.
