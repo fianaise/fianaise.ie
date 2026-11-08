@@ -20,23 +20,19 @@ Dún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on
 
 **Figure 2.** Average cyclists per day over the last 12 months, all days of the week. Counters with fewer than 180 working days in that time are left out. [Open full screen](../figures/cycling_dlr_counter_ranking.html).
 
-## Each counter over time
-
-<iframe src="../figures/cycling_dlr_counter_trends.html" width="100%" height="520" style="border:0" title="Monthly average cyclists a day at a chosen DLR counter" loading="lazy"></iframe>
-
-**Figure 3.** Average cyclists per day in each month. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. [Open full screen](../figures/cycling_dlr_counter_trends.html).
-
-## Time of year
+## Number of cyclists over time
 
 <iframe src="../figures/cycling_dlr_counter_seasons.html" width="100%" height="520" style="border:0" title="Average cyclists a day in each month of the year at a chosen DLR counter" loading="lazy"></iframe>
 
-**Figure 4.** Average cyclists per day in each calendar month, over the last three years of data. Use the menu to pick a counter. [Open full screen](../figures/cycling_dlr_counter_seasons.html).
-
-## Day of the week
+**Figure 3.** Average cyclists per day in each calendar month, over the last three years of data. Use the menu to pick a counter. [Open full screen](../figures/cycling_dlr_counter_seasons.html).
 
 <iframe src="../figures/cycling_dlr_counter_weekdays.html" width="100%" height="520" style="border:0" title="Average cyclists a day on each day of the week at a chosen DLR counter" loading="lazy"></iframe>
 
-**Figure 5.** Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. [Open full screen](../figures/cycling_dlr_counter_weekdays.html).
+**Figure 4.** Average cyclists per day on each day of the week, over the last 12 months. Weekends are in orange. Use the menu to pick a counter. [Open full screen](../figures/cycling_dlr_counter_weekdays.html).
+
+<iframe src="../figures/cycling_dlr_counter_trends.html" width="100%" height="520" style="border:0" title="Monthly average cyclists a day at a chosen DLR counter" loading="lazy"></iframe>
+
+**Figure 5.** Average cyclists per day in each month since counting began. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. [Open full screen](../figures/cycling_dlr_counter_trends.html).
 
 {{< include _dlr-counter-patterns.md >}}
 
