@@ -5,7 +5,7 @@ date: 2026-11-08
 date-format: "D MMMM YYYY"
 ---
 
-Part of [Cycling infrastructure in Dublin](index.qmd). See also the [Blackrock DART laneway](blackrock-dart-laneway.qmd) and the [Coastal Mobility Route](coastal-mobility-route.qmd).
+Part of [Cycling in Dublin](index.qmd). See also the [Blackrock DART laneway](blackrock-dart-laneway.qmd) and the [Coastal Mobility Route](coastal-mobility-route.qmd).
 
 ## The scheme
 

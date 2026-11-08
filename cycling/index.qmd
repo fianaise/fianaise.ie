@@ -1,6 +1,6 @@
 ---
-title: "Cycling infrastructure in Dublin"
-description: "Stretches of Dublin's cycle network that aren't what the map says, and what the council plans to do about them."
+title: "Cycling in Dublin"
+description: "How many people cycle in Dún Laoghaire-Rathdown, from the council's own counters, and the stretches of the network that aren't what the map says."
 listing:
   id: pieces
   contents: pieces.yml
@@ -13,9 +13,14 @@ listing:
   sort-ui: false
 ---
 
+The [DLR cycle counters](dlr-counters.qmd) page charts every one of the council's permanent bike counters, by month, by time of year and by day of the week, and updates itself when the council publishes new data.
+
 Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.
 
 This project documents those gaps, and the routes I cycle regularly, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there's news.
+
+:::{#pieces}
+:::
 
 ## Where things stand
 
@@ -33,10 +38,5 @@ Last checked 8 November 2026.
 | [Stillorgan village](stillorgan-village.qmd) | Old Dublin Road phase delayed to 2027 |
 
 How many people cycle each route is on the [DLR cycle counters](dlr-counters.qmd) page, which updates when the council publishes new data.
-
-## Pages
-
-:::{#pieces}
-:::
 
 Spotted a gap that should be here? Email [fianaise@proton.me](mailto:fianaise@proton.me) with a location and, if you can, a photo.

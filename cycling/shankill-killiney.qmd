@@ -6,7 +6,7 @@ date-format: "D MMMM YYYY"
 lightbox: true
 ---
 
-Part of [Cycling infrastructure in Dublin](index.qmd). See also the [Blackrock DART laneway](blackrock-dart-laneway.qmd).
+Part of [Cycling in Dublin](index.qmd). See also the [Blackrock DART laneway](blackrock-dart-laneway.qmd).
 
 ## What the map says
 

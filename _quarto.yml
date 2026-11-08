@@ -21,7 +21,7 @@ website:
           - href: religion/index.qmd
             text: Religion in Ireland
           - href: cycling/index.qmd
-            text: Cycling infrastructure in Dublin
+            text: Cycling in Dublin
           - href: https://opentalamh.ie
             text: Open Talamh
       - href: data.qmd
