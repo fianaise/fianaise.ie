@@ -63,11 +63,102 @@
     "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
   },
   {
+    "objectID": "cycling/index.html",
+    "href": "cycling/index.html",
+    "title": "Cycling infrastructure in Dublin",
+    "section": "",
+    "text": "Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.\nThis project documents those gaps, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there’s news.\n\n\n\n\n\n\n\n\n\n\nBlackrock DART laneway\n\n\nA walled lane about 1.2 metres wide on the Coastal Mobility Route. A wider replacement was approved in 2024, but work has not started.\n\n\n\n\n\n\n\n\n\n\n\n\nShankill to Killiney\n\n\nGoogle Maps routes bikes along a ‘separate bike lane’ here. On the ground it’s a shingle beach.\n\n\n\n\n\nNo matching items\n\nSpotted a gap that should be here? Email fianaise@proton.me with a location and, if you can, a photo."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html",
+    "href": "cycling/blackrock-dart-laneway.html",
+    "title": "The Blackrock DART laneway",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. See also Shankill to Killiney."
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html#the-problem",
+    "href": "cycling/blackrock-dart-laneway.html#the-problem",
+    "title": "The Blackrock DART laneway",
+    "section": "The problem",
+    "text": "The problem\nBetween Blackrock Park and Bath Place, at the entrance to Blackrock DART station, the Coastal Mobility Route squeezes into a single lane between high walls. It’s the only direct link between the park’s paths and the station, and Google Maps sends cycle routes through it.\nThe lane is about 1.2 metres wide (Part 8 report), and about 90 metres of it has walls on both sides (IrishCycle, January 2026). Two bikes can’t pass each other in it. Nor can a bike and a buggy, or two buggies. Signs tell people on bikes to dismount, so everyone queues at each end and goes through in turns. Local councillor Marie Baker put it plainly: “you end up flattening yourself against the wall if you come up to a cyclist” (IrishCycle, April 2024).\n\n\n\n\nThe laneway on Google Maps, from Blackrock Park (top) down to Bath Place and the station (bottom). The pin is at 53°18’12.1”N 6°10’49.4”W, where the park path enters the lane.\n\n\n\nView on OpenStreetMap"
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html#current-status-of-the-laneway",
+    "href": "cycling/blackrock-dart-laneway.html#current-status-of-the-laneway",
+    "title": "The Blackrock DART laneway",
+    "section": "Current status of the laneway",
+    "text": "Current status of the laneway\nDLR’s Blackrock DART to Park Active Travel Scheme replaces the lane with a new route through part of the garden of Deepwell House next door: 130 metres of two-way cycle track 3 to 3.65 metres wide, a separate 2 metre footpath, grass verges, and a new bridge over the Priory Stream. The old lane will be closed off (DLR Part 8 report; DLR PPN).\n\n\nApril 2024\nPlan published\n\n\nJune to August 2024\nPublic consultation: 321 submissions, about 81% in favour as proposed\n\n\nOctober 2024\nCouncillors approve the scheme\n\n\nNovember to December 2025\nCompulsory purchase order: no objections\n\n\nAugust 2026\nLane closed 24 to 28 August for ground investigation\n\n\nNot yet scheduled\nConstruction\n\n\n\nPlanning. The Part 8 consultation ran from 28 June to 9 August 2024 and drew 321 submissions. Councillors agreed the Chief Executive’s recommendations at their October 2024 meeting (DLR; Citizen Space; Chief Executive’s report).\nLand. The council’s compulsory purchase order for part of the Deepwell House garden went to An Coimisiún Pleanála (formerly An Bord Pleanála) on 11 November 2025 and closed with no objections received on 8 December 2025 (case 323857; IrishCycle, January 2026). At the time, Cllr Baker said there was “some paperwork to be completed and then detailed design to take place before work commences.”\nSite investigation. The council closed the lane from 24 to 28 August 2026 for ground investigation. Cllr Conor Dowling said: “While the main works will not commence for a few months, this is real progress” (IrishCycle, August 2026).\nConstruction. As of 7 November 2026 I could find no published start date, construction period or budget. The council’s report treats cost estimates as commercially sensitive."
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html#how-many-people-cycle-here-and-how-many-go-around",
+    "href": "cycling/blackrock-dart-laneway.html#how-many-people-cycle-here-and-how-many-go-around",
+    "title": "The Blackrock DART laneway",
+    "section": "How many people cycle here, and how many go around?",
+    "text": "How many people cycle here, and how many go around?\nThe council counted people on the laneway route on three weekdays in November 2022, from 7am to 7pm. Two survey points along the route averaged 406 and 476 cyclists a day and 1,373 and 772 pedestrians a day (Part 8 report, Table 4-3; a third point recorded 68 cyclists).\nDLR also runs permanent bicycle counters and publishes the hourly counts as open data. Three are on Rock Road at Booterstown, about a kilometre west of the lane: the cycle track, the bus lane, and a path counter it calls “Rock Road Park”. Another is on the Coastal Mobility Route at Seapoint, about a kilometre and a half east. Here’s what they counted over the same three days and hours.\n\n\nFigure 1. Average cyclists per weekday, 7am to 7pm, 8 to 10 November 2022. Blue: DLR’s permanent counters on Rock Road and at Seapoint. Orange: the council’s survey of the laneway route. Data: DLR, bicycle counts (CC BY), and the Part 8 report. Code: make_cycling_charts.py. Open full screen.\nOn those days about 1,670 cyclists a day passed the Rock Road counters and about 900 passed Seapoint, but only 400 to 480 used the laneway route. So the lane carried at most about half as many cyclists as the coastal route at Seapoint. Most people cycling the coast between Booterstown and Seapoint appear to stay on Rock Road and go through Blackrock village rather than take the park and the lane.\nThat’s consistent with people avoiding the lane, but it doesn’t prove it. Some of the people on these counters are heading to Blackrock village or turning inland, and nobody counts which way each person goes. The council’s own counts are also from just three days. What the numbers do give is a baseline. Once the new path opens, the same counters will show whether people switch from the road to the park route.\n\n\nFigure 2. Average cyclists per day by month, all days, from DLR’s permanent counters. The Seapoint counter started in September 2020, when the Coastal Mobility Route opened. Days with counter faults (missing hours, or totals of zero or under a quarter of the usual level) are left out, and months with fewer than 10 good days are blank. Data: DLR, bicycle counts and counter locations (CC BY). Code: make_cycling_charts.py. Open full screen.\nCycling on this stretch has held steady since the pandemic peak. In 2025 the Rock Road road counters averaged about 1,130 cyclists a day, the park path about 520, and Seapoint about 1,030, every day of the year."
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html#questions-for-the-council",
+    "href": "cycling/blackrock-dart-laneway.html#questions-for-the-council",
+    "title": "The Blackrock DART laneway",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nWhen will construction of the Blackrock DART to Park Active Travel Scheme start, and how long will it take?\nHas detailed design been completed, and has a contractor been appointed?\nWhat’s the published budget for the scheme?\nDuring construction, what’s the diversion for people walking and cycling between Blackrock Park and the station?\nWill the council put a permanent counter on the new path, so it can show how many people switch to it from Rock Road?\n\nThe scheme’s contact is DLR’s Capital Projects Office, capitalprojects@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/blackrock-dart-laneway.html#sources",
+    "href": "cycling/blackrock-dart-laneway.html#sources",
+    "title": "The Blackrock DART laneway",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Blackrock DART to Park Active Travel Scheme (consultation notice, updated 18 October 2024).\nDún Laoghaire-Rathdown County Council, consultation page and documents, including the Part 8 report (Atkins, June 2024) and the Chief Executive’s report (October 2024).\nDLR Public Participation Network, Proposed development: Blackrock DART to Park Active Travel Scheme, 1 July 2024.\nAn Coimisiún Pleanála, case 323857: Dún Laoghaire-Rathdown County Council Compulsory Purchase Order (Blackrock DART to Park Active Travel Scheme) Order, 2025.\nDún Laoghaire-Rathdown County Council, Bicycle Counts DLR and Bicycle/Pedestrian Counter Locations DLR, Smart Dublin open data, CC BY, hourly counts to September 2026.\nIrishCycle, Warm welcome for plan to replace narrow path at Blackrock Dart station with wide passageway, 22 April 2024.\nIrishCycle, Path cleared for upgrade of Blackrock Dart laneway as no objections to CPO received, 12 January 2026.\nIrishCycle, Closure on Coastal Mobility Route planned this month ahead of works to fix pinchpoint, 6 August 2026.\n\nMap screenshot: Fianaise, November 2026, CC BY 4.0."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html",
+    "href": "cycling/shankill-killiney.html",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#what-the-map-says",
+    "href": "cycling/shankill-killiney.html#what-the-map-says",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "What the map says",
+    "text": "What the map says\nAsk Google Maps for cycling directions from Shankill to Killiney and it sends you down to the shore and north along the coast: 2.8 km, nine minutes, most of it shown in dark green and labelled “Separate bike lane”.\n\n\n\n\nGoogle Maps cycling directions from Shankill to Killiney, 6 November 2026. The green section along the shore is labelled “Separate bike lane”."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#whats-actually-there",
+    "href": "cycling/shankill-killiney.html#whats-actually-there",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "What’s actually there",
+    "text": "What’s actually there\nFrom the Shankill end there’s a short stretch of path. After that, the “bike lane” is the beach below the Shanganagh cliffs and the seafront walls: loose, rounded stones, shingle and rough grass, with no path, surface or markings of any kind. You can’t ride a bike on it, and pushing one is hard work. It isn’t usable with a buggy or a wheelchair either.\n\n\n\n\n\n\nLooking north along the shore towards Killiney Hill and Dalkey Island. The whole route is loose shingle.\n\n\n\n\n\n\n\nLarge rounded stones below the seafront houses, where the map shows a bike lane.\n\n\n\n\n\n\n\n\n\nStones, grass and ivy-covered walls. There is no path.\n\n\n\n\n\n\n\nFurther north, the stones run right up to the walls.\n\n\n\n\n\n\n\n\nLooking north towards Killiney. Photos taken in early November 2026. A person in the background has been blurred.\n\n\nThe council agrees the shore is difficult. Its own page for the Corbawn Lane beach access, about 500 metres from Shankill DART station, says the strand “is unsuitable for those with disabilities due to the stoney terrain and dangers posed by unstable cliffs” (DLR, Corbawn Lane)."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#is-anything-planned",
+    "href": "cycling/shankill-killiney.html#is-anything-planned",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Is anything planned?",
+    "text": "Is anything planned?\nI found no council or National Transport Authority plan for a walking or cycling path along this stretch of shore. What I did find:\n\nThe Coastal Mobility Route stops well north of here. DLR’s coastal cycleway runs from Booterstown and Blackrock to Sandycove and Dalkey (DLR, Coastal Mobility Interventions). There is no equivalent route from Killiney south to Shankill.\nCoastal protection, not access. In 2018 to 2019 DLR rebuilt the Corbawn Lane beach access and put rock armour along about 180 metres of cliff to the north, costing about €928,000 (DLR, December 2018; Afloat). The works protected the cliff and the steps, not a route along the shore.\nIrish Rail’s sea defences. Irish Rail’s East Coast Railway Infrastructure Protection Project proposes rock armour and higher sea walls between Merrion Gates and Wicklow, including a section from Dalkey Tunnel to Shanganagh. It consulted the public in autumn 2025 and expects works to run to about 2029. RTÉ reported that “access routes to the public will be maintained and improved in some places”, and that some beaches may get narrower (RTÉ, September 2025). If this goes ahead, it’s the one current project that will reshape this shore, so it’s the moment to ask for a path.\nA coastal walk was suggested in 2017, further south, from Bray to Shankill. A councillor proposed referring the idea to a council committee, and another pointed to Woodbrook Golf Club and cliff erosion as obstacles (Bray People, July 2017).\n\nI haven’t found any news coverage of the Google Maps label itself."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#questions-for-the-council",
+    "href": "cycling/shankill-killiney.html#questions-for-the-council",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nDoes DLR consider the shore between Shankill and Killiney DART stations to be part of its cycle network? If not, will it ask Google to remove the “separate bike lane” label?\nAre there plans for a walking and cycling path between Shankill and Killiney, along the coast or inland, and is it in the DLR or NTA cycle network plans?\nIs DLR talking to Irish Rail about building public access, or a path, into the East Coast Railway Infrastructure Protection Project along this stretch?\nUntil there’s a path, what’s the recommended cycle route between Shankill and Killiney?\n\nYou can also report the label to Google directly: in Google Maps, tap the route and choose Send feedback."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#sources",
+    "href": "cycling/shankill-killiney.html#sources",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Corbawn Lane (beach information page).\nDún Laoghaire-Rathdown County Council, Corbawn Lane beach access and coastal protection works, 30 November 2018, updated June 2023.\nAfloat, Landing craft assists in Killiney Bay coastal protection works at Shanganagh cliffs.\nDún Laoghaire-Rathdown County Council, Coastal Mobility Interventions, 2020.\nDún Laoghaire-Rathdown County Council, Shankill cliffs.\nRTÉ News, Irish Rail plans to protect the east coast railway line, 15 September 2025.\nBray People, Ryan suggests coastal walk from Bray beach to Shankill, 12 July 2017.\n\nPhotos and map screenshot: Fianaise, November 2026, CC BY 4.0."
   },
   {
     "objectID": "index.html",
@@ -81,7 +172,7 @@
     "href": "index.html#projects",
     "title": "Fianaise",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\n\n\n\n\n\n\n\nCycling infrastructure in Dublin\n\n\nStretches of Dublin’s cycle network that aren’t what the map says, from a ‘bike lane’ on a shingle beach to a walled lane too narrow for two bikes.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "religion/charities.html",

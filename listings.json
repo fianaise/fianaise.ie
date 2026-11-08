@@ -9,9 +9,17 @@
     ]
   },
   {
+    "listing": "/cycling/index.html",
+    "items": [
+      "/cycling/blackrock-dart-laneway.html",
+      "/cycling/shankill-killiney.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/religion/index.html"
+      "/religion/index.html",
+      "/cycling/index.html"
     ]
   }
 ]
