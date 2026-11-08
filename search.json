@@ -63,18 +63,172 @@
     "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
   },
   {
-    "objectID": "cycling/index.html",
-    "href": "cycling/index.html",
-    "title": "Cycling infrastructure in Dublin",
+    "objectID": "cycling/shankill-killiney.html",
+    "href": "cycling/shankill-killiney.html",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
     "section": "",
-    "text": "Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.\nThis project documents those gaps, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there’s news.\n\n\n\n\n\n\n\n\n\n\nBlackrock DART laneway\n\n\nA walled lane about 1.2 metres wide on the Coastal Mobility Route. A wider replacement was approved in 2024, but work has not started.\n\n\n\n\n\n\n\n\n\n\n\n\nShankill to Killiney\n\n\nGoogle Maps routes bikes along a ‘separate bike lane’ here. On the ground it’s a shingle beach.\n\n\n\n\n\nNo matching items\n\nSpotted a gap that should be here? Email fianaise@proton.me with a location and, if you can, a photo."
+    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "cycling/shankill-killiney.html#what-the-map-says",
+    "href": "cycling/shankill-killiney.html#what-the-map-says",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "What the map says",
+    "text": "What the map says\nAsk Google Maps for cycling directions from Shankill to Killiney and it sends you down to the shore and north along the coast: 2.8 km, nine minutes, most of it shown in dark green and labelled “Separate bike lane”.\n\n\n\n\nGoogle Maps cycling directions from Shankill to Killiney, 6 November 2026. The green section along the shore is labelled “Separate bike lane”."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#whats-actually-there",
+    "href": "cycling/shankill-killiney.html#whats-actually-there",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "What’s actually there",
+    "text": "What’s actually there\nFrom the Shankill end there’s a short stretch of path. After that, the “bike lane” is the beach below the Shanganagh cliffs and the seafront walls: loose, rounded stones, shingle and rough grass, with no path, surface or markings of any kind. You can’t ride a bike on it, and pushing one is hard work. It isn’t usable with a buggy or a wheelchair either.\n\n\n\n\n\n\nLooking north along the shore towards Killiney Hill and Dalkey Island. The whole route is loose shingle.\n\n\n\n\n\n\n\nLarge rounded stones below the seafront houses, where the map shows a bike lane.\n\n\n\n\n\n\n\n\n\nStones, grass and ivy-covered walls. There is no path.\n\n\n\n\n\n\n\nFurther north, the stones run right up to the walls.\n\n\n\n\n\n\n\n\nLooking north towards Killiney. Photos taken in early November 2026. A person in the background has been blurred.\n\n\nThe council agrees the shore is difficult. Its own page for the Corbawn Lane beach access, about 500 metres from Shankill DART station, says the strand “is unsuitable for those with disabilities due to the stoney terrain and dangers posed by unstable cliffs” (DLR, Corbawn Lane)."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#is-anything-planned",
+    "href": "cycling/shankill-killiney.html#is-anything-planned",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Is anything planned?",
+    "text": "Is anything planned?\nI found no council or National Transport Authority plan for a walking or cycling path along this stretch of shore. What I did find:\n\nThe Coastal Mobility Route stops well north of here. DLR’s coastal cycleway runs from Booterstown and Blackrock to Sandycove and Dalkey (DLR, Coastal Mobility Interventions). There is no equivalent route from Killiney south to Shankill.\nCoastal protection, not access. In 2018 to 2019 DLR rebuilt the Corbawn Lane beach access and put rock armour along about 180 metres of cliff to the north, costing about €928,000 (DLR, December 2018; Afloat). The works protected the cliff and the steps, not a route along the shore.\nIrish Rail’s sea defences. Irish Rail’s East Coast Railway Infrastructure Protection Project proposes rock armour and higher sea walls between Merrion Gates and Wicklow, including a section from Dalkey Tunnel to Shanganagh. It consulted the public in autumn 2025 and expects works to run to about 2029. RTÉ reported that “access routes to the public will be maintained and improved in some places”, and that some beaches may get narrower (RTÉ, September 2025). If this goes ahead, it’s the one current project that will reshape this shore, so it’s the moment to ask for a path.\nA coastal walk was suggested in 2017, further south, from Bray to Shankill. A councillor proposed referring the idea to a council committee, and another pointed to Woodbrook Golf Club and cliff erosion as obstacles (Bray People, July 2017).\n\nI haven’t found any news coverage of the Google Maps label itself."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#questions-for-the-council",
+    "href": "cycling/shankill-killiney.html#questions-for-the-council",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nDoes DLR consider the shore between Shankill and Killiney DART stations to be part of its cycle network? If not, will it ask Google to remove the “separate bike lane” label?\nAre there plans for a walking and cycling path between Shankill and Killiney, along the coast or inland, and is it in the DLR or NTA cycle network plans?\nIs DLR talking to Irish Rail about building public access, or a path, into the East Coast Railway Infrastructure Protection Project along this stretch?\nUntil there’s a path, what’s the recommended cycle route between Shankill and Killiney?\n\nYou can also report the label to Google directly: in Google Maps, tap the route and choose Send feedback."
+  },
+  {
+    "objectID": "cycling/shankill-killiney.html#sources",
+    "href": "cycling/shankill-killiney.html#sources",
+    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Corbawn Lane (beach information page).\nDún Laoghaire-Rathdown County Council, Corbawn Lane beach access and coastal protection works, 30 November 2018, updated June 2023.\nAfloat, Landing craft assists in Killiney Bay coastal protection works at Shanganagh cliffs.\nDún Laoghaire-Rathdown County Council, Coastal Mobility Interventions, 2020.\nDún Laoghaire-Rathdown County Council, Shankill cliffs.\nRTÉ News, Irish Rail plans to protect the east coast railway line, 15 September 2025.\nBray People, Ryan suggests coastal walk from Bray beach to Shankill, 12 July 2017.\n\nPhotos and map screenshot: Fianaise, November 2026, CC BY 4.0."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html",
+    "href": "cycling/kilmacud-road-lower.html",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
     "section": "",
-    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+    "text": "Part of Cycling infrastructure in Dublin. See also Stillorgan village."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html#the-gap",
+    "href": "cycling/kilmacud-road-lower.html#the-gap",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
+    "section": "The gap",
+    "text": "The gap\nIn the words of local councillor Eoin O’Driscoll, the “existing cycle lane currently comes to an end outside Mount Anville Primary School”. From there you’re in traffic, on a road busy with school runs and through traffic heading for the N11."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html#whats-planned",
+    "href": "cycling/kilmacud-road-lower.html#whats-planned",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
+    "section": "What’s planned",
+    "text": "What’s planned\nThe fix is the DLR Connector, an 8–8.5 km active travel route from Nutgrove to Dún Laoghaire, about 6 km of it new. It’s estimated at about €45 million and funded by the National Transport Authority (NTA). It would carry a continuous cycle track along Lower Kilmacud Road and across the N11.\nPublic consultation ran from 3 June to 15 July 2025. The council planned to apply for planning permission by the end of 2025. That slipped: in October 2026 the application was expected to go to An Coimisiún Pleanála in the third or fourth quarter of 2026. Construction is pencilled in for 2027 to the end of 2028."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html#concerns-raised",
+    "href": "cycling/kilmacud-road-lower.html#concerns-raised",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
+    "section": "Concerns raised",
+    "text": "Concerns raised\nIrishCycle and others welcomed the route but flagged:\n\ncycle tracks of 2 m in places, which is tight for a main route;\na weak link to the Dodder greenway at the western end;\nthe N11 junction, where there were three fatal collisions between 2005 and 2016."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html#questions-for-the-council",
+    "href": "cycling/kilmacud-road-lower.html#questions-for-the-council",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nHas the DLR Connector been submitted to An Coimisiún Pleanála? If not, when will it be?\nWhat’s the current timeline for construction on the Lower Kilmacud Road section?\nUntil then, can anything be done at the end of the existing lane outside Mount Anville Primary, for example a protected transition or a lower speed limit at school times?\nWhat changes were made to the design after the 2025 consultation, particularly track widths and the N11 junction?\nWill the route include a permanent counter?\n\nThe contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/kilmacud-road-lower.html#sources",
+    "href": "cycling/kilmacud-road-lower.html#sources",
+    "title": "Lower Kilmacud Road: the lane that ends at a school gate",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, DLR Connector and DLR Connector FAQs, updated July 2025.\nIrishCycle, Dún Laoghaire-Rathdown to seek public input to DLR Connector active travel route, 30 May 2025.\nIrishCycle, DLR Connector: how well will it connect?, 15 July 2025.\nIrishCycle, Landmark Dublin project offering significant cycling connectivity expected to be submitted to planning board soon, 6 October 2026, including the quote from Cllr Eoin O’Driscoll."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html",
+    "href": "cycling/dun-laoghaire-central.html",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html#the-scheme",
+    "href": "cycling/dun-laoghaire-central.html#the-scheme",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "The scheme",
+    "text": "The scheme\nThe Dún Laoghaire Central active travel scheme covers about 3 km of Kill Avenue, Mounttown Road Lower and Upper, and Glenageary Road Upper. The council consulted from 25 August to 6 October 2022 and got 358 submissions. Clonmel Enterprises won the contract in December 2024 and work started in February 2025."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html#timeline",
+    "href": "cycling/dun-laoghaire-central.html#timeline",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "Timeline",
+    "text": "Timeline\n\n\n\n\n\n\n\nDate\nWhat happened\n\n\n\n\nAug–Oct 2022\nPublic consultation, 358 submissions\n\n\nDec 2024\nContract signed with Clonmel Enterprises\n\n\nFeb 2025\nConstruction starts\n\n\n17 Jul 2026\nMounttown Road Upper complete, according to the council\n\n\n14 Oct 2026\nMounttown Road Lower reopens\n\n\n23 Oct 2026\nFinal works finished; snagging and landscaping in November\n\n\n\nAn IrishCycle photo piece in August 2026 described parts of the route as unfinished at a time when the council said Mounttown Road Upper was complete. We’ve gone with the council’s dates."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html#what-to-check-now-its-open",
+    "href": "cycling/dun-laoghaire-central.html#what-to-check-now-its-open",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "What to check now it’s open",
+    "text": "What to check now it’s open\nIn 2022 IrishCycle and submissions to the consultation raised:\n\none-way cycle lanes only 1.5 m wide in places;\npinch points where the lanes narrow or stop;\nhow the lanes handle bus stops.\n\nThese are the things to look at now the scheme is finished. Photos from the route are welcome."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html#questions-for-the-council",
+    "href": "cycling/dun-laoghaire-central.html#questions-for-the-council",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nHas a stage 3 or stage 4 road safety audit been done on the finished scheme, and will it be published?\nWhere on the finished route are cycle lanes narrower than 2 m, and why?\nHow are cyclists and bus passengers kept apart at bus stops?\nWill a permanent counter be installed, so the council can show how use changes now the route is finished?\nWhen is snagging due to finish, and how can people report problems?\n\nThe contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/dun-laoghaire-central.html#sources",
+    "href": "cycling/dun-laoghaire-central.html#sources",
+    "title": "Dún Laoghaire Central: finished, now does it work?",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Dún Laoghaire Central (project page and updates, July–November 2026).\nDún Laoghaire-Rathdown County Council, Active travel improvements: DLR Central consultation, August–October 2022.\nIrishCycle, New cycle paths proposed for around Dún Laoghaire, 26 August 2022.\nIrishCycle, DLR Central active travel project to soon go to construction as contracts signed, 20 December 2024.\nIrishCycle, In images: Dún Laoghaire Central active travel route now partly open, 1 August 2026."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html",
+    "href": "cycling/coastal-mobility-route.html",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. Usage on this route is tracked on the DLR cycle counters page."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html#whats-there-now",
+    "href": "cycling/coastal-mobility-route.html#whats-there-now",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "What’s there now",
+    "text": "What’s there now\nThe Coastal Mobility Route (CMR) runs about 4.5 km along the coast road from Blackrock to Sandycove. About 3.6 km of it is a two-way cycle track separated from traffic. It went in during summer 2020 as a temporary Covid measure, built from bollards, paint and plastic kerbs, and that’s still largely what’s on the ground.\nIt’s one of the busiest cycle routes in the county. The council’s counter at Seapoint averaged 1,053 cyclists a day in the 12 months to September 2026, up 3% on the year before. The counter at People’s Park in Dún Laoghaire averaged about 794 a day.\nThe temporary layout leaves gaps where the segregation stops and you’re back in traffic, at Newtown Avenue, Crofton Road, Queen’s Road and Sandycove Avenue."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html#what-the-council-has-decided",
+    "href": "cycling/coastal-mobility-route.html#what-the-council-has-decided",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "What the council has decided",
+    "text": "What the council has decided\nThe council consulted on a permanent version, called Living Streets: Coastal Mobility Route, from 3 July to 11 August 2023. It got 1,211 submissions. The report was noted by the Dún Laoghaire Area Committee on 25 September 2023, with a proposal to “proceed to detailed design and construction”.\nThe permanent plan would:\n\nfill the gaps on Newtown Avenue, Crofton Road, Queen’s Road and Sandycove Avenue;\nreplace the temporary bollards with granite kerbs;\nadd about 15 raised crossings;\nreverse the one-way traffic on Windsor Terrace."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html#current-status",
+    "href": "cycling/coastal-mobility-route.html#current-status",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "Current status",
+    "text": "Current status\nThe consultation page was last updated on 1 December 2025. As of November 2026 we couldn’t find a published construction date, a tender or a contract for the permanent scheme. A short closure of the route in August 2026 was for ground investigation at the Blackrock DART laneway, not for this scheme."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html#questions-for-the-council",
+    "href": "cycling/coastal-mobility-route.html#questions-for-the-council",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nWhere is the permanent Coastal Mobility Route in design, and when is construction expected to start?\nHas the scheme been tendered, and is NTA funding approved?\nWhich sections will be built first? Will the gaps at Newtown Avenue, Crofton Road, Queen’s Road and Sandycove Avenue be prioritised?\nUntil then, what maintenance is planned for the temporary bollards and surface?\nThe York Road counter has had no usable data since late 2025. When will it be repaired?\n\nThe scheme’s contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/coastal-mobility-route.html#sources",
+    "href": "cycling/coastal-mobility-route.html#sources",
+    "title": "Coastal Mobility Route: six years on, still temporary",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Living Streets: Coastal Mobility Route consultation, July–August 2023, updated 1 December 2025.\nDún Laoghaire-Rathdown County Council, DLR Coastal Mobility Route (project case study).\nIrishCycle, Plan to make Dún Laoghaire’s Coastal Mobility Route permanent, 4 July 2023.\nDún Laoghaire-Rathdown County Council, Bicycle Counts DLR, Smart Dublin open data, CC BY, to September 2026. See the DLR cycle counters page for method."
   },
   {
     "objectID": "cycling/blackrock-dart-laneway.html",
@@ -119,46 +273,186 @@
     "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Blackrock DART to Park Active Travel Scheme (consultation notice, updated 18 October 2024).\nDún Laoghaire-Rathdown County Council, consultation page and documents, including the Part 8 report (Atkins, June 2024) and the Chief Executive’s report (October 2024).\nDLR Public Participation Network, Proposed development: Blackrock DART to Park Active Travel Scheme, 1 July 2024.\nAn Coimisiún Pleanála, case 323857: Dún Laoghaire-Rathdown County Council Compulsory Purchase Order (Blackrock DART to Park Active Travel Scheme) Order, 2025.\nDún Laoghaire-Rathdown County Council, Bicycle Counts DLR and Bicycle/Pedestrian Counter Locations DLR, Smart Dublin open data, CC BY, hourly counts to September 2026.\nIrishCycle, Warm welcome for plan to replace narrow path at Blackrock Dart station with wide passageway, 22 April 2024.\nIrishCycle, Path cleared for upgrade of Blackrock Dart laneway as no objections to CPO received, 12 January 2026.\nIrishCycle, Closure on Coastal Mobility Route planned this month ahead of works to fix pinchpoint, 6 August 2026.\n\nMap screenshot: Fianaise, November 2026, CC BY 4.0."
   },
   {
-    "objectID": "cycling/shankill-killiney.html",
-    "href": "cycling/shankill-killiney.html",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway."
+    "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
   },
   {
-    "objectID": "cycling/shankill-killiney.html#what-the-map-says",
-    "href": "cycling/shankill-killiney.html#what-the-map-says",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
-    "section": "What the map says",
-    "text": "What the map says\nAsk Google Maps for cycling directions from Shankill to Killiney and it sends you down to the shore and north along the coast: 2.8 km, nine minutes, most of it shown in dark green and labelled “Separate bike lane”.\n\n\n\n\nGoogle Maps cycling directions from Shankill to Killiney, 6 November 2026. The green section along the shore is labelled “Separate bike lane”."
+    "objectID": "cycling/blackrock-village.html",
+    "href": "cycling/blackrock-village.html",
+    "title": "Blackrock village: Living Streets works and the closed contraflow",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. See also the Blackrock DART laneway and the Coastal Mobility Route."
   },
   {
-    "objectID": "cycling/shankill-killiney.html#whats-actually-there",
-    "href": "cycling/shankill-killiney.html#whats-actually-there",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
-    "section": "What’s actually there",
-    "text": "What’s actually there\nFrom the Shankill end there’s a short stretch of path. After that, the “bike lane” is the beach below the Shanganagh cliffs and the seafront walls: loose, rounded stones, shingle and rough grass, with no path, surface or markings of any kind. You can’t ride a bike on it, and pushing one is hard work. It isn’t usable with a buggy or a wheelchair either.\n\n\n\n\n\n\nLooking north along the shore towards Killiney Hill and Dalkey Island. The whole route is loose shingle.\n\n\n\n\n\n\n\nLarge rounded stones below the seafront houses, where the map shows a bike lane.\n\n\n\n\n\n\n\n\n\nStones, grass and ivy-covered walls. There is no path.\n\n\n\n\n\n\n\nFurther north, the stones run right up to the walls.\n\n\n\n\n\n\n\n\nLooking north towards Killiney. Photos taken in early November 2026. A person in the background has been blurred.\n\n\nThe council agrees the shore is difficult. Its own page for the Corbawn Lane beach access, about 500 metres from Shankill DART station, says the strand “is unsuitable for those with disabilities due to the stoney terrain and dangers posed by unstable cliffs” (DLR, Corbawn Lane)."
+    "objectID": "cycling/blackrock-village.html#the-scheme",
+    "href": "cycling/blackrock-village.html#the-scheme",
+    "title": "Blackrock village: Living Streets works and the closed contraflow",
+    "section": "The scheme",
+    "text": "The scheme\nIn 2020 Blackrock Main Street got a temporary layout with more space for walking and a southbound contraflow cycle lane outside the library. The contraflow links the village to Maretimo Villas and on to the Coastal Mobility Route, so you can ride south through the village without going round the one-way system.\nThe council’s Living Streets: Blackrock Village scheme makes that layout permanent. Consultation closed on 10 June 2023. Clonmel Enterprises won the contract, and works started in October 2025. It costs about €6.3 million excluding VAT, of which more than €3 million is from the NTA. Substantial completion is expected in the first quarter of 2027."
   },
   {
-    "objectID": "cycling/shankill-killiney.html#is-anything-planned",
-    "href": "cycling/shankill-killiney.html#is-anything-planned",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
-    "section": "Is anything planned?",
-    "text": "Is anything planned?\nI found no council or National Transport Authority plan for a walking or cycling path along this stretch of shore. What I did find:\n\nThe Coastal Mobility Route stops well north of here. DLR’s coastal cycleway runs from Booterstown and Blackrock to Sandycove and Dalkey (DLR, Coastal Mobility Interventions). There is no equivalent route from Killiney south to Shankill.\nCoastal protection, not access. In 2018 to 2019 DLR rebuilt the Corbawn Lane beach access and put rock armour along about 180 metres of cliff to the north, costing about €928,000 (DLR, December 2018; Afloat). The works protected the cliff and the steps, not a route along the shore.\nIrish Rail’s sea defences. Irish Rail’s East Coast Railway Infrastructure Protection Project proposes rock armour and higher sea walls between Merrion Gates and Wicklow, including a section from Dalkey Tunnel to Shanganagh. It consulted the public in autumn 2025 and expects works to run to about 2029. RTÉ reported that “access routes to the public will be maintained and improved in some places”, and that some beaches may get narrower (RTÉ, September 2025). If this goes ahead, it’s the one current project that will reshape this shore, so it’s the moment to ask for a path.\nA coastal walk was suggested in 2017, further south, from Bray to Shankill. A councillor proposed referring the idea to a council committee, and another pointed to Woodbrook Golf Club and cliff erosion as obstacles (Bray People, July 2017).\n\nI haven’t found any news coverage of the Google Maps label itself."
+    "objectID": "cycling/blackrock-village.html#during-the-works",
+    "href": "cycling/blackrock-village.html#during-the-works",
+    "title": "Blackrock village: Living Streets works and the closed contraflow",
+    "section": "During the works",
+    "text": "During the works\nA reader comment on IrishCycle on 3 August 2026 said the “contra flow lane has been closed for months”. We haven’t found an official notice of the closure or of a signed diversion, and we’d like the council to confirm.\nThe council’s latest updates say resurfacing will happen in the New Year (update of 20 October 2026), and there was night work at the Rock Road and Rock Hill junction on 3 November 2026, from 7pm to 11pm."
   },
   {
-    "objectID": "cycling/shankill-killiney.html#questions-for-the-council",
-    "href": "cycling/shankill-killiney.html#questions-for-the-council",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "objectID": "cycling/blackrock-village.html#questions-for-the-council",
+    "href": "cycling/blackrock-village.html#questions-for-the-council",
+    "title": "Blackrock village: Living Streets works and the closed contraflow",
     "section": "Questions for the council",
-    "text": "Questions for the council\n\nDoes DLR consider the shore between Shankill and Killiney DART stations to be part of its cycle network? If not, will it ask Google to remove the “separate bike lane” label?\nAre there plans for a walking and cycling path between Shankill and Killiney, along the coast or inland, and is it in the DLR or NTA cycle network plans?\nIs DLR talking to Irish Rail about building public access, or a path, into the East Coast Railway Infrastructure Protection Project along this stretch?\nUntil there’s a path, what’s the recommended cycle route between Shankill and Killiney?\n\nYou can also report the label to Google directly: in Google Maps, tap the route and choose Send feedback."
+    "text": "Questions for the council\n\nIs the Main Street contraflow cycle lane currently closed? If so, since when, and when will it reopen?\nWhat’s the signed diversion for people cycling south through the village while it’s closed?\nIs the scheme still on track for substantial completion in the first quarter of 2027?\nWill the finished contraflow be physically protected from traffic and parking?\n\nThe contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
   },
   {
-    "objectID": "cycling/shankill-killiney.html#sources",
-    "href": "cycling/shankill-killiney.html#sources",
-    "title": "Shankill to Killiney: a bike lane that’s a beach",
+    "objectID": "cycling/blackrock-village.html#sources",
+    "href": "cycling/blackrock-village.html#sources",
+    "title": "Blackrock village: Living Streets works and the closed contraflow",
     "section": "Sources",
-    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Corbawn Lane (beach information page).\nDún Laoghaire-Rathdown County Council, Corbawn Lane beach access and coastal protection works, 30 November 2018, updated June 2023.\nAfloat, Landing craft assists in Killiney Bay coastal protection works at Shanganagh cliffs.\nDún Laoghaire-Rathdown County Council, Coastal Mobility Interventions, 2020.\nDún Laoghaire-Rathdown County Council, Shankill cliffs.\nRTÉ News, Irish Rail plans to protect the east coast railway line, 15 September 2025.\nBray People, Ryan suggests coastal walk from Bray beach to Shankill, 12 July 2017.\n\nPhotos and map screenshot: Fianaise, November 2026, CC BY 4.0."
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Living Streets: Blackrock Village (project page and updates, including 20 October 2026).\nDún Laoghaire-Rathdown County Council, Traffic and roadworks update, 31 October to 6 November 2026.\nIrishCycle, Living Streets Blackrock project to make Covid redesign permanent and add cycling connection, 2 May 2023.\nIrishCycle, Work to start to give Blackrock village’s temporary Covid project a longer-term makeover, 29 September 2025.\nLovin Dublin, Completion of Blackrock village’s €6m Living Streets project expected early next year."
+  },
+  {
+    "objectID": "cycling/dlr-counters.html",
+    "href": "cycling/dlr-counters.html",
+    "title": "DLR cycle counters",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. The Seapoint and People’s Park counters are on the Coastal Mobility Route, and the Rock Road counters are just south of the gap at Merrion Gates. The Blackrock DART laneway page uses both.\nDún Laoghaire-Rathdown County Council (DLR) has permanent automatic counters on its main cycle routes. They count every bike that passes, every hour, and the council publishes the counts as open data. This page turns them into charts. It checks for new data every week and updates itself when there is some.\nData to 30 September 2026, from 16 counters. Counting started in 2010.\n* Readings at The Metals jump between about 100 and 900 a day from one month to the next since late 2024, which looks like a counter fault. Treat its numbers with caution."
+  },
+  {
+    "objectID": "cycling/dlr-counters.html#where-the-counters-are",
+    "href": "cycling/dlr-counters.html#where-the-counters-are",
+    "title": "DLR cycle counters",
+    "section": "Where the counters are",
+    "text": "Where the counters are\n\n\nFigure 1. DLR’s bicycle counters. Where several counters stand together, such as the three on Rock Road, the circle shows their combined total. Hover over or tap a circle for each counter. Data: DLR, counter locations and bicycle counts (CC BY). Map tiles: © OpenStreetMap contributors, © CARTO. Open full screen."
+  },
+  {
+    "objectID": "cycling/dlr-counters.html#busiest-counters",
+    "href": "cycling/dlr-counters.html#busiest-counters",
+    "title": "DLR cycle counters",
+    "section": "Busiest counters",
+    "text": "Busiest counters\n\n\nFigure 2. Average cyclists per day over the last 12 months, all days of the week. Counters with fewer than 180 working days in that time are left out. Open full screen."
+  },
+  {
+    "objectID": "cycling/dlr-counters.html#each-counter-over-time",
+    "href": "cycling/dlr-counters.html#each-counter-over-time",
+    "title": "DLR cycle counters",
+    "section": "Each counter over time",
+    "text": "Each counter over time\n\n\nFigure 3. Average cyclists per day in each month. Use the menu to pick a counter. Cycling peaks in summer and dips in winter, so compare a month with the same month in other years. Open full screen."
+  },
+  {
+    "objectID": "cycling/dlr-counters.html#about-the-data",
+    "href": "cycling/dlr-counters.html#about-the-data",
+    "title": "DLR cycle counters",
+    "section": "About the data",
+    "text": "About the data\n\nWhat’s counted. Most counters count bikes only. Where a counter sits on a shared path, DLR publishes the bike count separately. One-way counters only see one direction, so they show roughly half the traffic of a two-way counter on the same road.\nFaults. Counters break, lose power or get their batteries changed, which shows up as days of zero or near zero. Days with fewer than 22 hours of data, a total of zero, or a total under a quarter of that counter’s median over the surrounding four weeks are left out. Months with fewer than 10 good days are left blank.\nUpdates. DLR updates the dataset roughly monthly, and sometimes publishes a year’s counts in one go. A weekly check downloads any new files and redraws this page.\nCode and data. fetch_cycle_counts.py downloads the counts. make_counter_page.py draws this page. The monthly averages and summary are in analysis/cycling/data as CSV.\n\nSource: Dún Laoghaire-Rathdown County Council, Bicycle Counts DLR and Bicycle/Pedestrian Counter Locations DLR, via Smart Dublin, Creative Commons Attribution."
+  },
+  {
+    "objectID": "cycling/index.html",
+    "href": "cycling/index.html",
+    "title": "Cycling infrastructure in Dublin",
+    "section": "",
+    "text": "Some of the routes that Google Maps and the councils show as cycle routes are hard or impossible to cycle: a path that turns into a stony beach, or a walled lane too narrow for two bikes to pass. Each one breaks a route that is otherwise good, and pushes people back onto busy roads or off their bikes.\nThis project documents those gaps, and the routes I cycle regularly, one at a time, with photos taken on the ground, what the map claims, and what the council has said or planned. Each page ends with questions for Dún Laoghaire-Rathdown County Council (DLR). Pages are updated when there’s news."
+  },
+  {
+    "objectID": "cycling/index.html#where-things-stand",
+    "href": "cycling/index.html#where-things-stand",
+    "title": "Cycling infrastructure in Dublin",
+    "section": "Where things stand",
+    "text": "Where things stand\nLast checked 8 November 2026.\n\n\n\nRoute\nStatus\n\n\n\n\nBlackrock DART laneway\nApproved 2024, no objections to the land purchase, construction not yet scheduled\n\n\nShankill to Killiney\nGoogle Maps shows a bike lane on a shingle beach\n\n\nCoastal Mobility Route\nStill temporary; permanent version backed in 2023, not yet built\n\n\nRock Road to Merrion Gates\nBuilt to Trimleston Avenue in 2023; gap to Merrion Gates on the city side\n\n\nLower Kilmacud Road\nDLR Connector due to go for planning; construction 2027–28\n\n\nDún Laoghaire Central\nFinished October 2026, snagging in November\n\n\nBlackrock village\nWorks until early 2027; contraflow reported closed\n\n\nStillorgan village\nOld Dublin Road phase delayed to 2027\n\n\n\nHow many people cycle each route is on the DLR cycle counters page, which updates when the council publishes new data."
+  },
+  {
+    "objectID": "cycling/index.html#pages",
+    "href": "cycling/index.html#pages",
+    "title": "Cycling infrastructure in Dublin",
+    "section": "Pages",
+    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nBlackrock DART laneway\n\n\nA walled lane about 1.2 metres wide on the Coastal Mobility Route. A wider replacement was approved in 2024, but work has not started.\n\n\n\n\n\n\n\n\n\n\n\n\nShankill to Killiney\n\n\nGoogle Maps routes bikes along a ‘separate bike lane’ here. On the ground it’s a shingle beach.\n\n\n\n\n\n\n\n\n\n\n\n\nCoastal Mobility Route\n\n\nBlackrock to Sandycove. Built as a Covid trial in 2020 and backed for a permanent upgrade in 2023, with no construction date yet.\n\n\n\n\n\n\n\n\n\n\n\n\nRock Road to Merrion Gates\n\n\nThe two-way track ends at Trimleston Avenue, the city boundary. Heading north you’re back in traffic.\n\n\n\n\n\n\n\n\n\n\n\n\nLower Kilmacud Road\n\n\nThe cycle lane stops outside Mount Anville Primary. The DLR Connector would fix it, but not before 2027.\n\n\n\n\n\n\n\n\n\n\n\n\nDún Laoghaire Central\n\n\nKill Avenue, Mounttown Road and Glenageary Road Upper. Finished in October 2026; now to check how it works.\n\n\n\n\n\n\n\n\n\n\n\n\nBlackrock village\n\n\nLiving Streets works run to early 2027. The Main Street contraflow has been reported closed for months.\n\n\n\n\n\n\n\n\n\n\n\n\nStillorgan village\n\n\nThe Old Dublin Road phase has slipped to 2027, and its plans don’t show a cycle track.\n\n\n\n\n\n\n\n\n\n\n\n\nDLR cycle counters\n\n\nHow many people cycle past each of DLR’s permanent bike counters, from the council’s open data. Updated when new data comes out.\n\n\n\n\n\nNo matching items\n\nSpotted a gap that should be here? Email fianaise@proton.me with a location and, if you can, a photo."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html",
+    "href": "cycling/rock-road-merrion-gates.html",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. Usage here is tracked on the DLR cycle counters page. See also the Coastal Mobility Route."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html#what-was-built",
+    "href": "cycling/rock-road-merrion-gates.html#what-was-built",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "What was built",
+    "text": "What was built\nDLR consulted on extending the Coastal Mobility Route from Blackrock Park to Trimleston Avenue from 6 to 27 April 2022. It got 260 submissions: 59% supported it as proposed and another 21% supported it with changes.\nActavo built it between October 2022 and June 2023: about 400–450 m of two-way cycle track on the seaward side of Rock Road, planned at a minimum of 3 m wide. It was nearly open by July 2023, and it’s a good stretch of track."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html#where-it-stops",
+    "href": "cycling/rock-road-merrion-gates.html#where-it-stops",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "Where it stops",
+    "text": "Where it stops\nThe track ends at Trimleston Avenue, which is where Dún Laoghaire-Rathdown meets Dublin City. North of there, towards Merrion Gates and Strand Road, is Dublin City Council’s road. Heading north you have to cross over and mix with traffic on Merrion Road. Dublin City’s own plans for this stretch were tied up with the Strand Road cycle route and its court case.\nWhen it consulted in 2022, DLR said feedback about the city side would be passed on to Dublin City Council."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html#how-many-people-use-it",
+    "href": "cycling/rock-road-merrion-gates.html#how-many-people-use-it",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "How many people use it",
+    "text": "How many people use it\nThe three Rock Road counters at Booterstown averaged about 1,620 cyclists a day between them in the 12 months to September 2026: 630 on the cycle track, 454 in the bus lane and 540 on the park path. Every one of those riders heading for the city reaches the end of the track."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html#questions-for-the-council",
+    "href": "cycling/rock-road-merrion-gates.html#questions-for-the-council",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nWhat has DLR heard back from Dublin City Council about continuing the track from Trimleston Avenue to Merrion Gates?\nIs there a joint DLR and DCC plan or timeline for that link?\nCan the crossing at the end of the track be improved in the meantime, so northbound riders aren’t left on Merrion Road with traffic?\nThe Rock Road cycle track counter was inbound only until 2026. Does it now count both directions, and from what date?\n\nThe contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/rock-road-merrion-gates.html#sources",
+    "href": "cycling/rock-road-merrion-gates.html#sources",
+    "title": "Rock Road: the cycle track that stops at the county boundary",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Blackrock Park to Trimleston Avenue sustainable transport improvements consultation, April 2022.\nIrishCycle, 80% of respondents support DLR Coastal Mobility Route extension to county boundary, 26 May 2022.\nIrishCycle, Work advancing on two-way cycle path on Rock Road, 17 April 2023.\nIrishCycle, Preview: Coastal Mobility Route cycle path extension to Dublin City boundary, 9 July 2023.\nActavo, Rock Road Sustainable Transport Improvements Scheme.\nDún Laoghaire-Rathdown County Council, Bicycle Counts DLR, Smart Dublin open data, CC BY, to September 2026."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html",
+    "href": "cycling/stillorgan-village.html",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "",
+    "text": "Part of Cycling infrastructure in Dublin. See also Lower Kilmacud Road."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html#the-plan",
+    "href": "cycling/stillorgan-village.html#the-plan",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "The plan",
+    "text": "The plan\nDLR consulted on the Stillorgan Village Area Movement Framework Plan from 28 October to 9 December 2015. It’s being built in phases. Phases 1 and 2, on Lower Kilmacud Road between South Avenue and Kilmacud Crokes, are done."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html#phase-4a-old-dublin-road",
+    "href": "cycling/stillorgan-village.html#phase-4a-old-dublin-road",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "Phase 4A: Old Dublin Road",
+    "text": "Phase 4A: Old Dublin Road\nPhase 4A covers the Old Dublin Road from St Lawrence’s Park to Stillorgan College of Further Education. The council consulted from 21 May to 18 June 2025 and got 125 submissions, and the report was noted in December 2025.\nThe published plans are for wider footpaths and public realm work. We couldn’t find a cycle track in them.\nConstruction was due to start in the second quarter of 2026. In January 2026 that moved to the first quarter of 2027."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html#the-rest",
+    "href": "cycling/stillorgan-village.html#the-rest",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "The rest",
+    "text": "The rest\nPhases 3 and 4B, covering Lower Kilmacud Road, The Hill and the rest of the Old Dublin Road, have no published timing."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html#questions-for-the-council",
+    "href": "cycling/stillorgan-village.html#questions-for-the-council",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "Questions for the council",
+    "text": "Questions for the council\n\nDoes Phase 4A include any cycling provision on the Old Dublin Road? If not, why not?\nIs the first quarter of 2027 still the start date for Phase 4A?\nWhen will Phases 3 and 4B be designed and consulted on?\nHow will the Stillorgan village phases connect to the DLR Connector on Lower Kilmacud Road?\n\nThe contact is DLR’s Active Travel team, cycling@dlrcoco.ie."
+  },
+  {
+    "objectID": "cycling/stillorgan-village.html#sources",
+    "href": "cycling/stillorgan-village.html#sources",
+    "title": "Stillorgan village: Old Dublin Road still waiting",
+    "section": "Sources",
+    "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Stillorgan Village Area Movement Framework Plan, consultation October–December 2015.\nDún Laoghaire-Rathdown County Council, Stillorgan Village Urban Framework Plan Phase 4A consultation, May–June 2025, and news notice.\nCllr Eoin O’Driscoll, Council update, January 2026.\nIrishCycle, Landmark Dublin project offering significant cycling connectivity expected to be submitted to planning board soon, 6 October 2026."
   },
   {
     "objectID": "index.html",
