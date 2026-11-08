@@ -1,0 +1,46 @@
+# Download DLR's open bicycle counter data from Smart Dublin.
+#
+# On main (monthly, or by hand from the Actions tab) it opens a pull request
+# when the council has published new counts. On any other branch, a push that
+# changes the fetch script commits the data straight back to that branch.
+on:
+  schedule:
+    - cron: "0 6 3 * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/fetch_cycle_counts.py"
+      - ".github/workflows/refresh-cycle-counts.yml"
+
+name: Refresh cycle counts
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python3 tools/fetch_cycle_counts.py
+      - name: Commit to this branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/cycling/data/raw
+          git diff --cached --quiet || git commit -m "Update DLR cycle counter data" && git push
+      - uses: peter-evans/create-pull-request@v7
+        if: github.ref == 'refs/heads/main'
+        with:
+          branch: data/cycle-counts
+          delete-branch: true
+          title: "Update DLR cycle counter data"
+          commit-message: "Update DLR cycle counter data"
+          body: DLR published new or changed bicycle counter data on Smart Dublin.
+          add-paths: analysis/cycling/data/raw/*
