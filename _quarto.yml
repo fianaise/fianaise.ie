@@ -5,6 +5,7 @@ project:
     - "*.qmd"
     - "religion/*.qmd"
     - "cycling/*.qmd"
+    - "marriage/*.qmd"
   resources:
     - CNAME
     - figures/**
@@ -22,6 +23,8 @@ website:
             text: Religion in Ireland
           - href: cycling/index.qmd
             text: Cycling in Dublin
+          - href: marriage/index.qmd
+            text: Married, or not
           - href: https://opentalamh.ie
             text: Open Talamh
       - href: data.qmd

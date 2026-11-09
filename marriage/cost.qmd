@@ -1,0 +1,46 @@
+---
+title: "The cost of not marrying"
+description: "Income tax, inheritance tax and capital gains tax for a married couple and an unmarried one in the same position, under 2027 rules."
+---
+
+Part of [Married, or not](index.qmd). To try your own numbers, use the [calculator](calculator.qmd).
+
+Take two couples who live together, share their money and raise children together. One couple is married and the other isn't. Everything else about them is the same. This page sets out where the tax they pay differs, using the rules for 2027 announced in Budget 2027. Universal Social Charge and PRSI are charged on each person separately whether they are married or not, so they don't change the comparison.^[Revenue, [USC for married couples and civil partners](https://www.revenue.ie/en/jobs-and-pensions/usc/married-couples-civil-partners.aspx): "The USC rates and thresholds apply to both you, and your spouse or civil partner, individually."]
+
+## Income tax {#income-tax}
+
+A married couple can be assessed jointly. They get two personal tax credits between them, whoever earns the money, and a standard rate band of €55,500, which grows by up to €37,500 more when both of them earn.^[Standard rate bands for 2027: €46,500 single, €55,500 married with one income, increased for two-income couples by the lower of €37,500 or the lower earner's income ([Citizens Information, Budget 2027](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/); [KPMG, Budget 2027 headlines](https://kpmg.com/ie/en/insights/tax/budget-2027/headlines.html)). Personal and employee tax credits are €2,125 each in 2027 ([Citizens Information](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/)).]
+
+A cohabiting couple can't. Each partner is taxed as a single person, with a band of €46,500 and one personal credit. If one partner earns little or nothing, their credit and band go unused, and nothing can be moved across to the partner who earns.
+
+{{< include _income-tax-examples.md >}}
+
+**Table 1.** Income tax for 2027 on employment income, for a married couple under joint assessment and an unmarried couple taxed as two single people. Before USC and PRSI, which are the same either way. The married figures don't include the Home Carer Tax Credit (up to €2,050 in 2027), which only married couples and civil partners can claim, so for some one-earner families the real gap is larger.^[Home Carer Tax Credit for 2027: [Citizens Information, Budget 2027](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/). Calculated by [`tax-rules.js`](https://github.com/fianaise/fianaise.ie/blob/main/marriage/tax-rules.js) with [`make_examples.js`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/marriage/make_examples.js).]
+
+The gap is biggest when one partner earns all or most of the money, which is common while children are small or when one partner is ill or caring for someone. For a one-earner couple with income above €55,500, it is €3,925 a year: €9,000 of extra standard rate band, worth €1,800, plus a second personal credit of €2,125. Two partners who each earn above €46,500 pay the same either way.
+
+The Government's position has not changed. In November 2023 the Minister for Finance said: "I have no immediate plans to amend the tax treatment of cohabitating couples."^[Dáil written answer, [7 November 2023](https://www.oireachtas.ie/en/debates/question/2023-11-07/291/).]
+
+## Inheritance {#inheritance}
+
+Inheritance tax in Ireland is Capital Acquisitions Tax (CAT). How much you can inherit tax free depends on your relationship to the person who died.
+
+- **A spouse or civil partner** pays no CAT at all on anything they inherit from their spouse.^[Revenue, [transfers between spouses and civil partners](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/transfers-between-spouses-civil-partners/index.aspx).]
+- **A cohabiting partner** is treated like an unrelated person, in the same group (Group C) as cousins, in-laws and friends. They can receive €22,000 tax free over their lifetime, and pay 33% on everything above that.^[Group C threshold of €22,000 for gifts and inheritances on or after 7 October 2026 ([Revenue, CAT thresholds](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx)); Group C covers "cousins, in-laws and friends" ([Revenue, CAT groups](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-groups.aspx)); 33% rate ([Revenue, CAT rates](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-rates.aspx)). For cohabitants, "the relevant Group Threshold is the Group C threshold" ([Dáil written answer, 11 July 2023](https://www.oireachtas.ie/en/debates/question/2023-07-11/214/)).]
+
+Suppose a couple own a home together, worth €600,000, and one of them dies. The survivor inherits a €300,000 half share. A spouse pays nothing. A cohabiting partner pays (€300,000 − €22,000) × 33% = **€91,740**, unless a relief applies. The same applies to savings, a pension fund or anything else one partner leaves the other.
+
+Budget 2027 raised all three CAT thresholds from 7 October 2026, including Group C, from €20,000 to €22,000. It did not change who is in which group, so cohabiting partners are still in Group C.^[Revenue, [CAT thresholds](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx).]
+
+There are two narrow ways out, and neither is a substitute for the spouse exemption:
+
+- **Dwelling house exemption.** Anyone can inherit a house free of CAT if it was the main home of the person who died, and the person inheriting lived in it as their only or main home for the three years before the death, don't own or have an interest in any other house, and keep it as their only or main home for six years afterwards (unless they are 65 or over).^[Revenue, [dwelling house exemption: qualifying conditions](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/dwelling-house/qualifying-conditions-inheritance-on-after-251216.aspx).] A partner who wants to move, or who owns another property, loses it. A spouse needs to meet none of these conditions.
+- **A court order.** A qualified cohabitant can apply to the court for provision from their partner's estate under the Cohabitants Act 2010, and what the court awards is free of CAT.^[Revenue, [certain transfers to qualified cohabitants](https://revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/certain-transfers-qualified-cohabitants/index.aspx).] But it means suing the estate, and what a partner is left in a will doesn't get the same treatment.
+
+## Capital gains {#capital-gains}
+
+If one spouse gives the other an asset, such as a share in a property or an investment, there is no Capital Gains Tax (CGT). If one cohabiting partner does the same, it is taxed as if they had sold it to a stranger at market value. The giver pays 31% on any gain above the €1,270 annual exemption.^[CGT rate of 31% for disposals on or after 7 October 2026; €1,270 annual exemption; "If you transfer an asset to or from your spouse, it is exempt from Capital Gains Tax" ([Citizens Information, Capital Gains Tax](https://www.citizensinformation.ie/en/money-and-tax/tax/capital-taxes/capital-gains-tax/)).] The partner receiving it may also owe CAT on its value, as above.
+
+## Pensions
+
+The State's widow's, widower's or surviving civil partner's pension used to be paid only to people who had been married or in a civil partnership. After the Supreme Court's decision in *O'Meara* in January 2024, the Oireachtas extended it in July 2025 to qualified cohabitants, as the Bereaved Partner's Pension.^[Department of Social Protection, [Bereaved Partners Bill passed by the Oireachtas](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas), July 2025.] Occupational pension schemes are a different matter. That is what the *Jones* case is about: see [The Constitution and the courts](constitution.qmd).
