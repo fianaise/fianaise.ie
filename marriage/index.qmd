@@ -1,13 +1,13 @@
 ---
-title: "Married, or not"
+title: "Marriage in Ireland"
 description: "How Irish tax and inheritance law treat couples who live together and raise children without marrying, what it costs them, and what the courts have said."
 listing:
   id: pieces
   contents: pieces.yml
   type: grid
-  grid-columns: 2
+  grid-columns: 3
   image-height: 100%
-  fields: [image, title, description]
+  fields: [image, description]
   sort: false
   filter-ui: false
   sort-ui: false
@@ -57,6 +57,6 @@ The law already has a test for a committed unmarried couple. A *qualified cohabi
 
 ## About this project
 
-I'm Maedbh King, and I have a personal stake in this: my partner and I have chosen not to marry, and we are raising two children together. My own view of marriage is on the [Why marriage?](why-marriage.qmd) page. The other pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please [tell me](../about.qmd#corrections).
+I'm Maedbh King, and I have a personal stake in this: my partner and I have chosen not to marry, and we are raising two children together. These pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please [tell me](../about.qmd#corrections).
 
 None of this is tax or legal advice. If you need to plan around these rules, talk to a solicitor or tax adviser.

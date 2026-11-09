@@ -3,7 +3,7 @@ title: "The cost of not marrying"
 description: "Income tax, inheritance tax and capital gains tax for a married couple and an unmarried one in the same position, under 2027 rules."
 ---
 
-Part of [Married, or not](index.qmd). To try your own numbers, use the [calculator](calculator.qmd).
+Part of [Marriage in Ireland](index.qmd). To try your own numbers, use the [calculator](calculator.qmd).
 
 Take two couples who live together, share their money and raise children together. One couple is married and the other isn't. Everything else about them is the same. This page sets out where the tax they pay differs, using the rules for 2027 announced in Budget 2027. Universal Social Charge and PRSI are charged on each person separately whether they are married or not, so they don't change the comparison.^[Revenue, [USC for married couples and civil partners](https://www.revenue.ie/en/jobs-and-pensions/usc/married-couples-civil-partners.aspx): "The USC rates and thresholds apply to both you, and your spouse or civil partner, individually."]
 

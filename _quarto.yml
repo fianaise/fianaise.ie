@@ -24,7 +24,7 @@ website:
           - href: cycling/index.qmd
             text: Cycling in Dublin
           - href: marriage/index.qmd
-            text: Married, or not
+            text: Marriage in Ireland
           - href: https://opentalamh.ie
             text: Open Talamh
       - href: data.qmd

@@ -5,7 +5,7 @@ resources:
   - tax-rules.js
 ---
 
-Part of [Married, or not](index.qmd). How each tax works, with sources, is on [The cost of not marrying](cost.qmd).
+Part of [Marriage in Ireland](index.qmd). How each tax works, with sources, is on [The cost of not marrying](cost.qmd).
 
 Put in your incomes for two stretches of life, for example while children are small and afterwards, and what one partner might leave the other. The calculator compares what you would pay if you were married with what you pay if you are not. It is a rough estimate, not tax advice.
 
