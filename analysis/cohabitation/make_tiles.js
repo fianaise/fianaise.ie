@@ -21,14 +21,13 @@ const tiles = [
       </body></html>`);
     await page.screenshot({ path: path.join(__dirname, "..", "..", "images", file) });
   }
-  // Home page cover: inheritance tax on a €300,000 half share of a home, married and not.
+  // Home page cover: one couple in six is cohabiting (CSO Census 2022, table F3035).
+  const pair = (on) => `<div style="display:flex;gap:10px"><div style="width:48px;height:48px;border-radius:50%;background:${on ? "#c4501f" : "#c9c7c0"}"></div><div style="width:48px;height:48px;border-radius:50%;background:${on ? "#c4501f" : "#c9c7c0"}"></div></div>`;
   await page.setContent(`<!doctype html><html><body style="margin:0;width:1200px;height:800px;background:#f3f2ee;
-    font-family:'Source Sans Pro','Liberation Sans',Arial,sans-serif;box-sizing:border-box;padding:90px 110px;display:flex;flex-direction:column;justify-content:center">
-    <div style="font-size:44px;color:#2b2a28;margin-bottom:50px">Inheritance tax on a €300,000 half share of a home</div>
-    <div style="display:grid;grid-template-columns:260px 1fr;row-gap:40px;align-items:center;font-size:44px;color:#2b2a28">
-      <div>Married</div><div style="display:flex;align-items:center;gap:24px"><div style="width:6px;height:110px;background:#52514e"></div><b style="font-size:64px">€0</b></div>
-      <div>Not married</div><div style="display:flex;align-items:center;gap:24px"><div style="width:500px;height:110px;background:#c4501f;border-radius:0 6px 6px 0"></div><b style="font-size:64px;color:#c4501f">€91,740</b></div>
-    </div></body></html>`);
+    font-family:'Source Sans Pro','Liberation Sans',Arial,sans-serif;box-sizing:border-box;padding:80px 110px;display:flex;flex-direction:column;justify-content:center">
+    <div style="display:flex;gap:40px;margin-bottom:60px">${[1, 0, 0, 0, 0, 0].map(pair).join("")}</div>
+    <div style="font-size:120px;font-weight:700;color:#c4501f;line-height:1">1 in 6</div>
+    <div style="font-size:48px;color:#2b2a28;margin-top:24px">couples in Ireland live together without marrying</div></body></html>`);
   await page.screenshot({ path: path.join(__dirname, "..", "..", "images", "cohabitation.png") });
   await browser.close();
 })();
