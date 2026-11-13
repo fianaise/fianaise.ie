@@ -5,7 +5,6 @@ const path = require("path");
 
 // [file, heading, line under it, colour of the heading]
 const tiles = [
-  ["cohabitation.png", "€0 / €91,740", "Inheritance tax on a €300,000 half share of a home, for a spouse and for an unmarried partner", "#c4501f"],
   ["cohabitation-cost.png", "The cost of not marrying", "", "#c4501f"],
   ["cohabitation-calculator.png", "Calculator", "", "#2a78d6"],
   ["cohabitation-constitution.png", "The Constitution and the courts", "", "#158a60"],
@@ -22,5 +21,14 @@ const tiles = [
       </body></html>`);
     await page.screenshot({ path: path.join(__dirname, "..", "..", "images", file) });
   }
+  // Home page cover: inheritance tax on a €300,000 half share of a home, married and not.
+  await page.setContent(`<!doctype html><html><body style="margin:0;width:1200px;height:800px;background:#f3f2ee;
+    font-family:'Source Sans Pro','Liberation Sans',Arial,sans-serif;box-sizing:border-box;padding:90px 110px;display:flex;flex-direction:column;justify-content:center">
+    <div style="font-size:44px;color:#2b2a28;margin-bottom:50px">Inheritance tax on a €300,000 half share of a home</div>
+    <div style="display:grid;grid-template-columns:260px 1fr;row-gap:40px;align-items:center;font-size:44px;color:#2b2a28">
+      <div>Married</div><div style="display:flex;align-items:center;gap:24px"><div style="width:6px;height:110px;background:#52514e"></div><b style="font-size:64px">€0</b></div>
+      <div>Not married</div><div style="display:flex;align-items:center;gap:24px"><div style="width:500px;height:110px;background:#c4501f;border-radius:0 6px 6px 0"></div><b style="font-size:64px;color:#c4501f">€91,740</b></div>
+    </div></body></html>`);
+  await page.screenshot({ path: path.join(__dirname, "..", "..", "images", "cohabitation.png") });
   await browser.close();
 })();
