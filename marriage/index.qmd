@@ -13,11 +13,7 @@ listing:
   sort-ui: false
 ---
 
-About one couple in six in Ireland is not married. At the 2022 census, 176,956 of the country's 1,059,955 couples were cohabiting, and 85,262 of those cohabiting couples were raising children together.^[CSO, Census 2022, table [F3035](https://data.cso.ie/table/F3035).] In 2024, 40.5% of babies were born to parents who were not married or in a civil partnership.^[CSO, [Births 2024](https://www.cso.ie/en/releasesandpublications/ep/p-vsar/vitalstatisticsannualreport2024/births2024/).]
-
-For tax, the State treats these couples as two unconnected individuals. In the Minister for Finance's words, cohabiting couples are "treated as separate and unconnected individuals for the purposes of income tax", cannot file joint returns, and cannot "share their tax credits and tax bands in the same manner as married couples".^[Dáil written answer, [30 March 2023](https://www.oireachtas.ie/en/debates/question/2023-03-30/130/).] When one partner dies, the other inherits as a stranger would: tax free up to €22,000, and 33% on everything above that. A husband, wife or civil partner pays nothing.^[Revenue, [CAT thresholds](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx) and [transfers between spouses](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/transfers-between-spouses-civil-partners/index.aspx).]
-
-This project sets out what that costs, why the law is the way it is, and how the courts have started to move on pensions but not yet on tax.
+About one couple in six in Ireland is cohabiting rather than married, and 85,262 of these couples are raising children together.^[CSO, Census 2022, table [F3035](https://data.cso.ie/table/F3035): 176,956 of 1,059,955 couples were cohabiting.] Revenue treats each of these couples as two unconnected individuals.^[Dáil written answer, [30 March 2023](https://www.oireachtas.ie/en/debates/question/2023-03-30/130/).] They can't share tax credits or bands, and when one partner dies the other pays inheritance tax like a stranger would. A husband, wife or civil partner pays none.^[Revenue, [CAT thresholds](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx) and [transfers between spouses](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/transfers-between-spouses-civil-partners/index.aspx).]
 
 ::: {.stat-cards .three}
 ::: {.stat-card}
@@ -50,13 +46,13 @@ couples in Ireland are cohabiting, not married (Census 2022). [Source](https://d
 
 ## What this project asks for
 
-The law already has a test for a committed unmarried couple. A *qualified cohabitant* is someone who has lived with their partner in an intimate and committed relationship for two years if they have a child together, or five years otherwise. Since 2025 that test decides who gets the State's Bereaved Partner's Pension.^[Department of Social Protection, [Bereaved Partners Bill passed by the Oireachtas](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas), July 2025.] This project asks for the same test to be used for tax:
+The law already has a test for a committed unmarried couple. A *qualified cohabitant* has lived with their partner for two years if they have a child together, or five years otherwise, and since 2025 that test decides who gets the State's Bereaved Partner's Pension.^[Department of Social Protection, [Bereaved Partners Bill passed by the Oireachtas](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas), July 2025.] This project asks for the same test to be used for tax.
 
 1. **Inheritance and capital gains first.** Gifts and inheritances between qualified cohabitants should be exempt from Capital Acquisitions Tax, and transfers between them exempt from Capital Gains Tax, as they are for spouses. This is where the gap is widest.
 2. **Then income tax.** Qualified cohabitants should be able to choose joint assessment, sharing tax credits and the standard rate band, as married couples can.
 
 ## About this project
 
-I'm Maedbh King, and I have a personal stake in this: my partner and I have chosen not to marry, and we are raising two children together. These pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please [tell me](../about.qmd#corrections).
+I'm Maedbh King, and I have a personal stake in this as my partner and I have chosen not to marry, and we are raising two children together. These pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please [tell me](../about.qmd#corrections).
 
 None of this is tax or legal advice. If you need to plan around these rules, talk to a solicitor or tax adviser.
