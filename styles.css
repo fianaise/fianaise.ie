@@ -139,3 +139,56 @@
 @media (max-width: 767px) {
   .timeline.cycling-timeline { grid-template-columns: 1fr; }
 }
+
+/* Married, or not: lifetime calculator. */
+.mc-form fieldset {
+  border: 1px solid #e8e7e3;
+  border-radius: 6px;
+  padding: 0.75rem 1rem 0.25rem;
+  margin: 0 0 1rem;
+}
+.mc-form legend {
+  float: none;
+  width: auto;
+  padding: 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.mc-form label {
+  display: block;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #52514e;
+}
+.mc-form input {
+  display: block;
+  width: 100%;
+  max-width: 14rem;
+  margin-top: 0.25rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #c9c7c0;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.mc-result {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  background: #f3f2ee;
+}
+.mc-total-label { margin: 0; }
+.mc-total {
+  margin: 0.25rem 0 1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #c4501f;
+  font-variant-numeric: tabular-nums;
+}
+.mc-table { margin-bottom: 0; background: transparent; font-variant-numeric: tabular-nums; }
+.mc-table td, .mc-table th { background: transparent; }
+@media (max-width: 575px) {
+  .mc-result { padding: 0.75rem; }
+  .mc-table { font-size: 0.82rem; }
+  .mc-table th, .mc-table td { padding: 0.4rem 0.25rem; }
+}

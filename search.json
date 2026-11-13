@@ -60,7 +60,7 @@
     "href": "data.html#code",
     "title": "Data & code",
     "section": "Code",
-    "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
+    "text": "Code\n\nanalysis/education_equality: fetches the CSO and Department of Education data and draws the religion and survey figures.\nanalysis/charts: draws the census, marriage and survey charts and maps in the site’s style. tools/fetch_school_lists.py downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.\ncohabitation/tax-rules.js and analysis/cohabitation: the tax rules behind the Cohabitation in Ireland calculator and worked examples.\nanalysis/charities: builds the charities landscape from the Charities Regulator’s register."
   },
   {
     "objectID": "cycling/shankill-killiney.html",
@@ -259,11 +259,144 @@
     "text": "Sources\n\nDún Laoghaire-Rathdown County Council, Blackrock DART to Park Active Travel Scheme (consultation notice, updated 18 October 2024).\nDún Laoghaire-Rathdown County Council, consultation page and documents, including the Part 8 report (Atkins, June 2024) and the Chief Executive’s report (October 2024).\nDLR Public Participation Network, Proposed development: Blackrock DART to Park Active Travel Scheme, 1 July 2024.\nAn Coimisiún Pleanála, case 323857: Dún Laoghaire-Rathdown County Council Compulsory Purchase Order (Blackrock DART to Park Active Travel Scheme) Order, 2025.\nDún Laoghaire-Rathdown County Council, Bicycle Counts DLR and Bicycle/Pedestrian Counter Locations DLR, Smart Dublin open data, CC BY, hourly counts to September 2026.\nIrishCycle, Warm welcome for plan to replace narrow path at Blackrock Dart station with wide passageway, 22 April 2024.\nIrishCycle, Path cleared for upgrade of Blackrock Dart laneway as no objections to CPO received, 12 January 2026.\nIrishCycle, Closure on Coastal Mobility Route planned this month ahead of works to fix pinchpoint, 6 August 2026.\n\nMap screenshot: Fianaise, November 2026, CC BY 4.0."
   },
   {
+    "objectID": "cohabitation/cost.html",
+    "href": "cohabitation/cost.html",
+    "title": "The cost of not marrying",
+    "section": "",
+    "text": "Part of Cohabitation in Ireland. To try your own numbers, use the calculator.\nTake two couples who live together, share their money and raise children together. One couple is married and the other isn’t. Everything else about them is the same. This page sets out where the tax they pay differs, using the rules for 2027 announced in Budget 2027. Universal Social Charge and PRSI are charged on each person separately whether they are married or not, so they don’t change the comparison.1"
+  },
+  {
+    "objectID": "cohabitation/cost.html#income-tax",
+    "href": "cohabitation/cost.html#income-tax",
+    "title": "The cost of not marrying",
+    "section": "Income tax",
+    "text": "Income tax\nA married couple can be assessed jointly. They get two personal tax credits between them, whoever earns the money, and a standard rate band of €55,500, which grows by up to €37,500 more when both of them earn.2\nA cohabiting couple can’t. Each partner is taxed as a single person, with a band of €46,500 and one personal credit. If one partner earns little or nothing, their credit and band go unused, and nothing can be moved across to the partner who earns.\n\n\n\n\n\n\n\n\n\nHousehold\nIncome tax if married\nIncome tax if not married\nExtra each year\n\n\n\n\nOne earner on €60,000, partner at home\n€6,525\n€10,450\n€3,925\n\n\nOne earner on €100,000, partner at home\n€22,525\n€26,450\n€3,925\n\n\nOne earner on €40,000, partner at home\n€1,625\n€3,750\n€2,125\n\n\n€70,000 and €20,000\n€12,400\n€14,450\n€2,050\n\n\n€90,000 and €30,000\n€22,400\n€24,200\n€1,800\n\n\nTwo earners on €50,000 each\n€12,900\n€12,900\n€0\n\n\n\nTable 1. Income tax for 2027 on employment income, for a married couple under joint assessment and an unmarried couple taxed as two single people. Before USC and PRSI, which are the same either way. The married figures don’t include the Home Carer Tax Credit (up to €2,050 in 2027), which only married couples and civil partners can claim, so for some one-earner families the real gap is larger.3\nThe gap is biggest when one partner earns all or most of the money, which is common while children are small or when one partner is ill or caring for someone. For a one-earner couple with income above €55,500, it is €3,925 a year: €9,000 of extra standard rate band, worth €1,800, plus a second personal credit of €2,125. Two partners who each earn above €46,500 pay the same either way.\nThe Government’s position has not changed. In November 2023 the Minister for Finance said: “I have no immediate plans to amend the tax treatment of cohabitating couples.”4"
+  },
+  {
+    "objectID": "cohabitation/cost.html#inheritance",
+    "href": "cohabitation/cost.html#inheritance",
+    "title": "The cost of not marrying",
+    "section": "Inheritance",
+    "text": "Inheritance\nInheritance tax in Ireland is Capital Acquisitions Tax (CAT). How much you can inherit tax free depends on your relationship to the person who died.\n\nA spouse or civil partner pays no CAT at all on anything they inherit from their spouse.5\nA cohabiting partner is treated like an unrelated person, in the same group (Group C) as cousins, in-laws and friends. They can receive €22,000 tax free over their lifetime, and pay 33% on everything above that.6\n\nSuppose a couple own a home together, worth €600,000, and one of them dies. The survivor inherits a €300,000 half share. A spouse pays nothing. A cohabiting partner pays (€300,000 − €22,000) × 33% = €91,740, unless a relief applies. The same applies to savings, a pension fund or anything else one partner leaves the other.\nBudget 2027 raised all three CAT thresholds from 7 October 2026, including Group C, from €20,000 to €22,000. It did not change who is in which group, so cohabiting partners are still in Group C.7\nThere are two narrow ways out, and neither is a substitute for the spouse exemption:\n\nDwelling house exemption. Anyone can inherit a house free of CAT if it was the main home of the person who died, and the person inheriting lived in it as their only or main home for the three years before the death, don’t own or have an interest in any other house, and keep it as their only or main home for six years afterwards (unless they are 65 or over).8 A partner who wants to move, or who owns another property, loses it. A spouse needs to meet none of these conditions.\nA court order. A qualified cohabitant can apply to the court for provision from their partner’s estate under the Cohabitants Act 2010, and what the court awards is free of CAT.9 But it means suing the estate, and what a partner is left in a will doesn’t get the same treatment."
+  },
+  {
+    "objectID": "cohabitation/cost.html#capital-gains",
+    "href": "cohabitation/cost.html#capital-gains",
+    "title": "The cost of not marrying",
+    "section": "Capital gains",
+    "text": "Capital gains\nIf one spouse gives the other an asset, such as a share in a property or an investment, there is no Capital Gains Tax (CGT). If one cohabiting partner does the same, it is taxed as if they had sold it to a stranger at market value. The giver pays 31% on any gain above the €1,270 annual exemption.10 The partner receiving it may also owe CAT on its value, as above."
+  },
+  {
+    "objectID": "cohabitation/cost.html#pensions",
+    "href": "cohabitation/cost.html#pensions",
+    "title": "The cost of not marrying",
+    "section": "Pensions",
+    "text": "Pensions\nThe State’s widow’s, widower’s or surviving civil partner’s pension used to be paid only to people who had been married or in a civil partnership. After the Supreme Court’s decision in O’Meara in January 2024, the Oireachtas extended it in July 2025 to qualified cohabitants, as the Bereaved Partner’s Pension.11 Occupational pension schemes are a different matter. That is what the Jones case is about: see The Constitution and the courts."
+  },
+  {
+    "objectID": "cohabitation/cost.html#footnotes",
+    "href": "cohabitation/cost.html#footnotes",
+    "title": "The cost of not marrying",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRevenue, USC for married couples and civil partners: “The USC rates and thresholds apply to both you, and your spouse or civil partner, individually.”↩︎\nStandard rate bands for 2027: €46,500 single, €55,500 married with one income, increased for two-income couples by the lower of €37,500 or the lower earner’s income (Citizens Information, Budget 2027; KPMG, Budget 2027 headlines). Personal and employee tax credits are €2,125 each in 2027 (Citizens Information).↩︎\nHome Carer Tax Credit for 2027: Citizens Information, Budget 2027. Calculated by tax-rules.js with make_examples.js.↩︎\nDáil written answer, 7 November 2023.↩︎\nRevenue, transfers between spouses and civil partners.↩︎\nGroup C threshold of €22,000 for gifts and inheritances on or after 7 October 2026 (Revenue, CAT thresholds); Group C covers “cousins, in-laws and friends” (Revenue, CAT groups); 33% rate (Revenue, CAT rates). For cohabitants, “the relevant Group Threshold is the Group C threshold” (Dáil written answer, 11 July 2023).↩︎\nRevenue, CAT thresholds.↩︎\nRevenue, dwelling house exemption: qualifying conditions.↩︎\nRevenue, certain transfers to qualified cohabitants.↩︎\nCGT rate of 31% for disposals on or after 7 October 2026; €1,270 annual exemption; “If you transfer an asset to or from your spouse, it is exempt from Capital Gains Tax” (Citizens Information, Capital Gains Tax).↩︎\nDepartment of Social Protection, Bereaved Partners Bill passed by the Oireachtas, July 2025.↩︎"
+  },
+  {
+    "objectID": "cohabitation/calculator.html",
+    "href": "cohabitation/calculator.html",
+    "title": "Calculator",
+    "section": "",
+    "text": "Part of Cohabitation in Ireland. How each tax works, with sources, is on The cost of not marrying.\nPut in your incomes for two stretches of life, for example while children are small and afterwards, and what one partner might leave the other. The calculator compares what you would pay if you were married with what you pay if you are not. It is a rough estimate, not tax advice."
+  },
+  {
+    "objectID": "cohabitation/calculator.html#what-it-assumes",
+    "href": "cohabitation/calculator.html#what-it-assumes",
+    "title": "Calculator",
+    "section": "What it assumes",
+    "text": "What it assumes\n\nIncome tax uses the 2027 rates, bands and credits from Budget 2027, kept the same for every year, with no inflation or pay rises. Incomes are treated as employment income. A married couple pays the lower of joint assessment and being taxed separately. USC and PRSI are left out because they are charged on each person separately either way.\nLeft out, so the real gap can be bigger: the Home Carer Tax Credit (up to €2,050 a year), which only married couples and civil partners can claim.\nInheritance tax assumes the partner who inherits has had no earlier gifts or inheritances that count towards the same €22,000 threshold, and that no relief applies. The dwelling house exemption can cover the family home, if strict conditions are met, and a court order under the Cohabitants Act 2010 is tax free.\nCapital gains tax is the tax on a gift between partners that a spouse wouldn’t pay. It uses the 31% rate and the €1,270 annual exemption.\n\nThe rules are in tax-rules.js, with a source for each number, and are updated after each Budget."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don’t have the time to do.\nFianaise is Irish for evidence.\nMy name is Maedbh King. I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.\nIf you spot a mistake, please open an issue on GitHub (there is a form for corrections). Corrections are made in the open, and the change history of every page is public on GitHub. If you’d like to see a particular analysis, or have some feedback, please email fianaise@proton.me.\nText and figures are licensed CC BY 4.0: reuse them freely, with credit to Fianaise. Code is MIT licensed. The underlying data belongs to its publishers and keeps their licences (see Data & code)."
+  },
+  {
+    "objectID": "cohabitation/constitution.html",
+    "href": "cohabitation/constitution.html",
+    "title": "The Constitution and the courts",
+    "section": "",
+    "text": "Part of Cohabitation in Ireland."
+  },
+  {
+    "objectID": "cohabitation/constitution.html#article-41",
+    "href": "cohabitation/constitution.html#article-41",
+    "title": "The Constitution and the courts",
+    "section": "Article 41",
+    "text": "Article 41\nThe Constitution’s article on the family is built around marriage. Article 41.3.1° says: “The State pledges itself to guard with special care the institution of Marriage, on which the Family is founded, and to protect it against attack.”1 The courts have read “the Family” in Article 41 as the family based on marriage, and the State relies on that reading when it defends treating married couples differently.\nArticle 41.2 is still in the Constitution too: “the State recognises that by her life within the home, woman gives to the State a support without which the common good cannot be achieved”, and “The State shall, therefore, endeavour to ensure that mothers shall not be obliged by economic necessity to engage in labour to the neglect of their duties in the home.”2"
+  },
+  {
+    "objectID": "cohabitation/constitution.html#the-2024-referendums",
+    "href": "cohabitation/constitution.html#the-2024-referendums",
+    "title": "The Constitution and the courts",
+    "section": "The 2024 referendums",
+    "text": "The 2024 referendums\nOn 8 March 2024 voters were asked two questions. The family amendment would have recognised families “whether founded on marriage or on other durable relationships”. It was rejected by 67.7% to 32.3%.3 The care amendment, which would have replaced Article 41.2, was also rejected.4 So the Constitution’s wording is unchanged."
+  },
+  {
+    "objectID": "cohabitation/constitution.html#civil-partnership",
+    "href": "cohabitation/constitution.html#civil-partnership",
+    "title": "The Constitution and the courts",
+    "section": "Civil partnership",
+    "text": "Civil partnership\nFrom 2011 to 2015 same-sex couples could register a civil partnership, which carries the same tax treatment as marriage. It was never open to opposite-sex couples.5 Since the Marriage Act 2015 came into effect on 16 November 2015, no new civil partnerships can be registered.6 That leaves marriage as the only way for any couple to be treated as a couple for tax."
+  },
+  {
+    "objectID": "cohabitation/constitution.html#the-pension-cases",
+    "href": "cohabitation/constitution.html#the-pension-cases",
+    "title": "The Constitution and the courts",
+    "section": "The pension cases",
+    "text": "The pension cases\nThe courts have started to say that protecting marriage doesn’t require the State to penalise other families, using the equality guarantee in Article 40.1.\nO’Meara (2024). John O’Meara was refused the widower’s pension when his partner, the mother of their children, died, because they had not married. On 22 January 2024 the Supreme Court found in his favour, on the basis of Article 40.1.7 The Oireachtas responded in July 2025 by extending the pension to qualified cohabitants: two years together if they have a child, five years otherwise. It is paid back to the date of the judgment.8\nJones (2026). Freddie Jones and James Kingston lived together from 1998 until Mr Kingston died in 2022. Mr Jones was refused a civil service spouse’s pension. In January 2026 the High Court held that excluding qualified cohabitants from that scheme was incompatible with Article 40.1.9 On 22 May 2026 the Supreme Court agreed to hear the State’s appeal directly.10 The decision is pending.\nNeither case is about tax. But both turn on the same question that tax raises: whether the State can treat two families that do the same things for each other differently, only because one of them married."
+  },
+  {
+    "objectID": "cohabitation/constitution.html#footnotes",
+    "href": "cohabitation/constitution.html#footnotes",
+    "title": "The Constitution and the courts",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBunreacht na hÉireann, Article 41.3.1°.↩︎\nAs quoted by the Electoral Commission.↩︎\nRTÉ, 9 March 2024.↩︎\nElectoral Commission: “The proposal was rejected by the people.”↩︎\nCivil Partnership and Certain Rights and Obligations of Cohabitants Act 2010.↩︎\nCSO, Marriages 2024: from 16 November 2015 “same-sex couples no longer had the option to apply for a Civil Partnership.”↩︎\nO’Meara v Minister for Social Protection [2024] IESC 1. Date: Department of Social Protection. Basis: PILA.↩︎\nDepartment of Social Protection, July 2025.↩︎\nIrish Times, 19 January 2026; PILA.↩︎\n[2026] IESCDET 64; Irish Times, 25 May 2026.↩︎"
+  },
+  {
+    "objectID": "cohabitation/index.html",
+    "href": "cohabitation/index.html",
+    "title": "Cohabitation in Ireland",
+    "section": "",
+    "text": "About one couple in six in Ireland is cohabiting rather than married, and 85,262 of these couples are raising children together.1 Revenue treats each of these couples as two unconnected individuals.2 They can’t share tax credits or bands, and when one partner dies the other pays inheritance tax like a stranger would. A husband, wife or civil partner pays none.3"
+  },
+  {
+    "objectID": "cohabitation/index.html#the-cost-of-not-marrying",
+    "href": "cohabitation/index.html#the-cost-of-not-marrying",
+    "title": "Cohabitation in Ireland",
+    "section": "The cost of not marrying",
+    "text": "The cost of not marrying\n\n\nup to €3,925\n\nmore income tax a year for a one-earner couple who aren’t married, under 2027 rules. See the examples.\n\n\n\n€91,740\n\ninheritance tax on a €300,000 share of a family home left to a partner. A spouse would pay €0. How it’s worked out.\n\n\n\n1 in 6\n\ncouples in Ireland are cohabiting, not married (Census 2022). Source.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIncome tax, inheritance tax and capital gains tax for a married couple and an unmarried one in the same position, with worked examples.\n\n\n\n\n\n\n\n\n\n\n\n\nPut in your own incomes, years and assets, and see roughly what not being married costs over a lifetime.\n\n\n\n\n\n\n\n\n\n\n\n\nArticle 41, the 2024 referendums, and the pension cases, O’Meara and Jones, where the courts have started to move.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cohabitation/index.html#what-can-be-done-for-cohabiting-couples",
+    "href": "cohabitation/index.html#what-can-be-done-for-cohabiting-couples",
+    "title": "Cohabitation in Ireland",
+    "section": "What can be done for cohabiting couples?",
+    "text": "What can be done for cohabiting couples?\nThe law already has a test for a committed unmarried couple. A qualified cohabitant has lived with their partner for two years if they have a child together, or five years otherwise, and since 2025 that test decides who gets the State’s Bereaved Partner’s Pension.4 Can the same be done for tax? The biggest gap is in inheritance and capital gains, so the first step would be to exempt gifts, inheritances and asset transfers between qualified cohabitants from Capital Acquisitions Tax and Capital Gains Tax, as they are for spouses. The next would be to let qualified cohabitants choose joint assessment for income tax, sharing tax credits and the standard rate band as married couples can."
+  },
+  {
+    "objectID": "cohabitation/index.html#about-this-project",
+    "href": "cohabitation/index.html#about-this-project",
+    "title": "Cohabitation in Ireland",
+    "section": "About this project",
+    "text": "About this project\nI’m Maedbh King, and I have a personal stake in this as my partner and I have chosen not to marry, and we are raising two children together. These pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please tell me.\nNone of this is tax or legal advice. If you need to plan around these rules, talk to a solicitor or tax adviser."
+  },
+  {
+    "objectID": "cohabitation/index.html#footnotes",
+    "href": "cohabitation/index.html#footnotes",
+    "title": "Cohabitation in Ireland",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nCSO, Census 2022, table F3035: 176,956 of 1,059,955 couples were cohabiting.↩︎\nDáil written answer, 30 March 2023.↩︎\nRevenue, CAT thresholds and transfers between spouses.↩︎\nDepartment of Social Protection, Bereaved Partners Bill passed by the Oireachtas, July 2025.↩︎"
   },
   {
     "objectID": "cycling/blackrock-village.html",
@@ -417,7 +550,7 @@
     "href": "index.html#projects",
     "title": "Fianaise",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\n\n\n\n\n\n\n\nCycling in Dublin\n\n\nHow many people cycle Dublin’s southside routes, from the council’s own counters, and the stretches of the network that aren’t what the map says.\n\n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nReligion in Ireland\n\n\nWho runs Ireland’s schools, what parents say they want, how religious affiliation is changing, and how much of the charity sector is religious.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Talamh\n\n\nAn open, evidence-graded map of who owns land in Ireland, starting with the Catholic Church and the State.\n\n\n\n\n\n\n\n\n\n\n\n\nCycling in Dublin\n\n\nHow many people cycle Dublin’s southside routes, from the council’s own counters, and the stretches of the network that aren’t what the map says.\n\n\n\n\n\n\n\n\n\n\n\n\nCohabitation in Ireland\n\n\nHow Irish tax and inheritance law treat couples who live together without marrying, what it costs them, and what the courts have said.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "religion/charities.html",

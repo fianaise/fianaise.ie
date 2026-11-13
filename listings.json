@@ -9,6 +9,14 @@
     ]
   },
   {
+    "listing": "/cohabitation/index.html",
+    "items": [
+      "/cohabitation/cost.html",
+      "/cohabitation/calculator.html",
+      "/cohabitation/constitution.html"
+    ]
+  },
+  {
     "listing": "/cycling/index.html",
     "items": [
       "/cycling/dlr-counters.html",
@@ -26,7 +34,8 @@
     "listing": "/index.html",
     "items": [
       "/religion/index.html",
-      "/cycling/index.html"
+      "/cycling/index.html",
+      "/cohabitation/index.html"
     ]
   }
 ]

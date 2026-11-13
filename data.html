@@ -109,6 +109,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Cycling in Dublin</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./cohabitation/index.html">
+ <span class="dropdown-text">Cohabitation in Ireland</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://opentalamh.ie">
  <span class="dropdown-text">Open Talamh</span></a>
   </li>  
@@ -205,6 +209,18 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="./religion/schools.html">Patronage maps and figures</a>, <a href="./religion/primary-school-survey.html">survey school map</a> and <a href="./religion/charities.html">the charities landscape</a></td>
 <td>2025–26 school year (Schools page); 2024–25 for the survey map</td>
 </tr>
+<tr class="even">
+<td><a href="https://data.cso.ie/table/F3035">Family units in private households (F3035)</a></td>
+<td>Central Statistics Office</td>
+<td><a href="./cohabitation/index.html">Cohabitation in Ireland</a></td>
+<td>Census 2016, 2022</td>
+</tr>
+<tr class="odd">
+<td>Tax rates, bands, credits and CAT thresholds (<a href="https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx">Revenue</a>, <a href="https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/">Citizens Information, Budget 2027</a>)</td>
+<td>Revenue; Department of Finance</td>
+<td><a href="./cohabitation/cost.html">The cost of not marrying</a> and <a href="./cohabitation/calculator.html">calculator</a></td>
+<td>Budget 2027 (tax year 2027)</td>
+</tr>
 </tbody>
 </table>
 <section id="code" class="level2">
@@ -212,6 +228,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/education_equality"><code>analysis/education_equality</code></a>: fetches the CSO and Department of Education data and draws the religion and survey figures.</li>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charts"><code>analysis/charts</code></a>: draws the census, marriage and survey charts and maps in the site’s style. <a href="https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_school_lists.py"><code>tools/fetch_school_lists.py</code></a> downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.</li>
+<li><a href="https://github.com/fianaise/fianaise.ie/blob/main/cohabitation/tax-rules.js"><code>cohabitation/tax-rules.js</code></a> and <a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/cohabitation"><code>analysis/cohabitation</code></a>: the tax rules behind the Cohabitation in Ireland calculator and worked examples.</li>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charities"><code>analysis/charities</code></a>: builds the charities landscape from the Charities Regulator’s register.</li>
 </ul>
 
