@@ -14,7 +14,7 @@ listing:
   sort-ui: false
 ---
 
-Fianaise is an independent project that uses open data to look at Irish public life: who runs our schools, who owns the land, how safe our streets are to cycle, and how the law treats families. It isn't neutral. Each project starts from a question I think deserves more attention, and the writing says plainly what I think the evidence shows, including where policy falls short. What doesn't change is the method: every figure names its data source, and the data and code behind it are published, so you can check the numbers and draw your own conclusions.
+Fianaise is an independent project that uses open data to look at Irish public life, including who runs our schools, who owns the land, how safe our streets are to cycle and how the law treats families. The projects reflect questions I think deserve more attention, and the analysis says what I think the evidence shows, including where policy falls short. Every figure names its data source, and the data and code behind it are published, so you can check the numbers and draw your own conclusions.
 
 *Fianaise* is Irish for evidence. You can reach me at [fianaise@proton.me](mailto:fianaise@proton.me).
 
