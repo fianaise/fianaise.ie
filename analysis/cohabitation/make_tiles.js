@@ -5,7 +5,6 @@ const path = require("path");
 
 // [file, heading, line under it, colour of the heading]
 const tiles = [
-  ["cohabitation.png", "€0 / €91,740", "Inheritance tax on a €300,000 half share of a home, for a spouse and for an unmarried partner", "#c4501f"],
   ["cohabitation-cost.png", "The cost of not marrying", "", "#c4501f"],
   ["cohabitation-calculator.png", "Calculator", "", "#2a78d6"],
   ["cohabitation-constitution.png", "The Constitution and the courts", "", "#158a60"],
@@ -22,5 +21,13 @@ const tiles = [
       </body></html>`);
     await page.screenshot({ path: path.join(__dirname, "..", "..", "images", file) });
   }
+  // Home page cover: one couple in six is cohabiting (CSO Census 2022, table F3035).
+  const pair = (on) => `<div style="display:flex;gap:10px"><div style="width:48px;height:48px;border-radius:50%;background:${on ? "#c4501f" : "#c9c7c0"}"></div><div style="width:48px;height:48px;border-radius:50%;background:${on ? "#c4501f" : "#c9c7c0"}"></div></div>`;
+  await page.setContent(`<!doctype html><html><body style="margin:0;width:1200px;height:800px;background:#f3f2ee;
+    font-family:'Source Sans Pro','Liberation Sans',Arial,sans-serif;box-sizing:border-box;padding:80px 110px;display:flex;flex-direction:column;justify-content:center">
+    <div style="display:flex;gap:40px;margin-bottom:60px">${[1, 0, 0, 0, 0, 0].map(pair).join("")}</div>
+    <div style="font-size:120px;font-weight:700;color:#c4501f;line-height:1">1 in 6</div>
+    <div style="font-size:48px;color:#2b2a28;margin-top:24px">couples in Ireland live together without marrying</div></body></html>`);
+  await page.screenshot({ path: path.join(__dirname, "..", "..", "images", "cohabitation.png") });
   await browser.close();
 })();
