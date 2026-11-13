@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Roughly what not being married costs a couple in Ireland in income tax, inheritance tax and capital gains tax, under 2027 rules.">
+<meta name="description" content="Roughly how much more tax an unmarried couple in Ireland pays than a married one, under 2027 rules.">
 
 <title>Calculator – Fianaise</title>
 <style>
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8d3ad9c781c51ccd60b292c95058b2c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f35a81a4717690815b2013502477d714.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Roughly what not being married costs a couple in Ireland in income tax, inheritance tax and capital gains tax, under 2027 rules.
+    Roughly how much more tax an unmarried couple in Ireland pays than a married one, under 2027 rules.
   </div>
 </div>
 
@@ -175,44 +175,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Part of <a href="../cohabitation/index.html">Cohabitation in Ireland</a>. How each tax works, with sources, is on <a href="../cohabitation/cost.html">The cost of not marrying</a>.</p>
-<p>Put in your incomes for two stretches of life, for example while children are small and afterwards, and what one partner might leave the other. The calculator compares what you would pay if you were married with what you pay if you are not. It is a rough estimate, not tax advice.</p>
+<p>Fill in the four boxes to see roughly how much more tax you pay because you aren’t married. It’s an estimate, not tax advice.</p>
 <form id="mc-form" class="mc-form" onsubmit="return false">
-  <fieldset>
-    <legend>First stretch</legend>
-    <label>Partner 1's income (€ a year) <input type="number" id="a1" min="0" step="1000" value="60000"></label>
-    <label>Partner 2's income (€ a year) <input type="number" id="b1" min="0" step="1000" value="0"></label>
-    <label>Number of years <input type="number" id="y1" min="0" max="80" step="1" value="5"></label>
-  </fieldset>
-  <fieldset>
-    <legend>Second stretch</legend>
-    <label>Partner 1's income (€ a year) <input type="number" id="a2" min="0" step="1000" value="60000"></label>
-    <label>Partner 2's income (€ a year) <input type="number" id="b2" min="0" step="1000" value="30000"></label>
-    <label>Number of years <input type="number" id="y2" min="0" max="80" step="1" value="25"></label>
-  </fieldset>
-  <fieldset>
-    <legend>Assets</legend>
-    <label>What one partner would leave the other (€), for example a half share of the home, savings and pension funds <input type="number" id="inh" min="0" step="5000" value="300000"></label>
-    <label>Gains on assets one partner gives the other while both are alive (€), for example moving a property into joint names <input type="number" id="gain" min="0" step="1000" value="0"></label>
-  </fieldset>
+  <label>Your income (€ a year) <input type="number" inputmode="numeric" id="a" min="0" step="1000" value="60000"></label>
+  <label>Your partner's income (€ a year) <input type="number" inputmode="numeric" id="b" min="0" step="1000" value="0"></label>
+  <label>Years you expect to be together <input type="number" inputmode="numeric" id="y" min="0" max="80" step="1" value="30"></label>
+  <label>What one of you would leave the other (€), such as your share of the home and savings <input type="number" inputmode="numeric" id="inh" min="0" step="10000" value="300000"></label>
 </form>
 
 <div class="mc-result" aria-live="polite">
   <p class="mc-total-label">Not being married would cost you about</p>
   <p class="mc-total" id="mc-total">€0</p>
-  
-<table class="table mc-table caption-top">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th class="text-end" data-quarto-table-cell-role="th">If married</th>
-<th class="text-end" data-quarto-table-cell-role="th">If not married</th>
-<th class="text-end" data-quarto-table-cell-role="th">Difference</th>
-</tr>
-</thead>
-<tbody id="mc-rows">
-</tbody>
-</table>
-
+  <p id="mc-income"></p>
+  <p id="mc-inherit"></p>
 </div>
 
 <script src="tax-rules.js"></script>
@@ -220,38 +195,29 @@ ul.task-list li input[type="checkbox"] {
 (function () {
   var T = window.MarriageTax;
   var eur = function (x) { return "€" + Math.round(x).toLocaleString("en-IE"); };
-  var ids = ["a1", "b1", "y1", "a2", "b2", "y2", "inh", "gain"];
   function val(id) { var v = parseFloat(document.getElementById(id).value); return isFinite(v) && v > 0 ? v : 0; }
-  function row(label, married, single) {
-    return "<tr><th scope='row'>" + label + "</th><td class='text-end'>" + eur(married) +
-      "</td><td class='text-end'>" + eur(single) + "</td><td class='text-end'><strong>" +
-      eur(single - married) + "</strong></td></tr>";
-  }
   function update() {
-    var y1 = Math.round(val("y1")), y2 = Math.round(val("y2"));
-    var incM = y1 * T.incomeTaxMarried(val("a1"), val("b1")) + y2 * T.incomeTaxMarried(val("a2"), val("b2"));
-    var incS = y1 * T.incomeTaxSeparate(val("a1"), val("b1")) + y2 * T.incomeTaxSeparate(val("a2"), val("b2"));
-    var cat = T.inheritanceTaxCohabitant(val("inh"));
-    var cgt = T.cgtCohabitant(val("gain"));
-    document.getElementById("mc-rows").innerHTML =
-      row("Income tax over " + (y1 + y2) + " years", incM, incS) +
-      row("Inheritance tax", 0, cat) +
-      row("Capital gains tax", 0, cgt) +
-      row("Total", incM, incS + cat + cgt);
-    document.getElementById("mc-total").textContent = eur(incS - incM + cat + cgt);
+    var a = val("a"), b = val("b"), y = Math.round(val("y")), inh = val("inh");
+    var yearly = T.incomeTaxGap(a, b);
+    var cat = T.inheritanceTaxCohabitant(inh);
+    document.getElementById("mc-total").textContent = eur(yearly * y + cat);
+    document.getElementById("mc-income").textContent = yearly > 0
+      ? "You pay " + eur(yearly) + " a year more income tax than a married couple on the same incomes. Over " + y + " years that adds up to " + eur(yearly * y) + "."
+      : "On these incomes you pay the same income tax as a married couple.";
+    document.getElementById("mc-inherit").textContent = cat > 0
+      ? "If one of you died, the other would pay " + eur(cat) + " in inheritance tax. A husband, wife or civil partner would pay nothing."
+      : "On this amount there would be no inheritance tax to pay.";
   }
-  ids.forEach(function (id) { document.getElementById(id).addEventListener("input", update); });
+  ["a", "b", "y", "inh"].forEach(function (id) { document.getElementById(id).addEventListener("input", update); });
   update();
 })();
 </script>
 <section id="what-it-assumes" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-assumes">What it assumes</h2>
-<ul>
-<li><strong>Income tax</strong> uses the 2027 rates, bands and credits from Budget 2027, kept the same for every year, with no inflation or pay rises. Incomes are treated as employment income. A married couple pays the lower of joint assessment and being taxed separately. USC and PRSI are left out because they are charged on each person separately either way.</li>
-<li><strong>Left out, so the real gap can be bigger:</strong> the Home Carer Tax Credit (up to €2,050 a year), which only married couples and civil partners can claim.</li>
-<li><strong>Inheritance tax</strong> assumes the partner who inherits has had no earlier gifts or inheritances that count towards the same €22,000 threshold, and that no relief applies. The <a href="../cohabitation/cost.html#inheritance">dwelling house exemption</a> can cover the family home, if strict conditions are met, and a court order under the Cohabitants Act 2010 is tax free.</li>
-<li><strong>Capital gains tax</strong> is the tax on a gift between partners that a spouse wouldn’t pay. It uses the 31% rate and the €1,270 annual exemption.</li>
-</ul>
+<p>The calculator uses the 2027 tax rates, bands and credits from Budget 2027 for every year, with no inflation or pay rises, and treats both incomes as wages. A married couple pays whichever is lower, joint assessment or being taxed separately. USC and PRSI are left out because they are charged on each person separately whether you are married or not.</p>
+<p>The Home Carer Tax Credit, worth up to €2,050 a year to married couples and civil partners, is left out, so the real gap can be bigger.</p>
+<p>The inheritance tax figure assumes the partner who inherits has had no earlier gifts or inheritances that count towards the same €22,000 threshold, and that no relief applies. The <a href="../cohabitation/cost.html#inheritance">dwelling house exemption</a> can cover the family home if strict conditions are met, and money awarded by a court under the Cohabitants Act 2010 is tax free.</p>
+<p>The calculator doesn’t include capital gains tax, which an unmarried partner can also face when they give the other an asset such as a share in a property. That’s explained on <a href="../cohabitation/cost.html#capital-gains">The cost of not marrying</a>.</p>
 <p>The rules are in <a href="https://github.com/fianaise/fianaise.ie/blob/main/cohabitation/tax-rules.js"><code>tax-rules.js</code></a>, with a source for each number, and are updated after each Budget.</p>
 
 
