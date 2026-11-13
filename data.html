@@ -113,6 +113,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Cohabitation in Ireland</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./airspace/index.html">
+ <span class="dropdown-text">Irish airspace</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://opentalamh.ie">
  <span class="dropdown-text">Open Talamh</span></a>
   </li>  
@@ -221,6 +225,12 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="./cohabitation/cost.html">The cost of not marrying</a> and <a href="./cohabitation/calculator.html">calculator</a></td>
 <td>Budget 2027 (tax year 2027)</td>
 </tr>
+<tr class="even">
+<td><a href="https://www.adsb.lol/docs/open-data/historical/">Historical ADS-B flight tracks</a> (ODbL)</td>
+<td>adsb.lol</td>
+<td><a href="./airspace/index.html">Irish airspace</a></td>
+<td>28 October to 12 November 2026</td>
+</tr>
 </tbody>
 </table>
 <section id="code" class="level2">
@@ -230,6 +240,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charts"><code>analysis/charts</code></a>: draws the census, marriage and survey charts and maps in the site’s style. <a href="https://github.com/fianaise/fianaise.ie/blob/main/tools/fetch_school_lists.py"><code>tools/fetch_school_lists.py</code></a> downloads new school lists from gov.ie, and a GitHub Action redraws the maps whenever a new list is added.</li>
 <li><a href="https://github.com/fianaise/fianaise.ie/blob/main/cohabitation/tax-rules.js"><code>cohabitation/tax-rules.js</code></a> and <a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/cohabitation"><code>analysis/cohabitation</code></a>: the tax rules behind the Cohabitation in Ireland calculator and worked examples.</li>
 <li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/charities"><code>analysis/charities</code></a>: builds the charities landscape from the Charities Regulator’s register.</li>
+<li><a href="https://github.com/fianaise/fianaise.ie/tree/main/analysis/airspace"><code>analysis/airspace</code></a>: downloads the daily adsb.lol flight archives, picks out government and business jets using Irish airports, and draws the Irish airspace timelapse and tables.</li>
 </ul>
 
 
