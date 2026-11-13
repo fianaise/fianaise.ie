@@ -1,0 +1,36 @@
+---
+title: "Irish airspace"
+description: "Which governments and private jets flew into Ireland for the European Political Community and EU leaders' meetings in Dublin in November 2026, from open flight-tracking data."
+---
+
+Ireland hosted the European Political Community on Thursday 12 November 2026 and an informal meeting of EU leaders on Friday 13 November, both at the Convention Centre Dublin, as part of its EU Presidency.^[Irish Presidency of the Council of the EU, [Meeting of the European Political Community](https://irish-presidency.consilium.europa.eu/en/events/meeting-of-the-european-political-community-epc/) and [Informal meeting of EU Heads of State or Government](https://irish-presidency.consilium.europa.eu/en/events/informal-meeting-of-eu-heads-of-state-or-government/).] Most aircraft broadcast their position, altitude and identity over ADS-B, and a network of volunteer receivers records these signals and publishes every day's flights as open data, which makes it possible to see which government planes and private jets came to Ireland for the summits and when they arrived.
+
+<video src="../figures/airspace_government_timelapse.mp4" poster="../images/airspace.png" controls muted loop playsinline style="width:100%;max-width:720px;display:block;margin:1rem auto;border-radius:4px"></video>
+
+**Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November. Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
+
+## Government planes
+
+On an ordinary weekday no more than two foreign government or military aircraft land in Ireland, while on the day of the European Political Community there were 17, most of which arrived in a wave between 09:00 and 11:30 that morning. Business jet numbers stayed within their usual range of about 15 to 27 a day, although several of the jets that look private on paper were in fact government aircraft, such as those of Monaco, Serbia, North Macedonia, Georgia and Croatia.
+
+{{< include _daily-counts.md >}}
+
+**Table 1.** Aircraft that landed at or took off from an Irish airport each day. The days before the summit are Wednesday to Friday of the two previous weeks, and Tuesday 10 November. The archive for Friday 6 November is incomplete.
+
+Several governments set their leader down at Dublin and then flew the empty plane on to Shannon, which suggests that Dublin ran short of parking space. Hungary, Switzerland, Czechia, Slovakia, Bulgaria, Monaco and Serbia all did this. France, Portugal, Italy, Romania, Ukraine and the United States used Casement Aerodrome at Baldonnel, the Air Corps base, instead of Dublin Airport.
+
+{{< include _government-flights.md >}}
+
+The registration or military serial and the callsign identify the government that sent each plane, as with SAM for the United States Air Force's VIP fleet, GAF for the German Air Force and CTM for the French Air Force, but they say nothing about who was on board.
+
+## Private jets
+
+Most of the private jets that used Irish airports during the week were charter or fractional-ownership aircraft from operators such as NetJets, VistaJet and Flexjet, which carry different customers from one day to the next. Jets registered in the United States are often held by trust companies or holding companies, so the public register names the company and not the person who flies on the plane. The table below lists operators only.
+
+{{< include _private-jets.md >}}
+
+## About the data
+
+The flight data comes from [adsb.lol](https://www.adsb.lol/docs/open-data/historical/), which publishes a full day of worldwide flight tracks from volunteer receivers every day under the Open Database Licence. An aircraft counts here when it was on the ground, or below 1,500 feet, within 9 km of an Irish airport. Baldonnel and Weston are only 3 km apart, so they are shown together. Some government aircraft switch off or hide their transponders and do not appear in the data, so these counts are a minimum. Flights by the Irish Air Corps itself are left out. The country of each government plane comes from its registration or callsign, and the aircraft type and the military flag come from the aircraft database that adsb.lol publishes with the tracks.
+
+**Code and data.** The scripts in [`analysis/airspace`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/airspace) download each day's archive, pick out the aircraft that used an Irish airport, draw the timelapse and write the tables on this page. The daily counts, the list of aircraft and their tracks are in [`analysis/airspace/data`](https://github.com/fianaise/fianaise.ie/tree/main/analysis/airspace/data).
