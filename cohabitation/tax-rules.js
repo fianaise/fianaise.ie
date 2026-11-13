@@ -1,6 +1,6 @@
-// Irish tax rules used by the "Marriage in Ireland" calculator and worked examples.
+// Irish tax rules used by the "Cohabitation in Ireland" calculator and worked examples.
 // Tax year 2027 (Budget 2027, announced 6 October 2026). Update this file after each Budget.
-// Sources are listed on marriage/sources.qmd; each value notes where it comes from.
+// Sources are listed on cohabitation/sources.qmd; each value notes where it comes from.
 (function (root) {
   "use strict";
 

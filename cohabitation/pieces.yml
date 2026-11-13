@@ -1,15 +1,15 @@
 - title: "The cost of not marrying"
   path: cost.qmd
-  image: ../images/marriage-cost.png
+  image: ../images/cohabitation-cost.png
   image-alt: "The cost of not marrying"
   description: "Income tax, inheritance tax and capital gains tax for a married couple and an unmarried one in the same position, with worked examples."
 - title: "Calculator"
   path: calculator.qmd
-  image: ../images/marriage-calculator.png
+  image: ../images/cohabitation-calculator.png
   image-alt: "Calculator"
   description: "Put in your own incomes, years and assets, and see roughly what not being married costs over a lifetime."
 - title: "The Constitution and the courts"
   path: constitution.qmd
-  image: ../images/marriage-constitution.png
+  image: ../images/cohabitation-constitution.png
   image-alt: "The Constitution and the courts"
   description: "Article 41, the 2024 referendums, and the pension cases, O'Meara and Jones, where the courts have started to move."

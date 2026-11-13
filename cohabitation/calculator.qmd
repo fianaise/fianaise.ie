@@ -5,7 +5,7 @@ resources:
   - tax-rules.js
 ---
 
-Part of [Marriage in Ireland](index.qmd). How each tax works, with sources, is on [The cost of not marrying](cost.qmd).
+Part of [Cohabitation in Ireland](index.qmd). How each tax works, with sources, is on [The cost of not marrying](cost.qmd).
 
 Put in your incomes for two stretches of life, for example while children are small and afterwards, and what one partner might leave the other. The calculator compares what you would pay if you were married with what you pay if you are not. It is a rough estimate, not tax advice.
 
@@ -77,4 +77,4 @@ Put in your incomes for two stretches of life, for example while children are sm
 - **Inheritance tax** assumes the partner who inherits has had no earlier gifts or inheritances that count towards the same €22,000 threshold, and that no relief applies. The [dwelling house exemption](cost.qmd#inheritance) can cover the family home, if strict conditions are met, and a court order under the Cohabitants Act 2010 is tax free.
 - **Capital gains tax** is the tax on a gift between partners that a spouse wouldn't pay. It uses the 31% rate and the €1,270 annual exemption.
 
-The rules are in [`tax-rules.js`](https://github.com/fianaise/fianaise.ie/blob/main/marriage/tax-rules.js), with a source for each number, and are updated after each Budget.
+The rules are in [`tax-rules.js`](https://github.com/fianaise/fianaise.ie/blob/main/cohabitation/tax-rules.js), with a source for each number, and are updated after each Budget.

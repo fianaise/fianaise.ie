@@ -1,8 +1,8 @@
-// Writes the worked-examples table on marriage/cost.qmd from the rules in marriage/tax-rules.js.
-// Run from the repository root: node analysis/marriage/make_examples.js
+// Writes the worked-examples table on cohabitation/cost.qmd from the rules in cohabitation/tax-rules.js.
+// Run from the repository root: node analysis/cohabitation/make_examples.js
 const fs = require("fs");
 const path = require("path");
-const t = require(path.join(__dirname, "..", "..", "marriage", "tax-rules.js"));
+const t = require(path.join(__dirname, "..", "..", "cohabitation", "tax-rules.js"));
 
 const eur = (x) => "€" + Math.round(x).toLocaleString("en-IE");
 const examples = [
@@ -18,5 +18,5 @@ let out = "| Household | Income tax if married | Income tax if not married | Ext
 for (const [label, a, b] of examples) {
   out += `| ${label} | ${eur(t.incomeTaxMarried(a, b))} | ${eur(t.incomeTaxSeparate(a, b))} | **${eur(t.incomeTaxGap(a, b))}** |\n`;
 }
-fs.writeFileSync(path.join(__dirname, "..", "..", "marriage", "_income-tax-examples.md"), out);
+fs.writeFileSync(path.join(__dirname, "..", "..", "cohabitation", "_income-tax-examples.md"), out);
 process.stdout.write(out);

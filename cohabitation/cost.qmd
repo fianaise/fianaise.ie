@@ -3,7 +3,7 @@ title: "The cost of not marrying"
 description: "Income tax, inheritance tax and capital gains tax for a married couple and an unmarried one in the same position, under 2027 rules."
 ---
 
-Part of [Marriage in Ireland](index.qmd). To try your own numbers, use the [calculator](calculator.qmd).
+Part of [Cohabitation in Ireland](index.qmd). To try your own numbers, use the [calculator](calculator.qmd).
 
 Take two couples who live together, share their money and raise children together. One couple is married and the other isn't. Everything else about them is the same. This page sets out where the tax they pay differs, using the rules for 2027 announced in Budget 2027. Universal Social Charge and PRSI are charged on each person separately whether they are married or not, so they don't change the comparison.^[Revenue, [USC for married couples and civil partners](https://www.revenue.ie/en/jobs-and-pensions/usc/married-couples-civil-partners.aspx): "The USC rates and thresholds apply to both you, and your spouse or civil partner, individually."]
 
@@ -15,7 +15,7 @@ A cohabiting couple can't. Each partner is taxed as a single person, with a band
 
 {{< include _income-tax-examples.md >}}
 
-**Table 1.** Income tax for 2027 on employment income, for a married couple under joint assessment and an unmarried couple taxed as two single people. Before USC and PRSI, which are the same either way. The married figures don't include the Home Carer Tax Credit (up to €2,050 in 2027), which only married couples and civil partners can claim, so for some one-earner families the real gap is larger.^[Home Carer Tax Credit for 2027: [Citizens Information, Budget 2027](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/). Calculated by [`tax-rules.js`](https://github.com/fianaise/fianaise.ie/blob/main/marriage/tax-rules.js) with [`make_examples.js`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/marriage/make_examples.js).]
+**Table 1.** Income tax for 2027 on employment income, for a married couple under joint assessment and an unmarried couple taxed as two single people. Before USC and PRSI, which are the same either way. The married figures don't include the Home Carer Tax Credit (up to €2,050 in 2027), which only married couples and civil partners can claim, so for some one-earner families the real gap is larger.^[Home Carer Tax Credit for 2027: [Citizens Information, Budget 2027](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/). Calculated by [`tax-rules.js`](https://github.com/fianaise/fianaise.ie/blob/main/cohabitation/tax-rules.js) with [`make_examples.js`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/cohabitation/make_examples.js).]
 
 The gap is biggest when one partner earns all or most of the money, which is common while children are small or when one partner is ill or caring for someone. For a one-earner couple with income above €55,500, it is €3,925 a year: €9,000 of extra standard rate band, worth €1,800, plus a second personal credit of €2,125. Two partners who each earn above €46,500 pay the same either way.
 

@@ -1,14 +1,14 @@
-// Draws the project tiles for "Marriage in Ireland" (images/marriage*.png) with Playwright.
-// Run from the repository root: node analysis/marriage/make_tiles.js
+// Draws the project tiles for "Cohabitation in Ireland" (images/cohabitation*.png) with Playwright.
+// Run from the repository root: node analysis/cohabitation/make_tiles.js
 const { chromium } = require("playwright");
 const path = require("path");
 
 // [file, heading, line under it, colour of the heading]
 const tiles = [
-  ["marriage.png", "€0 / €91,740", "Inheritance tax on a €300,000 half share of a home, for a spouse and for an unmarried partner", "#c4501f"],
-  ["marriage-cost.png", "The cost of not marrying", "", "#c4501f"],
-  ["marriage-calculator.png", "Calculator", "", "#2a78d6"],
-  ["marriage-constitution.png", "The Constitution and the courts", "", "#158a60"],
+  ["cohabitation.png", "€0 / €91,740", "Inheritance tax on a €300,000 half share of a home, for a spouse and for an unmarried partner", "#c4501f"],
+  ["cohabitation-cost.png", "The cost of not marrying", "", "#c4501f"],
+  ["cohabitation-calculator.png", "Calculator", "", "#2a78d6"],
+  ["cohabitation-constitution.png", "The Constitution and the courts", "", "#158a60"],
 ];
 
 (async () => {
