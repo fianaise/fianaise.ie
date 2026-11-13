@@ -1,0 +1,57 @@
+---
+title: "Cohabitation in Ireland"
+description: "How Irish tax and inheritance law treat couples who live together and raise children without marrying, what it costs them, and what the courts have said."
+listing:
+  id: pieces
+  contents: pieces.yml
+  type: grid
+  grid-columns: 3
+  image-height: 100%
+  fields: [image, description]
+  sort: false
+  filter-ui: false
+  sort-ui: false
+---
+
+About one couple in six in Ireland is cohabiting rather than married, and 85,262 of these couples are raising children together.^[CSO, Census 2022, table [F3035](https://data.cso.ie/table/F3035): 176,956 of 1,059,955 couples were cohabiting.] Revenue treats each of these couples as two unconnected individuals.^[Dáil written answer, [30 March 2023](https://www.oireachtas.ie/en/debates/question/2023-03-30/130/).] They can't share tax credits or bands, and when one partner dies the other pays inheritance tax like a stranger would. A husband, wife or civil partner pays none.^[Revenue, [CAT thresholds](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx) and [transfers between spouses](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-exemptions/transfers-between-spouses-civil-partners/index.aspx).]
+
+## The cost of not marrying
+
+::: {.stat-cards .three}
+::: {.stat-card}
+[up to €3,925]{.stat-number}
+
+::: {.stat-text}
+more income tax a year for a one-earner couple who aren't married, under 2027 rules. [See the examples](cost.qmd#income-tax).
+:::
+:::
+
+::: {.stat-card}
+[€91,740]{.stat-number}
+
+::: {.stat-text}
+inheritance tax on a €300,000 share of a family home left to a partner. A spouse would pay €0. [How it's worked out](cost.qmd#inheritance).
+:::
+:::
+
+::: {.stat-card}
+[1 in 6]{.stat-number}
+
+::: {.stat-text}
+couples in Ireland are cohabiting, not married (Census 2022). [Source](https://data.cso.ie/table/F3035).
+:::
+:::
+:::
+
+:::{#pieces}
+:::
+
+## What can be done for cohabiting couples?
+
+The law already has a test for a committed unmarried couple. A *qualified cohabitant* has lived with their partner for two years if they have a child together, or five years otherwise, and since 2025 that test decides who gets the State's Bereaved Partner's Pension.^[Department of Social Protection, [Bereaved Partners Bill passed by the Oireachtas](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas), July 2025.] Can the same be done for tax? The biggest gap is in inheritance and capital gains, so the first step would be to exempt gifts, inheritances and asset transfers between qualified cohabitants from Capital Acquisitions Tax and Capital Gains Tax, as they are for spouses. The next would be to let qualified cohabitants choose joint assessment for income tax, sharing tax credits and the standard rate band as married couples can.
+
+## About this project
+
+I'm Maedbh King, and I have a personal stake in this as my partner and I have chosen not to marry, and we are raising two children together. These pages stick to the law and the numbers, and every figure links to its source. If you spot a mistake, please [tell me](../about.qmd#corrections).
+
+None of this is tax or legal advice. If you need to plan around these rules, talk to a solicitor or tax adviser.

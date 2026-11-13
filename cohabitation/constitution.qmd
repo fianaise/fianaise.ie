@@ -1,0 +1,30 @@
+---
+title: "The Constitution and the courts"
+description: "Why Irish law treats married and unmarried couples differently, the 2024 referendums, and the pension cases where the courts have started to move."
+---
+
+Part of [Cohabitation in Ireland](index.qmd).
+
+## Article 41
+
+The Constitution's article on the family is built around marriage. Article 41.3.1° says: "The State pledges itself to guard with special care the institution of Marriage, on which the Family is founded, and to protect it against attack."^[[Bunreacht na hÉireann](https://www.irishstatutebook.ie/eli/cons/en/html), Article 41.3.1°.] The courts have read "the Family" in Article 41 as the family based on marriage, and the State relies on that reading when it defends treating married couples differently.
+
+Article 41.2 is still in the Constitution too: "the State recognises that by her life within the home, woman gives to the State a support without which the common good cannot be achieved", and "The State shall, therefore, endeavour to ensure that mothers shall not be obliged by economic necessity to engage in labour to the neglect of their duties in the home."^[As quoted by the [Electoral Commission](https://www.electoralcommission.ie/referendum/referendums-on-family-and-care/).]
+
+## The 2024 referendums
+
+On 8 March 2024 voters were asked two questions. The family amendment would have recognised families "whether founded on marriage or on other durable relationships". It was rejected by 67.7% to 32.3%.^[[RTÉ](https://www.rte.ie/news/ireland/2024/0309/1436882-referendum), 9 March 2024.] The care amendment, which would have replaced Article 41.2, was also rejected.^[[Electoral Commission](https://www.electoralcommission.ie/referendum/referendums-on-family-and-care/): "The proposal was rejected by the people."] So the Constitution's wording is unchanged.
+
+## Civil partnership
+
+From 2011 to 2015 same-sex couples could register a civil partnership, which carries the same tax treatment as marriage. It was never open to opposite-sex couples.^[[Civil Partnership and Certain Rights and Obligations of Cohabitants Act 2010](https://www.irishstatutebook.ie/eli/2010/act/24/enacted/en/html).] Since the Marriage Act 2015 came into effect on 16 November 2015, no new civil partnerships can be registered.^[CSO, [Marriages 2024](https://www.cso.ie/en/releasesandpublications/ep/p-mar/marriages2024/mainresults/): from 16 November 2015 "same-sex couples no longer had the option to apply for a Civil Partnership."] That leaves marriage as the only way for any couple to be treated as a couple for tax.
+
+## The pension cases
+
+The courts have started to say that protecting marriage doesn't require the State to penalise other families, using the equality guarantee in Article 40.1.
+
+**O'Meara (2024).** John O'Meara was refused the widower's pension when his partner, the mother of their children, died, because they had not married. On 22 January 2024 the Supreme Court found in his favour, on the basis of Article 40.1.^[*O'Meara v Minister for Social Protection* [2024] IESC 1. Date: [Department of Social Protection](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas). Basis: [PILA](https://www.pila.ie/resources/bulletin/2026/02/04/high-court-exclusion-of-qualified-cohabitants-from-civil-service-spouses-pension-unconstitutional).] The Oireachtas responded in July 2025 by extending the pension to qualified cohabitants: two years together if they have a child, five years otherwise. It is paid back to the date of the judgment.^[[Department of Social Protection](https://www.gov.ie/en/department-of-social-protection/press-releases/bereaved-partners-bill-passed-by-the-oireachtas), July 2025.]
+
+**Jones (2026).** Freddie Jones and James Kingston lived together from 1998 until Mr Kingston died in 2022. Mr Jones was refused a civil service spouse's pension. In January 2026 the High Court held that excluding qualified cohabitants from that scheme was incompatible with Article 40.1.^[[Irish Times](https://www.irishtimes.com/crime-law/courts/2026/01/19/states-refusal-of-spouses-pension-unconstitutional-court-finds/), 19 January 2026; [PILA](https://www.pila.ie/resources/bulletin/2026/02/04/high-court-exclusion-of-qualified-cohabitants-from-civil-service-spouses-pension-unconstitutional).] On 22 May 2026 the Supreme Court agreed to hear the State's appeal directly.^[[2026] IESCDET 64; [Irish Times](https://www.irishtimes.com/crime-law/courts/2026/05/25/state-appeals-ruling-it-breached-constitution-by-refusing-spouses-pension-to-bereaved-partner/), 25 May 2026.] The decision is pending.
+
+Neither case is about tax. But both turn on the same question that tax raises: whether the State can treat two families that do the same things for each other differently, only because one of them married.
