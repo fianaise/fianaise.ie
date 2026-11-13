@@ -6,6 +6,7 @@ project:
     - "religion/*.qmd"
     - "cycling/*.qmd"
     - "cohabitation/*.qmd"
+    - "airspace/*.qmd"
   resources:
     - CNAME
     - figures/**
@@ -25,6 +26,8 @@ website:
             text: Cycling in Dublin
           - href: cohabitation/index.qmd
             text: Cohabitation in Ireland
+          - href: airspace/index.qmd
+            text: Irish airspace
           - href: https://opentalamh.ie
             text: Open Talamh
       - href: data.qmd

@@ -202,3 +202,10 @@
   border-radius: 4px;
   background: #fff;
 }
+
+/* Irish airspace: one expandable row per country. */
+.airspace-table details { border-bottom: 1px solid #e8e7e3; padding: 0.55rem 0; }
+.airspace-table summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: baseline; }
+.airspace-table .as-country { font-weight: 600; }
+.airspace-table .as-meta { color: var(--bs-secondary-color, #555); font-size: 0.9rem; }
+.airspace-table table { width: 100%; margin: 0.6rem 0 0.25rem; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
