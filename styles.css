@@ -192,3 +192,13 @@
   .mc-table { font-size: 0.82rem; }
   .mc-table th, .mc-table td { padding: 0.4rem 0.25rem; }
 }
+.mc-form select {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  margin-top: 0.25rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #c9c7c0;
+  border-radius: 4px;
+  background: #fff;
+}

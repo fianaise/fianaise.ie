@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f35a81a4717690815b2013502477d714.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8d3ad9c781c51ccd60b292c95058b2c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -175,12 +175,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Part of <a href="../cohabitation/index.html">Cohabitation in Ireland</a>. How each tax works, with sources, is on <a href="../cohabitation/cost.html">The cost of not marrying</a>.</p>
-<p>Fill in the four boxes to see roughly how much more tax you pay because you aren’t married. It’s an estimate, not tax advice.</p>
+<p>Fill in the boxes to see roughly how much more tax you pay because you aren’t married. It’s an estimate, not tax advice.</p>
 <form id="mc-form" class="mc-form" onsubmit="return false">
   <label>Your income (€ a year) <input type="number" inputmode="numeric" id="a" min="0" step="1000" value="60000"></label>
   <label>Your partner's income (€ a year) <input type="number" inputmode="numeric" id="b" min="0" step="1000" value="0"></label>
   <label>Years you expect to be together <input type="number" inputmode="numeric" id="y" min="0" max="80" step="1" value="30"></label>
   <label>What one of you would leave the other (€), such as your share of the home and savings <input type="number" inputmode="numeric" id="inh" min="0" step="10000" value="300000"></label>
+  <label>Your stage of life (optional)
+    <select id="stage">
+      <option value="">Choose one</option>
+      <option value="young">Raising young children</option>
+      <option value="children">Raising older children</option>
+      <option value="none">No children</option>
+      <option value="later">Children grown up, or retired</option>
+    </select>
+  </label>
 </form>
 
 <div class="mc-result" aria-live="polite">
@@ -188,6 +197,7 @@ ul.task-list li input[type="checkbox"] {
   <p class="mc-total" id="mc-total">€0</p>
   <p id="mc-income"></p>
   <p id="mc-inherit"></p>
+  <p id="mc-stage" hidden=""></p>
 </div>
 
 <script src="tax-rules.js"></script>
@@ -196,6 +206,12 @@ ul.task-list li input[type="checkbox"] {
   var T = window.MarriageTax;
   var eur = function (x) { return "€" + Math.round(x).toLocaleString("en-IE"); };
   function val(id) { var v = parseFloat(document.getElementById(id).value); return isFinite(v) && v > 0 ? v : 0; }
+  var stageNotes = {
+    young: "If one of you is at home with the children, a married couple could also claim the Home Carer Tax Credit, worth up to €2,050 a year, so your real gap may be bigger than this.",
+    children: "If one of you works part time or stays at home, a married couple could also claim the Home Carer Tax Credit, worth up to €2,050 a year, so your real gap may be bigger than this.",
+    none: "Without children together, you count as qualified cohabitants after five years living together, rather than two. That is the test for the Bereaved Partner's Pension, and for applying to the court for provision from a partner's estate.",
+    later: "At this stage the inheritance tax matters most. Since 2025 a surviving qualified cohabitant can get the State's Bereaved Partner's Pension, but some occupational schemes, like the civil service scheme in the Jones case, still pay a pension only to a spouse."
+  };
   function update() {
     var a = val("a"), b = val("b"), y = Math.round(val("y")), inh = val("inh");
     var yearly = T.incomeTaxGap(a, b);
@@ -207,8 +223,15 @@ ul.task-list li input[type="checkbox"] {
     document.getElementById("mc-inherit").textContent = cat > 0
       ? "If one of you died, the other would pay " + eur(cat) + " in inheritance tax. A husband, wife or civil partner would pay nothing."
       : "On this amount there would be no inheritance tax to pay.";
+    var note = stageNotes[document.getElementById("stage").value];
+    var el = document.getElementById("mc-stage");
+    el.hidden = !note;
+    el.textContent = note || "";
   }
-  ["a", "b", "y", "inh"].forEach(function (id) { document.getElementById(id).addEventListener("input", update); });
+  ["a", "b", "y", "inh", "stage"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", update);
+    document.getElementById(id).addEventListener("change", update);
+  });
   update();
 })();
 </script>
