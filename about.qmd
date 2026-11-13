@@ -4,6 +4,8 @@ title: "About"
 
 Fianaise takes open data about Irish public life and makes it readable: charts and maps, a few sentences on what they show, and the data and code behind each one. The aim is to keep the public informed and to help hold institutions to account, by doing the analysis that journalists and policymakers often don't have the time to do.
 
+Fianaise has a point of view. The projects are ones I've chosen because I think they matter and get too little scrutiny, and the analysis doesn't sit on the fence when the evidence points one way. It also doesn't try to cover everything. What it does promise is transparency: every figure lists its data source, the data and code are public (see [Data & code](data.qmd)), and you are welcome to check the numbers and disagree with the conclusions.
+
 *Fianaise* is Irish for evidence.
 
 My name is [Maedbh King](https://www.maedbhking.com/home). I grew up in Dublin and spent 10 years in North America, where I did a PhD in Psychology at the University of California, Berkeley and a postdoctoral fellowship at MIT. I moved back to Ireland with my family in summer 2025, and now work in strategy and policy at Trinity College Dublin. Fianaise is independent of my employer and is done in my own time.
