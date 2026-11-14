@@ -139,5 +139,10 @@ for t in range(T0, T1 + 1, STEP):
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "30", "-i", os.path.join(FR, "f%04d.png"),
                 "-vf", "tpad=stop_mode=clone:stop_duration=2,format=yuv420p", "-c:v", "libx264", "-crf", "22",
                 "-movflags", "+faststart", os.path.join(ROOT, "figures", "airspace_government_timelapse.mp4")], check=True)
+MP4 = os.path.join(ROOT, "figures", "airspace_government_timelapse.mp4")
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", MP4, "-vf",
+                "fps=12,scale=720:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=48:stats_mode=diff[p];"
+                "[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle",
+                os.path.join(ROOT, "figures", "airspace_government_timelapse.gif")], check=True)
 shutil.rmtree(FR)
 print("frames", fr)
