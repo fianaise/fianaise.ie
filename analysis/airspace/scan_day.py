@@ -29,8 +29,15 @@ def parts():
             break
         yield base + suf
 
-urls = list(parts())
-cat = subprocess.Popen(["curl", "-sSL", "--retry", "4"] + [x for u in urls for x in (u,)], stdout=subprocess.PIPE)
+import glob as _glob, os as _os
+# Set ADSB_LOCAL to a folder holding already-downloaded .tar.aa/.tar.ab parts to read them
+# instead of streaming (useful when the connection drops mid-download).
+_local = sorted(_glob.glob(_os.path.join(_os.environ.get("ADSB_LOCAL", "/nonexistent"), tag + ".tar.*")))
+if _local:
+    cat = subprocess.Popen(["cat"] + _local, stdout=subprocess.PIPE)
+else:
+    urls = list(parts())
+    cat = subprocess.Popen(["curl", "-sSL", "--retry", "4"] + [x for u in urls for x in (u,)], stdout=subprocess.PIPE)
 # curl with multiple URLs writes them sequentially to stdout -> concatenated tar
 fields = ["day", "hex", "reg", "type", "desc", "ownOp", "dbFlags", "callsigns", "in_box_points",
           "min_alt_in_box", "first_in_box_utc", "last_in_box_utc", "airports_ground", "airports_low"]
