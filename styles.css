@@ -209,3 +209,9 @@
 .airspace-table .as-country { font-weight: 600; }
 .airspace-table .as-meta { color: var(--bs-secondary-color, #555); font-size: 0.9rem; }
 .airspace-table table { width: 100%; margin: 0.6rem 0 0.25rem; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+
+/* Irish airspace: shareable timelapse GIF. */
+.airspace-gif { margin: 1rem auto; max-width: 720px; }
+.airspace-gif img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.gif-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.6rem; }
+.gif-status { color: var(--bs-secondary-color, #555); font-size: 0.88rem; }

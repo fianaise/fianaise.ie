@@ -5,7 +5,63 @@ description: "Which governments and private jets flew into Ireland for the Europ
 
 Ireland hosted the European Political Community on Thursday 12 November 2026 and an informal meeting of EU leaders on Friday 13 November, both at the Convention Centre Dublin, as part of its EU Presidency.^[Irish Presidency of the Council of the EU, [Meeting of the European Political Community](https://irish-presidency.consilium.europa.eu/en/events/meeting-of-the-european-political-community-epc/) and [Informal meeting of EU Heads of State or Government](https://irish-presidency.consilium.europa.eu/en/events/informal-meeting-of-eu-heads-of-state-or-government/).] Most aircraft broadcast their position, altitude and identity over ADS-B, and a network of volunteer receivers records these signals and publishes every day's flights as open data, which makes it possible to see which government planes and private jets came to Ireland for the summits and when they arrived.
 
-<video src="../figures/airspace_government_timelapse.mp4" poster="../images/airspace.png" controls muted loop playsinline style="width:100%;max-width:720px;display:block;margin:1rem auto;border-radius:4px"></video>
+<figure class="airspace-gif">
+<img id="airspace-gif" src="../figures/airspace_government_timelapse.gif" alt="Timelapse map of government planes flying into and out of Ireland for the Dublin summits, 11 to 13 November 2026, each labelled with its country">
+<div class="gif-actions">
+<button type="button" class="btn btn-sm btn-outline-dark" id="gif-share">Share</button>
+<button type="button" class="btn btn-sm btn-outline-dark" id="gif-copy">Copy GIF</button>
+<a class="btn btn-sm btn-outline-dark" href="../figures/airspace_government_timelapse.gif" download="ireland-government-planes-dublin-summits.gif">Download GIF</a>
+<a class="btn btn-sm btn-outline-dark" href="../figures/airspace_government_timelapse.mp4" download="ireland-government-planes-dublin-summits.mp4">Download video</a>
+<span class="gif-status" id="gif-status" role="status"></span>
+</div>
+</figure>
+
+```{=html}
+<script>
+(function () {
+  const img = document.getElementById("airspace-gif");
+  const status = document.getElementById("gif-status");
+  const gifUrl = new URL(img.getAttribute("src"), location.href).href;
+  const pageUrl = location.href.split("#")[0];
+  const say = (t) => { status.textContent = t; setTimeout(() => { status.textContent = ""; }, 4000); };
+  const gifFile = async () => {
+    const blob = await (await fetch(gifUrl)).blob();
+    return new File([blob], "ireland-government-planes-dublin-summits.gif", { type: "image/gif" });
+  };
+  document.getElementById("gif-share").addEventListener("click", async () => {
+    const text = "Government planes flying into Ireland for the Dublin summits, 11 to 13 November 2026";
+    try {
+      const file = await gifFile();
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: "Irish airspace", text: text + " " + pageUrl });
+      } else if (navigator.share) {
+        await navigator.share({ title: "Irish airspace", text: text, url: pageUrl });
+      } else {
+        await navigator.clipboard.writeText(pageUrl);
+        say("Link to this page copied");
+      }
+    } catch (e) {
+      if (e && e.name !== "AbortError") say("Sharing didn't work here, so use Download GIF instead");
+    }
+  });
+  document.getElementById("gif-copy").addEventListener("click", async () => {
+    // Most browsers only accept PNG on the clipboard, so try the GIF first and fall back to the GIF's link.
+    try {
+      const blob = await (await fetch(gifUrl)).blob();
+      await navigator.clipboard.write([new ClipboardItem({ "image/gif": blob })]);
+      say("GIF copied");
+    } catch (e) {
+      try {
+        await navigator.clipboard.writeText(gifUrl);
+        say("This browser can't copy animated images, so the GIF's link was copied instead");
+      } catch (e2) {
+        say("Copying didn't work here, so use Download GIF instead");
+      }
+    }
+  });
+})();
+</script>
+```
 
 **Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November to midnight on Friday 13 November. Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
 
