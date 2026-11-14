@@ -7,17 +7,19 @@ Ireland hosted the European Political Community on Thursday 12 November 2026 and
 
 <video src="../figures/airspace_government_timelapse.mp4" poster="../images/airspace.png" controls muted loop playsinline style="width:100%;max-width:720px;display:block;margin:1rem auto;border-radius:4px"></video>
 
-**Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November. Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
+**Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November to midnight on Friday 13 November. Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
 
 ## Government planes
 
-On an ordinary weekday no more than two foreign government or military aircraft land in Ireland, while on the day of the European Political Community there were 17, most of which arrived in a wave between 09:00 and 11:30 that morning. Business jet numbers stayed within their usual range of about 15 to 27 a day, although several of the jets that look private on paper were in fact government aircraft, such as those of Monaco, Serbia, North Macedonia, Georgia and Croatia.
+On an ordinary weekday no more than two foreign government or military aircraft land in Ireland, while on the day of the European Political Community there were 17, most of which arrived in a wave between 09:00 and 11:30 that morning, and on the Friday there were 17 again as they came back to collect their leaders and fly home. Business jet numbers stayed within their usual range of about 15 to 27 a day, although several of the jets that look private on paper were in fact government aircraft, such as those of Monaco, Serbia, North Macedonia, Georgia and Croatia.
 
 {{< include _daily-counts.md >}}
 
-**Table 1.** Aircraft that landed at or took off from an Irish airport each day. The days before the summit are Wednesday to Friday of the two previous weeks, and Tuesday 10 November. The archive for Friday 6 November is incomplete.
+**Table 1.** Aircraft that landed at or took off from an Irish airport each day. The days before the summit are Wednesday to Friday of the two previous weeks, and Tuesday 10 November. The archive for Friday 6 November is incomplete. A plane that stayed overnight is counted on each day it landed or took off.
 
 Several governments set their leader down at Dublin and then flew the empty plane on to Shannon, which suggests that Dublin ran short of parking space. Hungary, Switzerland, Czechia, Slovakia, Bulgaria, Monaco and Serbia all did this. France, Portugal, Italy, Romania, Ukraine and the United States used Casement Aerodrome at Baldonnel, the Air Corps base, instead of Dublin Airport.
+
+The departures on Friday follow the two meetings. The leaders of countries outside the EU, who came only for the European Political Community, left on Friday morning, with Switzerland gone by 06:20 and Azerbaijan, Monaco and Montenegro by 10:00. The planes parked at Shannon flew back to Dublin between late morning and mid-afternoon, and most EU leaders left in a second wave between about 16:40 and 19:00 once their own meeting had finished, among them those of France, Germany, Czechia, Bulgaria, Lithuania, Slovakia, Croatia, Poland and Italy.
 
 {{< include _government-flights.md >}}
 

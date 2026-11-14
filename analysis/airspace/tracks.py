@@ -5,7 +5,14 @@ day, out = sys.argv[1], sys.argv[2]
 want = set(open(sys.argv[3]).read().split())
 tag = f"v{day}-planes-readsb-prod-0"
 base = f"https://github.com/adsblol/globe_history_2026/releases/download/{tag}/{tag}.tar."
-cat = subprocess.Popen(["curl", "-sSL", "--retry", "4", base + "aa", base + "ab", base + "ac"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+import glob as _glob, os as _os
+# Set ADSB_LOCAL to a folder holding already-downloaded .tar.aa/.tar.ab parts to read them
+# instead of streaming (useful when the connection drops mid-download).
+_local = sorted(_glob.glob(_os.path.join(_os.environ.get("ADSB_LOCAL", "/nonexistent"), tag + ".tar.*")))
+if _local:
+    cat = subprocess.Popen(["cat"] + _local, stdout=subprocess.PIPE)
+else:
+    cat = subprocess.Popen(["curl", "-sSL", "--retry", "4", base + "aa", base + "ab", base + "ac"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
 res = {}
 try:
   with tarfile.open(fileobj=cat.stdout, mode="r|") as t:

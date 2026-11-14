@@ -13,7 +13,7 @@ Every figure on Fianaise is built from public data by code in the [fianaise.ie r
 | [Data on individual schools](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/) | Department of Education | [Patronage maps and figures](religion/schools.qmd), [survey school map](religion/primary-school-survey.qmd) and [the charities landscape](religion/charities.qmd) | 2025–26 school year (Schools page); 2024–25 for the survey map |
 | [Family units in private households (F3035)](https://data.cso.ie/table/F3035) | Central Statistics Office | [Cohabitation in Ireland](cohabitation/index.qmd) | Census 2016, 2022 |
 | Tax rates, bands, credits and CAT thresholds ([Revenue](https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-thresholds-rates-and-aggregation-rules/cat-thresholds.aspx), [Citizens Information, Budget 2027](https://www.citizensinformation.ie/en/money-and-tax/budgets/budget-2027/)) | Revenue; Department of Finance | [The cost of not marrying](cohabitation/cost.qmd) and [calculator](cohabitation/calculator.qmd) | Budget 2027 (tax year 2027) |
-| [Historical ADS-B flight tracks](https://www.adsb.lol/docs/open-data/historical/) (ODbL) | adsb.lol | [Irish airspace](airspace/index.qmd) | 28 October to 12 November 2026 |
+| [Historical ADS-B flight tracks](https://www.adsb.lol/docs/open-data/historical/) (ODbL) | adsb.lol | [Irish airspace](airspace/index.qmd) | 28 October to 13 November 2026 |
 
 ## Code
 
