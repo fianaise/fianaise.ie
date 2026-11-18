@@ -275,6 +275,278 @@
     return bar;
   }
 
+  // ── Fit charts to the screen ───────────────────────────────────────────────
+  // The charts are drawn for a laptop. On a narrower screen (an iPad, a phone)
+  // this wraps titles that would be cut off, shrinks labels and legends that
+  // don't fit, puts side-by-side maps one above the other, and makes the frame
+  // taller to suit. At laptop width it leaves the chart as drawn.
+  const STACK_BELOW = 640; // px of frame width
+  const measureCtx = document.createElement("canvas").getContext("2d");
+  function textWidth(t, size, bold, family) {
+    measureCtx.font = (bold ? "700 " : "400 ") + size + "px " + family;
+    return measureCtx.measureText(t).width;
+  }
+
+  // Re-wrap Plotly's pseudo-HTML so no line is wider than `max` pixels.
+  function wrapText(text, max, base, family) {
+    if (typeof text !== "string" || !text) return text;
+    const tokens = text.match(/<[^>]+>|[^\s<]+|\s+/g) || [];
+    const stack = [{ bold: false, size: base }];
+    let out = "", lineW = 0, space = false;
+    for (const t of tokens) {
+      const cur = stack[stack.length - 1];
+      if (t[0] === "<") {
+        if (/^<br/i.test(t)) { out += t; lineW = 0; space = false; }
+        else if (t[1] === "/") { if (stack.length > 1) stack.pop(); out += t; }
+        else {
+          const m = t.match(/font-size:\s*(\d+)/i);
+          stack.push({ bold: cur.bold || /^<b\b/i.test(t), size: m ? +m[1] : cur.size });
+          out += t;
+        }
+        continue;
+      }
+      if (/^\s+$/.test(t)) { space = true; continue; }
+      const w = textWidth(t, cur.size, cur.bold, family);
+      const sw = space ? textWidth(" ", cur.size, cur.bold, family) : 0;
+      if (lineW > 0 && lineW + sw + w > max) { out += "<br>"; lineW = w; }
+      else { out += space ? " " : ""; lineW += sw + w; }
+      out += t;
+      space = false;
+    }
+    return out;
+  }
+
+  function widestLine(text, size, family) {
+    return Math.max(0, ...String(text).split(/<br\s*\/?>/i).map((l) =>
+      textWidth(l.replace(/<[^>]+>/g, ""), size, /<b\b/i.test(l), family)));
+  }
+
+  function fitChart(frame) {
+    let orig = null, lastW = 0, running = false, again = false;
+
+    async function run() {
+      if (running) { again = true; return; }
+      running = true;
+      try { await apply(); } catch (e) { /* leave the chart as drawn */ }
+      running = false;
+      if (again) { again = false; run(); }
+    }
+
+    async function apply() {
+      let doc, P, gd;
+      for (let i = 0; i < 50; i++) {
+        try { doc = frame.contentDocument; } catch (e) { return; }
+        gd = doc && doc.querySelector(".js-plotly-plot");
+        P = frame.contentWindow && frame.contentWindow.Plotly;
+        if (gd && P && gd._fullLayout) break;
+        await sleep(100);
+      }
+      if (!gd || !P || !gd._fullLayout) return;
+      // Tiled maps redraw their own way; leave them as drawn.
+      const sp = gd._fullLayout._subplots || {};
+      if ((sp.mapbox && sp.mapbox.length) || (sp.map && sp.map.length)) return;
+      const W = frame.clientWidth;
+      if (!W || Math.abs(W - lastW) < 2) return;
+      lastW = W;
+      if (!orig) {
+        orig = {
+          layout: JSON.parse(JSON.stringify(gd.layout)),
+          names: (gd.data || []).map((t) => t.name),
+          frameH: frame.offsetHeight,
+        };
+      }
+      const L = orig.layout;
+      const fl = gd._fullLayout;
+      const family = (fl.font && fl.font.family) || "sans-serif";
+      const m = Object.assign({ l: 80, r: 80, t: 100, b: 80 }, L.margin || {});
+      const sz = fl._size || {};
+      const plotW = sz.w || (W - m.l - m.r);
+      const padL = sz.l != null ? sz.l : m.l, padR = sz.r != null ? sz.r : m.r;
+      const u = {};
+
+      // Two maps side by side → one above the other.
+      const g1 = L.geo && L.geo.domain, g2 = L.geo2 && L.geo2.domain;
+      const sideBySide = g1 && g2 && g1.x && g2.x && g1.x[1] <= 0.51 && g2.x[0] >= 0.49 && !L.geo3;
+      const stack = sideBySide && W < STACK_BELOW;
+      let plotH = null, gap = 0, topGap = 0;
+      if (sideBySide) {
+        if (stack) {
+          const mapH = Math.round(plotW * 1.15);
+          const gapPx = 84, topPx = 56;
+          plotH = 2 * mapH + gapPx + topPx;
+          gap = gapPx / plotH;
+          topGap = topPx / plotH;
+          u["geo.domain"] = { x: [0, 1], y: [0.5 + gap / 2, 1 - topGap] };
+          u["geo2.domain"] = { x: [0, 1], y: [0, 0.5 - gap / 2] };
+        } else {
+          u["geo.domain"] = g1;
+          u["geo2.domain"] = g2;
+        }
+      }
+
+      // Title: wrap to the frame; say top/bottom rather than left/right.
+      if (L.title && L.title.text) {
+        let t = L.title.text;
+        if (stack) t = t.replace(/\bLeft:/g, "Top:").replace(/\bRight:/g, "Bottom:").replace(/\bleft\b/g, "top").replace(/\bright\b/g, "bottom");
+        const size = (L.title.font && L.title.font.size) || (fl.title && fl.title.font && fl.title.font.size) || 17;
+        u["title.text"] = wrapText(t, W * 0.96 - 18, size, family);
+      }
+
+      // Annotations: subplot titles wrap; other labels shrink to fit.
+      (L.annotations || []).forEach((a, i) => {
+        if (!a || typeof a.text !== "string") return;
+        const size = (a.font && a.font.size) || 12;
+        const mid = (d) => d && d.x ? (d.x[0] + d.x[1]) / 2 : null;
+        const which = sideBySide && a.xref !== "x" && Math.abs(a.x - mid(g1)) < 0.02 ? 1
+          : sideBySide && a.xref !== "x" && Math.abs(a.x - mid(g2)) < 0.02 ? 2 : 0;
+        if (which) {
+          const p = "annotations[" + i + "].";
+          if (stack) {
+            u[p + "x"] = 0.5;
+            u[p + "y"] = which === 1 ? 1 - topGap : 0.5 - gap / 2 + 0.004;
+            u[p + "yanchor"] = "bottom";
+            u[p + "text"] = wrapText(a.text, plotW - 8, size, family);
+          } else {
+            u[p + "x"] = a.x; u[p + "y"] = a.y;
+            u[p + "yanchor"] = a.yanchor || "auto";
+            u[p + "text"] = wrapText(a.text, (plotW / 2) - 8, size, family);
+          }
+          return;
+        }
+        // Where the label sits across the plot, from 0 (left) to 1 (right).
+        let x = typeof a.x === "number" ? a.x : 0.5;
+        if (a.xref && a.xref !== "paper") {
+          const ax = fl[a.xref.replace(/^x/, "xaxis")];
+          if (!ax || !ax.range || ax.type === "category") return;
+          const [r0, r1] = ax.range.map(Number), d = ax.domain || [0, 1];
+          x = d[0] + (x - r0) / (r1 - r0) * (d[1] - d[0]);
+        }
+        const anchor = a.xanchor || "auto";
+        if (anchor === "center" || (anchor === "auto" && Math.abs(x - 0.5) < 0.02)) {
+          u["annotations[" + i + "].text"] = wrapText(a.text, plotW - 8, size, family);
+          return;
+        }
+        const room = anchor === "right" ? x * plotW + padL - 6 : (1 - x) * plotW + padR - 6;
+        const need = widestLine(a.text, size, family) * 1.08;
+        if (room > 40 && need > room) u["annotations[" + i + "].font.size"] = Math.max(10, Math.floor(size * room / need));
+        else if (a.font && a.font.size) u["annotations[" + i + "].font.size"] = size;
+      });
+
+      // Legends: smaller text on a phone, and long entries wrapped.
+      const narrow = W < STACK_BELOW;
+      const names = { name: [] }, nameIdx = [];
+      if (L.showlegend !== false && fl.showlegend) {
+        const size = (L.legend && L.legend.font && L.legend.font.size) || 12;
+        const lsize = narrow ? Math.min(size, 12) : size;
+        u["legend.font.size"] = lsize;
+        (gd.data || []).forEach((t, i) => {
+          const was = orig.names[i];
+          if (typeof was !== "string" || t.showlegend === false) return;
+          const now = narrow ? wrapText(was, W - 80, lsize, family) : was;
+          if (now !== t.name) { names.name.push(now); nameIdx.push(i); }
+        });
+      }
+
+      // Axis labels: a size smaller on a phone so long category names fit.
+      Object.keys(L).filter((k) => /^[xy]axis\d*$/.test(k)).forEach((k) => {
+        const size = (L[k].tickfont && L[k].tickfont.size) || null;
+        if (size && size > 11) u[k + ".tickfont.size"] = narrow ? 11 : size;
+      });
+
+      let baseH = plotH ? plotH + m.t + m.b : (L.height || orig.frameH);
+      // A single map on a phone needs less height than on a laptop.
+      const geos = (gd._fullLayout._subplots || {}).geo || [];
+      if (!plotH && geos.length === 1 && W < STACK_BELOW) baseH = Math.min(baseH, m.t + m.b + Math.round(plotW * 1.3));
+      u["margin.t"] = m.t;
+      u["margin.b"] = m.b;
+      if (L.legend) {
+        const lg = L.legend;
+        Object.assign(u, { "legend.x": lg.x, "legend.xanchor": lg.xanchor, "legend.y": lg.y,
+          "legend.yanchor": lg.yanchor, "legend.yref": lg.yref || "paper" });
+      }
+      u.height = baseH;
+      if (nameIdx.length) await P.restyle(gd, names, nameIdx);
+      await P.relayout(gd, u);
+
+      // If the legend now runs into a label (as the map titles do once the
+      // legend wraps), move the legend under the chart.
+      const leg = gd.querySelector(".legend");
+      let legExtra = 0;
+      if (leg) {
+        const lr = leg.getBoundingClientRect();
+        const hit = Array.from(gd.querySelectorAll(".annotation")).some((el) => {
+          const r = el.getBoundingClientRect();
+          return r.height && r.left < lr.right && r.right > lr.left && r.top < lr.bottom && r.bottom > lr.top;
+        });
+        if (hit) {
+          legExtra = Math.ceil(lr.height) + 12;
+          await P.relayout(gd, { "legend.y": 0, "legend.yanchor": "top", "legend.yref": "container",
+            "legend.x": 0.02, "legend.xanchor": "left", "margin.b": m.b + legExtra, height: baseH + legExtra });
+          await P.relayout(gd, { "legend.y": (legExtra - 4) / (baseH + legExtra) });
+        }
+      }
+      baseH += legExtra;
+
+      // Make room if the wrapped title now runs into the legend or labels.
+      const top = gd.getBoundingClientRect().top;
+      const title = gd.querySelector(".g-gtitle");
+      const titleBottom = title ? title.getBoundingClientRect().bottom - top : 0;
+      let highest = Infinity;
+      gd.querySelectorAll(".legend, .annotation, .updatemenu-header-group").forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.height && r.top - top < m.t) highest = Math.min(highest, r.top - top);
+      });
+      if (highest === Infinity) highest = m.t;
+      const extra = Math.max(0, Math.ceil(titleBottom + 8 - highest));
+      if (extra) await P.relayout(gd, { "margin.t": m.t + extra, height: baseH + extra });
+      frame.style.height = (baseH + extra) + "px";
+    }
+
+    frame.addEventListener("load", () => { lastW = 0; run(); });
+    run();
+    return run;
+  }
+
+  const fitRuns = [];
+  document.querySelectorAll('iframe[src*="figures/"]').forEach((frame) => fitRuns.push(fitChart(frame)));
+  let fitTimer = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(fitTimer);
+    fitTimer = setTimeout(() => fitRuns.forEach((r) => r()), 200);
+  });
+
+  // ── Wide tables scroll sideways on a phone rather than widening the page ───
+  document.querySelectorAll("main table").forEach((table) => {
+    const parent = table.parentElement;
+    if (!parent || parent.closest(".data-table-wrap, .table-scroll, .table-responsive")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "table-scroll";
+    parent.insertBefore(wrap, table);
+    wrap.append(table);
+  });
+
+  // ── Collapsible captions ───────────────────────────────────────────────────
+  // Each caption is a short title, then a ".caption-details" block with the
+  // full description and sources. Fold that block behind a button so long
+  // captions don't fill a phone screen. Without this script it simply shows.
+  document.querySelectorAll("div.caption-details").forEach((div) => {
+    const details = document.createElement("details");
+    details.className = "caption-details";
+    const summary = document.createElement("summary");
+    summary.innerHTML = '<span class="when-closed">Show details and sources</span><span class="when-open">Hide details and sources</span>';
+    details.append(summary);
+    while (div.firstChild) details.append(div.firstChild);
+    div.replaceWith(details);
+  });
+  // Open the details when someone follows a link to something inside them.
+  const openTarget = () => {
+    const el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    const d = el && el.closest("details.caption-details");
+    if (d) d.open = true;
+  };
+  openTarget();
+  window.addEventListener("hashchange", openTarget);
+
   // ── Wire up figures and tables ─────────────────────────────────────────────
 
   document.querySelectorAll('iframe[src*="figures/"]').forEach((frame) => {

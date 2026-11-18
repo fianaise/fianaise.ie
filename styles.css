@@ -232,3 +232,17 @@
 }
 .figure-share-menu button:hover, .figure-share-menu a:hover,
 .figure-share-menu button:focus-visible, .figure-share-menu a:focus-visible { background: #f3f2ee; }
+
+/* Collapsible figure captions (figures/figure-tools.js) */
+p:has(+ .caption-details) { margin-bottom: 0.2rem; }
+details.caption-details { margin: 0 0 1.1rem; font-size: 0.92rem; }
+details.caption-details > summary { display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer;
+  list-style: none; color: var(--bs-link-color, #2a6f97); font-size: 0.85rem; font-weight: 600; padding: 0.15rem 0; }
+details.caption-details > summary::-webkit-details-marker { display: none; }
+details.caption-details > summary::before { content: "▸"; display: inline-block; transition: transform 0.15s; }
+details.caption-details[open] > summary::before { transform: rotate(90deg); }
+details.caption-details > summary .when-open, details.caption-details[open] > summary .when-closed { display: none; }
+details.caption-details[open] > summary .when-open { display: inline; }
+details.caption-details > p { margin: 0.35rem 0 0.5rem; }
+.table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll > table { margin-bottom: 0.5rem; }
