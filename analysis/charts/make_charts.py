@@ -241,7 +241,7 @@ def survey_intend_vs_preference():
         hovertemplate="Prefer denominational<br><b>%{x:.1f}%</b> · %{customdata:,} households<extra></extra>",
     ))
     fig.update_layout(base_layout(
-        title=title("4 in 10 parents heading for a denominational school<br>would prefer a multi-denominational one",
+        title=title("4 in 10 households heading for a denominational school<br>would prefer a multi-denominational one",
                     f"Households with a child not yet in school (n = {base:,}), by intended school and preferred ethos"),
         barmode="stack",
         bargap=0.45,
@@ -257,10 +257,10 @@ def survey_intend_vs_preference():
 
 
 def survey_numbers():
-    """Eligible, received and valid responses, parents beside staff and boards."""
+    """Eligible, received and valid responses, households beside staff and boards."""
     from plotly.subplots import make_subplots
     groups = [
-        ("Parents and guardians", report.PARENT_ELIGIBLE, report.PARENT_SUBMITTED_RESPONSES,
+        ("Households (parents and guardians)", report.PARENT_ELIGIBLE, report.PARENT_SUBMITTED_RESPONSES,
          report.PARENT_VALID_RESPONSES),
         ("Staff and boards of management", report.STAFF_BOARD_TARGET_POPULATION,
          report.STAFF_BOARD_SUBMITTED_RESPONSES, report.STAFF_BOARD_VALID_RESPONSES),
@@ -298,7 +298,7 @@ def survey_numbers():
 
 
 def parents_vs_staff_by_county():
-    """Slide 8: parents (two groups) against staff and boards, county by county."""
+    """Slide 8: households (two groups) against staff and boards, county by county."""
     parent = report.TABLE_3_PARENT_MULTIDENOM_BY_COUNTY.set_index("County")
     staff = report.TABLE_8_STAFF_BOARD_BY_COUNTY.set_index("County")["MultiDenom_pref_pct"]
     df = parent.join(staff).sort_values("MultiDenom_pref_pct", ascending=False)
@@ -307,14 +307,14 @@ def parents_vs_staff_by_county():
     LIGHT_ORANGE, STAFF = "#f4a582", "#22343c"
     save_csv(df.reset_index()[["County", "Not_yet_in_school_pct", "Children_in_school_pct", "MultiDenom_pref_pct"]]
              .rename(columns={
-                 "Not_yet_in_school_pct": "Parents, child not yet in school (%)",
-                 "Children_in_school_pct": "Parents, child in school (%)",
+                 "Not_yet_in_school_pct": "Households with a child not yet in school (%)",
+                 "Children_in_school_pct": "Households with a child in school (%)",
                  "MultiDenom_pref_pct": "School staff and boards (%)",
              }).assign(Source=f"Primary School Survey results summary report (June 2026), Table 3 p. 19 and Table 8 p. 29, {REPORT_PDF}#page=19"),
              "parents_vs_staff_by_county.csv")
 
     fig = go.Figure()
-    # Grey area up to staff and boards, a peach band from there to the higher parent group.
+    # Grey area up to staff and boards, a peach band from there to the higher household group.
     fig.add_trace(go.Scatter(x=counties, y=df["MultiDenom_pref_pct"], mode="lines", line=dict(width=0),
                              fill="tozeroy", fillcolor="rgba(34,52,60,0.08)", hoverinfo="skip", showlegend=False))
     fig.add_trace(go.Scatter(x=counties, y=top, mode="lines", line=dict(width=0),
@@ -324,8 +324,8 @@ def parents_vs_staff_by_county():
         fig.add_trace(go.Scatter(x=[c, c], y=[r["MultiDenom_pref_pct"], max(r["Children_in_school_pct"], r["Not_yet_in_school_pct"])],
                                  mode="lines", line=dict(color=INK_3, width=1, dash="dot"), hoverinfo="skip", showlegend=False))
     series = [
-        ("Parents, child not yet in school", "Not_yet_in_school_pct", ORANGE),
-        ("Parents, child in school", "Children_in_school_pct", LIGHT_ORANGE),
+        ("Households with a child not yet in school", "Not_yet_in_school_pct", ORANGE),
+        ("Households with a child in school", "Children_in_school_pct", LIGHT_ORANGE),
         ("School staff and boards", "MultiDenom_pref_pct", STAFF),
     ]
     for name, col, colour in series:
@@ -337,8 +337,8 @@ def parents_vs_staff_by_county():
     staff_nat = float(report.TABLE_7_STAFF_BOARD_NATIONAL.set_index("preference").loc["MULTI-DENOMINATIONAL", "percentage"])
     parent_nat = float(report.TABLE_2A_NATIONAL_PROPORTIONS.set_index("household_type").loc["ALL", "multidenom_pct"])
     fig.update_layout(base_layout(
-        title=title("Parents want multi-denominational schools more than staff and boards do",
-                    f"Share preferring a multi-denominational school, by county. Nationally: parents {parent_nat:.0f}%, staff and boards {staff_nat:.1f}%"),
+        title=title("Households want multi-denominational schools more than staff and boards do",
+                    f"Share preferring a multi-denominational school, by county. Nationally: households {parent_nat:.0f}%, staff and boards {staff_nat:.1f}%"),
         showlegend=True, hovermode="closest",
         legend=dict(orientation="h", x=0, xanchor="left", y=1.0, yanchor="bottom",
                     font=dict(color=INK, size=13), itemclick=False, itemdoubleclick=False),

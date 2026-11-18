@@ -39,4 +39,4 @@ All primary schools in Ireland are funded by the State, but each one has a patro
 
 **Figure 2.** Every mainstream primary school by its ethos as the Department records it. Click a group in the legend to show or hide it. Data: Department of Education, [data on individual schools](https://www.gov.ie/en/department-of-education/collections/data-on-individual-schools/), using the latest list published. Code: [`make_maps.py`](https://github.com/fianaise/fianaise.ie/blob/main/analysis/charts/make_maps.py). [Open full screen](../figures/ethos_current_config.html).
 
-What parents say they want is on the [Primary School Survey 2026](primary-school-survey.qmd) page.
+What households say they want is on the [Primary School Survey 2026](primary-school-survey.qmd) page.

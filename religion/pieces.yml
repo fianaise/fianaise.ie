@@ -5,7 +5,7 @@
 - title: "Primary School Survey 2026"
   path: primary-school-survey.qmd
   image: ../images/religion-survey.png
-  description: "What parents, school staff and boards of management told the Department of Education about school ethos."
+  description: "What households, school staff and boards of management told the Department of Education about school ethos."
 - title: "Census and marriages"
   path: census-marriages.qmd
   image: ../images/religion-trends.png

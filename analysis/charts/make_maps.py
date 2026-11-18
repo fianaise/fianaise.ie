@@ -166,14 +166,14 @@ def school_results():
     """The school-level survey results, one row per mainstream school, with each
     school's ethos and location from the Department's school lists.
 
-    A school "wants multi-denominational" when more than half of the parents of
+    A school "wants multi-denominational" when more than half of the households with
     children in the school who answered prefer a multi-denominational ethos
     (more than 50% of votes cast). This is the school-specific result the
     Department sent each school, and it counts 485 of the 2,731 mainstream
-    denominational schools with a reportable result. Parents of children not yet
+    denominational schools with a reportable result. Households with children not yet
     in school are reported by school too, but they named a school they might
     use, so they are left out of the count and shown only in the hover text.
-    Results are blank ("-") where too few parents answered to report. Special
+    Results are blank ("-") where too few households answered to report. Special
     schools are left out: the school lists that give ethos cover mainstream
     schools only.
     """
@@ -207,9 +207,9 @@ def school_results():
     df["is_denominational"] = ~df["is_multi"]
     df["reportable"] = df["in_valid"].notna()
     df["wants_multid"] = df["is_denominational"] & (df["in_pct"] > 50)
-    # The looser count: 50% or more of all parent responses for the school,
-    # pooling parents of children not yet in school (preschool) with current
-    # parents. 573 mainstream denominational schools; the old map showed 572
+    # The looser count: 50% or more of all household responses for the school,
+    # pooling households with children not yet in school (preschool) with current
+    # households. 573 mainstream denominational schools; the old map showed 572
     # because it left out the one with no location.
     df["all_valid"] = df["in_valid"] + df["not_valid"].fillna(0)
     df["all_pct"] = (df["in_multi"] + num(survey.MULTI_NOT_N).fillna(0)) / df["all_valid"] * 100
@@ -234,8 +234,8 @@ def survey_school_map():
     for _, r in df[unmapped & (df["category"] != "other_denominational")].iterrows():
         print(f"  not on the map (no location): {r[survey.NAME_COL]}, {r[survey.COUNTY_COL]}, {r['category']}")
     groups = [
-        ("wants_multid", "Denominational: more than 50% of current parents want multi-denominational", "#eb6834", "circle", 7),
-        ("preschool_only", "Denominational: 50% or more only when preschool parents are included", "#f4b183", "circle", 6),
+        ("wants_multid", "Denominational: more than 50% of current households want multi-denominational", "#eb6834", "circle", 7),
+        ("preschool_only", "Denominational: 50% or more only when preschool households are included", "#f4b183", "circle", 6),
         ("currently_multid", "Already multi-denominational", "#1baf7a", "circle", 7),
         ("low_response", "Denominational, too few responses to report", "#a3aab3", "circle", 5),
     ]
@@ -250,14 +250,14 @@ def survey_school_map():
                   "wants_multid", "wants_with_preschool", survey.LAT_COL, survey.LON_COL]]
              .rename(columns={survey.NAME_COL: "School", survey.COUNTY_COL: "County", survey.ETHOS_COL: "Ethos (survey)",
                               "ethos_detail": "Ethos (school list)", "category": "Group",
-                              "in_valid": "Valid responses, parents of children in school",
-                              "in_pct": "Prefer multi-denominational, parents of children in school (%)",
-                              "not_valid": "Valid responses, parents of children not yet in school",
-                              "not_pct": "Prefer multi-denominational, parents of children not yet in school (%)",
-                              "all_valid": "Valid responses, all parents",
-                              "all_pct": "Prefer multi-denominational, all parents (%)",
-                              "wants_multid": "More than 50% of current parents prefer multi-denominational",
-                              "wants_with_preschool": "50% or more of all parents (incl. preschool) prefer multi-denominational",
+                              "in_valid": "Valid responses, households with children in school",
+                              "in_pct": "Prefer multi-denominational, households with children in school (%)",
+                              "not_valid": "Valid responses, households with children not yet in school",
+                              "not_pct": "Prefer multi-denominational, households with children not yet in school (%)",
+                              "all_valid": "Valid responses, all households",
+                              "all_pct": "Prefer multi-denominational, all households (%)",
+                              "wants_multid": "More than 50% of current households prefer multi-denominational",
+                              "wants_with_preschool": "50% or more of all households (incl. preschool) prefer multi-denominational",
                               survey.LAT_COL: "Latitude", survey.LON_COL: "Longitude"})
              .assign(Source=f"Primary School Survey, results for all primary schools ({SURVEY_PAGE}); "
                             f"locations from Data on Individual Schools 2024-25 ({SCHOOL_LISTS})"),
@@ -268,9 +268,9 @@ def survey_school_map():
     # already multi-denominational schools (green) and the schools whose result
     # wasn't published (grey) for context.
     panels = [
-        ("wants_multid", wants, "Parents of children in the school",
+        ("wants_multid", wants, "Households with children in the school",
          "more than 50% prefer multi-denominational"),
-        ("wants_with_preschool", wants_pooled, "Parents of children in the school<br>and of children not yet in school",
+        ("wants_with_preschool", wants_pooled, "Households with children in the school<br>and with children not yet in school",
          "50% or more prefer multi-denominational"),
     ]
     fig = make_subplots(rows=1, cols=2, specs=[[{"type": "geo"}, {"type": "geo"}]], horizontal_spacing=0.02,
@@ -278,13 +278,13 @@ def survey_school_map():
                                         f"{n:,} schools: {rule}</span>" for _, n, name, rule in panels])
 
     def hover(g):
-        pct = g["in_pct"].map(lambda v: "" if pd.isna(v) else f"<br>Current parents preferring multi-denominational: <b>{v:.1f}%</b>")
+        pct = g["in_pct"].map(lambda v: "" if pd.isna(v) else f"<br>Current households preferring multi-denominational: <b>{v:.1f}%</b>")
         n = g["in_valid"].map(lambda v: "" if pd.isna(v) else f" ({int(v):,} responses)")
 
         def more(r):
-            t = "" if pd.isna(r["not_pct"]) else f"<br>Preschool parents: {r['not_pct']:.1f}% ({int(r['not_valid']):,} responses)"
+            t = "" if pd.isna(r["not_pct"]) else f"<br>Preschool households: {r['not_pct']:.1f}% ({int(r['not_valid']):,} responses)"
             if not pd.isna(r["all_pct"]) and not pd.isna(r["not_pct"]):
-                t += f"<br>All parents: {r['all_pct']:.1f}% ({int(r['all_valid']):,} responses)"
+                t += f"<br>All households: {r['all_pct']:.1f}% ({int(r['all_valid']):,} responses)"
             return t
         nyet = g.apply(more, axis=1).astype(str) if len(g) else g["in_pct"].astype(str)
         return np.stack([g[survey.NAME_COL].fillna("Unknown"), g[survey.COUNTY_COL].fillna(""),
@@ -294,7 +294,7 @@ def survey_school_map():
         # (rows, legend label, colour, size)
         (lambda key: df["category"].eq("low_response"), f"Denominational, too few responses to publish ({(df['category'] == 'low_response').sum():,})", "#a3aab3", 5),
         (lambda key: df["is_multi"], f"Already multi-denominational ({has:,})", "#1baf7a", 6),
-        (lambda key: df[key], "Denominational, most parents want multi-denominational", "#eb6834", 6),
+        (lambda key: df[key], "Denominational, most households want multi-denominational", "#eb6834", 6),
     ]
     for col, (key, *_rest) in enumerate(panels, start=1):
         base_geo(fig, row=1, col=col)
@@ -308,9 +308,9 @@ def survey_school_map():
                 hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]} · %{customdata[2]}%{customdata[3]}<extra></extra>",
             ), row=1, col=col)
     fig.update_layout(base_layout(
-        title=title(f"Denominational schools where most parents want multi-denominational: {wants:,} or {wants_pooled:,}",
-                    "Mainstream primary schools. Left: parents of current pupils only. "
-                    "Right: adding parents of children not yet in school"),
+        title=title(f"Denominational schools where most households want multi-denominational: {wants:,} or {wants_pooled:,}",
+                    "Mainstream primary schools. Left: households with children in the school only. "
+                    "Right: adding households with children not yet in school"),
         showlegend=True, legend=legend_top() | dict(y=1.08),
         margin=dict(l=10, r=10, t=190, b=10), height=760,
     ))
@@ -364,11 +364,11 @@ COUNTY_TABLE_STYLE = """<style>
 
 def county_table():
     """Denominational mainstream schools in each county, and how many have
-    parents wanting a multi-denominational ethos, on both definitions:
+    households wanting a multi-denominational ethos, on both definitions:
 
-      current parents   more than 50% of parents of children in the school
-      with preschool    50% or more of all parent responses for the school,
-                        including parents of children not yet in school
+      current households   more than 50% of households with children in the school
+      with preschool    50% or more of all household responses for the school,
+                        including households with children not yet in school
 
     Shares are of the schools with a reportable result (enough responses).
     Writes religion/_county-multid-table.md (included on the survey page),
@@ -399,14 +399,14 @@ def county_table():
     save_csv(out.rename(columns={
         "schools": "Denominational schools", "catholic": "Catholic", "other": "Church of Ireland and other faiths",
         "reportable": "Schools with reportable results",
-        "cur": "Current parents: schools where more than 50% prefer multi-denominational",
-        "cur_cath": "Current parents: of which Catholic",
-        "cur_other": "Current parents: of which Church of Ireland and other faiths",
-        "cur_pct": "Current parents: share of schools with reportable results (%)",
-        "pre": "Current and preschool parents: schools where 50% or more prefer multi-denominational",
-        "pre_cath": "Current and preschool parents: of which Catholic",
-        "pre_other": "Current and preschool parents: of which Church of Ireland and other faiths",
-        "pre_pct": "Current and preschool parents: share of schools with reportable results (%)",
+        "cur": "Current households: schools where more than 50% prefer multi-denominational",
+        "cur_cath": "Current households: of which Catholic",
+        "cur_other": "Current households: of which Church of Ireland and other faiths",
+        "cur_pct": "Current households: share of schools with reportable results (%)",
+        "pre": "Current and preschool households: schools where 50% or more prefer multi-denominational",
+        "pre_cath": "Current and preschool households: of which Catholic",
+        "pre_other": "Current and preschool households: of which Church of Ireland and other faiths",
+        "pre_pct": "Current and preschool households: share of schools with reportable results (%)",
     }).assign(Source=f"Primary School Survey, results for all primary schools ({SURVEY_PAGE}); "
                      f"ethos from Data on Individual Schools 2024-25 ({SCHOOL_LISTS})"),
         "county_denominational_multid.csv")
@@ -421,8 +421,8 @@ def county_table():
 
     head = ('<thead><tr class="group-row"><td></td>'
             '<th scope="colgroup" colspan="4">Mainstream denominational schools</th>'
-            '<th scope="colgroup" colspan="2" class="grp is-cur">Current parents<span>more than 50% want multi-denominational</span></th>'
-            '<th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool parents<span>50% or more want multi-denominational</span></th></tr>\n'
+            '<th scope="colgroup" colspan="2" class="grp is-cur">Current households<span>more than 50% want multi-denominational</span></th>'
+            '<th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool households<span>50% or more want multi-denominational</span></th></tr>\n'
             '<tr><th scope="col">County</th><th scope="col">All</th>'
             '<th scope="col">Catholic</th><th scope="col">Other faiths</th><th scope="col">With results</th>'
             '<th scope="col" class="grp">Schools</th><th scope="col">Share</th>'
@@ -442,26 +442,26 @@ def county_table():
 
 
 def county_multid_map(t, nat):
-    """Counties shaded by the share of denominational schools where parents want
-    multi-denominational. Current parents by default; a menu switches to
-    current and preschool parents. Both use the same colour scale."""
+    """Counties shaded by the share of denominational schools where households want
+    multi-denominational. Current households by default; a menu switches to
+    current and preschool households. Both use the same colour scale."""
     t = t.reindex(COUNTIES)
     save_csv(pd.concat([t, nat.to_frame("Ireland").T])[["reportable", "cur", "cur_pct", "pre", "pre_pct"]]
              .astype({"reportable": int, "cur": int, "pre": int})
              .reset_index(names="County").rename(columns={
                  "reportable": "Denominational schools with reportable results",
-                 "cur": "Current parents: schools where more than 50% prefer multi-denominational",
-                 "cur_pct": "Current parents: share of schools (%)",
-                 "pre": "Current and preschool parents: schools where 50% or more prefer multi-denominational",
-                 "pre_pct": "Current and preschool parents: share of schools (%)",
+                 "cur": "Current households: schools where more than 50% prefer multi-denominational",
+                 "cur_pct": "Current households: share of schools (%)",
+                 "pre": "Current and preschool households: schools where 50% or more prefer multi-denominational",
+                 "pre_pct": "Current and preschool households: share of schools (%)",
              }).assign(Source=f"Primary School Survey, results for all primary schools ({SURVEY_PAGE}); "
                               f"ethos from Data on Individual Schools 2024-25 ({SCHOOL_LISTS})"),
              "county_multid_map.csv")
     zmax = float(np.ceil(max(t["cur_pct"].max(), t["pre_pct"].max()) / 10) * 10)
     scale = [[0, "#fdf1ea"], [0.35, "#f6b48f"], [0.7, "#eb6834"], [1, "#8f3410"]]
     views = [
-        ("cur", "Current parents (more than 50%)", "more than 50% of current parents"),
-        ("pre", "Current and preschool parents (50% or more)", "50% or more of current and preschool parents"),
+        ("cur", "Current households (more than 50%)", "more than 50% of current households"),
+        ("pre", "Current and preschool households (50% or more)", "50% or more of current and preschool households"),
     ]
     fig = go.Figure()
     base_geo(fig)
@@ -481,7 +481,7 @@ def county_multid_map(t, nat):
         return (f"Share of mainstream denominational schools where {how}<br>prefer a multi-denominational ethos. "
                 f"Ireland: {int(nat[key]):,} of {int(nat.reportable):,} schools with results ({nat[key + '_pct']:.1f}%)")
 
-    head = "Where parents want multi-denominational schools, county by county"
+    head = "Where households want multi-denominational schools, county by county"
     buttons = [dict(label=label, method="update",
                     args=[{"visible": [True] + [j == i for j in range(len(views))]},
                           {"title": title(head, subtitle(key, how))}])
@@ -607,7 +607,7 @@ def patronage():
 
 
 def preference_vs_provision(t, year):
-    """Slide 17: what parents prefer against what exists today."""
+    """Slide 17: what households prefer against what exists today."""
     from staff_board_data import TABLE_2A_NATIONAL_PROPORTIONS as T2A
     prefer = float(T2A.set_index("household_type").loc["ALL", "multidenom_pct"])
     rows = [
