@@ -36,7 +36,7 @@
 </style>
 <div class="data-table-wrap" data-figure="county_denominational_multid">
 <table class="data-table sortable" id="county-table">
-<thead><tr class="group-row"><td></td><th scope="colgroup" colspan="4">Mainstream denominational schools</th><th scope="colgroup" colspan="2" class="grp is-cur">Current parents<span>more than 50% want multi-denominational</span></th><th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool parents<span>50% or more want multi-denominational</span></th></tr>
+<thead><tr class="group-row"><td></td><th scope="colgroup" colspan="4">Mainstream denominational schools</th><th scope="colgroup" colspan="2" class="grp is-cur">Current households<span>more than 50% want multi-denominational</span></th><th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool households<span>50% or more want multi-denominational</span></th></tr>
 <tr><th scope="col">County</th><th scope="col">All</th><th scope="col">Catholic</th><th scope="col">Other faiths</th><th scope="col">With results</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th></tr></thead>
 <tbody>
 <tr><th scope="row">Wicklow</th><td>76</td><td>55</td><td>21</td><td>75</td><td class="grp">36</td><td data-value="48.00"><span class="pct-bar" style="--pct:48.0%"></span>48.0%</td><td class="grp">40</td><td data-value="53.33"><span class="pct-bar is-pre" style="--pct:53.3%"></span>53.3%</td></tr>
