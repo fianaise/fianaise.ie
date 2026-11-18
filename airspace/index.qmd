@@ -63,7 +63,11 @@ Ireland hosted the European Political Community on Thursday 12 November 2026 and
 </script>
 ```
 
-**Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November to midnight on Friday 13 November. Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
+**Figure 1.** Government and military planes flying in and out of Ireland, with each one labelled by the country that sent it, from 06:00 on Wednesday 11 November to midnight on Friday 13 November.
+
+::: {.caption-details}
+Hollow circles are planes parked at an Irish airport. Times are Irish time. Data: [adsb.lol](https://www.adsb.lol/docs/open-data/historical/) (ODbL).
+:::
 
 ## Government planes
 
@@ -71,7 +75,11 @@ On an ordinary weekday no more than two foreign government or military aircraft 
 
 {{< include _daily-counts.md >}}
 
-**Table 1.** Aircraft that landed at or took off from an Irish airport each day. The days before the summit are Wednesday to Friday of the two previous weeks, and Tuesday 10 November. The archive for Friday 6 November is incomplete. A plane that stayed overnight is counted on each day it landed or took off.
+**Table 1.** Aircraft that landed at or took off from an Irish airport each day.
+
+::: {.caption-details}
+The days before the summit are Wednesday to Friday of the two previous weeks, and Tuesday 10 November. The archive for Friday 6 November is incomplete. A plane that stayed overnight is counted on each day it landed or took off.
+:::
 
 Several governments set their leader down at Dublin and then flew the empty plane on to Shannon, which suggests that Dublin ran short of parking space. Hungary, Switzerland, Czechia, Slovakia, Bulgaria, Monaco and Serbia all did this. France, Portugal, Italy, Romania, Ukraine and the United States used Casement Aerodrome at Baldonnel, the Air Corps base, instead of Dublin Airport.
 
