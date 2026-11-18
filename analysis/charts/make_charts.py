@@ -286,7 +286,7 @@ def survey_numbers():
             textfont=dict(color=INK, size=15),
             hovertemplate=f"{name}<br>%{{y}}: <b>%{{x:,}}</b><extra></extra>",
         ), row=i, col=1)
-        fig.update_xaxes(axis(range=[0, eligible * 1.3], showticklabels=False), row=i, col=1)
+        fig.update_xaxes(axis(range=[0, eligible * 1.45], showticklabels=False), row=i, col=1)
         fig.update_yaxes(axis(autorange="reversed", tickfont=dict(color=INK_2, size=13)), row=i, col=1)
     fig.update_layout(base_layout(
         bargap=0.3, margin=dict(l=10, r=20, t=40, b=10), height=470,
