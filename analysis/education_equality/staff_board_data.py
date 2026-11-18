@@ -14,7 +14,7 @@ The report is published at:
 (look for "Primary School Survey - Results Summary Report" under "Publications").
 
 The direct PDF link used for this project was:
-    https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf
+    https://fianaise.ie/figures/sources/Primary_School_Survey_Results_Summary_Report_June_2026.pdf
 
 NOTE: assets.gov.ie blocks automated/robotic downloads (robots.txt), so this
 file CANNOT be fetched programmatically — it must be downloaded manually in a

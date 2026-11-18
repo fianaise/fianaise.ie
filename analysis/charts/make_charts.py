@@ -42,7 +42,7 @@ MULTI_D, DENOM = "#2f855a", "#a3aab3"   # the survey pages' green / grey
 CONFIG = {"displayModeBar": False, "responsive": True}
 
 # The Department's Primary School Survey results summary report (June 2026).
-REPORT_PDF = "https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf"
+REPORT_PDF = "https://fianaise.ie/figures/sources/Primary_School_Survey_Results_Summary_Report_June_2026.pdf"
 
 
 def base_layout(**kw):
