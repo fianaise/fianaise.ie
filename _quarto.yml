@@ -46,3 +46,4 @@ format:
     theme: cosmo
     toc: false
     css: styles.css
+    include-after-body: _figure-tools.html

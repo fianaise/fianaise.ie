@@ -7,7 +7,7 @@ Part of [Religion in Ireland](index.qmd). See also the [Primary School Survey 20
 
 ## The patronage landscape in Ireland
 
-All primary schools in Ireland are funded by the State, but each one has a patron, and the patron sets the school's ethos. Almost nine in ten have a Catholic patron.
+All primary schools in Ireland are funded by the State, but each one has a patron, and the patron sets the school's ethos. Almost nine in ten mainstream primary schools have a Catholic patron. The figures on this page are for mainstream primary schools; special schools are not in the Department's school lists used here.
 
 {{< include _patronage-stats.md >}}
 

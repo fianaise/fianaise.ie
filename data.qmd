@@ -4,6 +4,8 @@ title: "Data & code"
 
 Every figure on Fianaise is built from public data by code in the [fianaise.ie repository](https://github.com/fianaise/fianaise.ie). The data belongs to its publishers and keeps their licences.
 
+Under every figure there are buttons to download the numbers behind it as a CSV file, save the chart as an image and share it. The CSV files are also in [`figures/data/`](https://github.com/fianaise/fianaise.ie/tree/main/figures/data).
+
 | Dataset | Publisher | Used for | Pulled |
 | --- | --- | --- | --- |
 | [Marriages by form of ceremony (VSA44)](https://data.cso.ie/table/VSA44) | Central Statistics Office | [Marriages](religion/census-marriages.qmd) | 2000 to 2024 |

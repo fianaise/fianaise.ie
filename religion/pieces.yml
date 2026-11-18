@@ -1,7 +1,7 @@
 - title: "Schools"
   path: schools.qmd
   image: ../images/religion-schools.png
-  description: "Who runs Ireland's primary schools: almost nine in ten have a Catholic patron, and one in twenty is multi-denominational."
+  description: "Who runs Ireland's mainstream primary schools: almost nine in ten have a Catholic patron, and one in twenty is multi-denominational."
 - title: "Primary School Survey 2026"
   path: primary-school-survey.qmd
   image: ../images/religion-survey.png
