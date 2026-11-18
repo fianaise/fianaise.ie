@@ -1,8 +1,43 @@
 <!-- Written by analysis/charts/make_maps.py from the school-level survey results. Don't edit by hand. -->
+<style>
+#county-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.88rem;
+  font-variant-numeric: tabular-nums; line-height: 1.3; margin: 0; }
+#county-table th, #county-table td { padding: 0.42rem 0.6rem; text-align: right; white-space: nowrap;
+  border-bottom: 1px solid #e8e7e3; vertical-align: middle; }
+#county-table th:first-child, #county-table td:first-child { text-align: left; padding-left: 0.5rem; min-width: 6.5rem;
+  position: sticky; left: 0; background: inherit; z-index: 1; }
+#county-table thead th { font-weight: 600; color: #0b0b0b; vertical-align: bottom; white-space: normal; }
+#county-table thead tr:last-child th { border-bottom: 2px solid #0b0b0b; background: #fff; }
+#county-table .group-row th { text-align: center; font-size: 0.82rem; border-bottom: 2px solid #c9c7c0; padding-bottom: 0.3rem; }
+#county-table .group-row th span { display: block; font-weight: 400; color: #52514e; font-size: 0.76rem; }
+#county-table .group-row .is-cur { border-bottom-color: #eb6834; }
+#county-table .group-row .is-pre { border-bottom-color: #f4b183; }
+#county-table .group-row td { border-bottom: 0; background: #fff; }
+#county-table .grp { border-left: 1px solid #e8e7e3; }
+#county-table tbody tr { background: #fff; }
+#county-table tbody tr:nth-child(even) { background: #f8f7f4; }
+#county-table tbody tr:hover { background: #f1efe9; }
+#county-table tbody th { font-weight: 600; }
+#county-table tfoot tr { background: #fff; }
+#county-table tfoot th, #county-table tfoot td { font-weight: 700; border-top: 2px solid #0b0b0b; border-bottom: 0; }
+#county-table thead tr:last-child th { cursor: pointer; user-select: none; }
+#county-table th[aria-sort="ascending"]::after { content: " \25B2"; font-size: 0.65em; }
+#county-table th[aria-sort="descending"]::after { content: " \25BC"; font-size: 0.65em; }
+#county-table .pct-bar { display: inline-block; width: 3rem; height: 0.5rem; margin-right: 0.45rem; vertical-align: middle;
+  border-radius: 2px; background: linear-gradient(to right, #eb6834 var(--pct), #ecebe6 var(--pct)); }
+#county-table .pct-bar.is-pre { background: linear-gradient(to right, #f4b183 var(--pct), #ecebe6 var(--pct)); }
+.data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0.75rem 0 0.25rem;
+  border-top: 1px solid #e8e7e3; }
+@media (max-width: 575px) {
+  #county-table { font-size: 0.8rem; }
+  #county-table th, #county-table td { padding: 0.38rem 0.45rem; }
+  #county-table .pct-bar { display: none; }
+}
+</style>
 <div class="data-table-wrap" data-figure="county_denominational_multid">
 <table class="data-table sortable" id="county-table">
-<thead><tr class="group-row"><td colspan="5"></td><th scope="colgroup" colspan="2" class="grp">Current parents<br><span>more than 50% want multi-den.</span></th><th scope="colgroup" colspan="2" class="grp">Current and preschool parents<br><span>50% or more want multi-den.</span></th></tr>
-<tr><th scope="col">County</th><th scope="col">Denominational schools</th><th scope="col">Catholic</th><th scope="col">Other faiths</th><th scope="col">With results</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th></tr></thead>
+<thead><tr class="group-row"><td></td><th scope="colgroup" colspan="4">Mainstream denominational schools</th><th scope="colgroup" colspan="2" class="grp is-cur">Current parents<span>more than 50% want multi-denominational</span></th><th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool parents<span>50% or more want multi-denominational</span></th></tr>
+<tr><th scope="col">County</th><th scope="col">All</th><th scope="col">Catholic</th><th scope="col">Other faiths</th><th scope="col">With results</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th><th scope="col" class="grp">Schools</th><th scope="col">Share</th></tr></thead>
 <tbody>
 <tr><th scope="row">Wicklow</th><td>76</td><td>55</td><td>21</td><td>75</td><td class="grp">36</td><td data-value="48.00"><span class="pct-bar" style="--pct:48.0%"></span>48.0%</td><td class="grp">40</td><td data-value="53.33"><span class="pct-bar is-pre" style="--pct:53.3%"></span>53.3%</td></tr>
 <tr><th scope="row">Cork</th><td>321</td><td>302</td><td>19</td><td>307</td><td class="grp">97</td><td data-value="31.60"><span class="pct-bar" style="--pct:31.6%"></span>31.6%</td><td class="grp">104</td><td data-value="33.88"><span class="pct-bar is-pre" style="--pct:33.9%"></span>33.9%</td></tr>
