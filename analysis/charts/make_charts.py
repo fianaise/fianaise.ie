@@ -19,6 +19,9 @@ import plotly.graph_objects as go
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA = os.path.join(ROOT, "analysis", "education_equality", "data")
 FIGURES = os.path.join(ROOT, "figures")
+# Each figure's numbers as a CSV, for the "Download data" button under it on the
+# site (figures/figure-tools.js looks for figures/data/<figure name>.csv).
+FIGURE_DATA = os.path.join(FIGURES, "data")
 sys.path.insert(0, os.path.join(ROOT, "analysis", "education_equality"))
 import staff_board_data as report  # noqa: E402
 from staff_board_data import INTEND_TO_ENROL_MULTIDENOM  # noqa: E402
@@ -37,6 +40,9 @@ YEAR_RAMP = {"2011": "#86b6ef", "2016": "#2a78d6", "2022": "#104281"}
 MULTI_D, DENOM = "#2f855a", "#a3aab3"   # the survey pages' green / grey
 
 CONFIG = {"displayModeBar": False, "responsive": True}
+
+# The Department's Primary School Survey results summary report (June 2026).
+REPORT_PDF = "https://assets.gov.ie/static/documents/1e08f77c/Primary_School_Survey_Results_Summary_Report_final__.pdf"
 
 
 def base_layout(**kw):
@@ -73,8 +79,24 @@ def save(fig, name, post_script=None):
     print("wrote", path)
 
 
+def save_csv(df, name):
+    """Write the data behind a figure to figures/data/<name>.csv."""
+    os.makedirs(FIGURE_DATA, exist_ok=True)
+    path = os.path.join(FIGURE_DATA, name)
+    if "Source" in df.columns and len(df) > 1 and df["Source"].nunique() == 1:
+        # The source once, on the first row, keeps the big school-by-school files small.
+        df = df.copy()
+        df["Source"] = [df["Source"].iloc[0]] + [""] * (len(df) - 1)
+    df.to_csv(path, index=False, float_format="%.2f", encoding="utf-8")
+    print("wrote", path)
+
+
 def marriages():
     df = pd.read_csv(os.path.join(DATA, "ireland_marriage_data_agg.csv"))
+    save_csv(df[["Year", "Form of Ceremony", "Number of Marriages", "Percentage"]]
+             .rename(columns={"Number of Marriages": "Marriages", "Percentage": "Share of marriages (%)"})
+             .assign(Source="CSO PxStat VSA44, https://data.cso.ie/table/VSA44"),
+             "marriage_stats.csv")
     df = df[["Year", "Form of Ceremony", "Percentage"]]
     highlight = {
         "Roman Catholic": ("Roman Catholic", BLUE),
@@ -141,6 +163,10 @@ AGE_ORDER = ["0 - 4", "5 - 9", "10 - 14", "15 - 19", "20 - 24", "25 - 29", "30 -
 def census(religion, out, headline, sub, xmax):
     df = pd.read_csv(os.path.join(DATA, "ireland_religion_census_data_ages.csv"))
     df = df[df["Religion"] == religion].copy()
+    save_csv(df[["Census Year", "Religion", "Age Group", "VALUE", "Percentage"]]
+             .rename(columns={"VALUE": "People", "Percentage": "Share of age group (%)"})
+             .assign(Source="CSO PxStat F5071, https://data.cso.ie/table/F5071"),
+             out.replace(".html", ".csv"))
     df["age"] = (df["Age Group"].str.replace(" years and over", "+", regex=False)
                  .str.replace(" years", "", regex=False))
     df["Census Year"] = df["Census Year"].astype(str)
@@ -187,6 +213,15 @@ def survey_intend_vs_preference():
     denom = [100 - p for p in multi]
     multi_n = [m for _, _, m in rows]
     denom_n = [n - m for _, n, m in rows]
+    save_csv(pd.DataFrame({
+        "Intended school": ["Denominational", "Multi-denominational"],
+        "Households": [n for _, n, _ in rows],
+        "Prefer multi-denominational": multi_n,
+        "Prefer multi-denominational (%)": multi,
+        "Prefer denominational": denom_n,
+        "Prefer denominational (%)": denom,
+        "Source": f"Primary School Survey results summary report (June 2026), section 3.1.2, p. 14, {REPORT_PDF}#page=14",
+    }), "vis2_intend_vs_preference.csv")
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
@@ -234,6 +269,12 @@ def survey_numbers():
     fig = make_subplots(rows=2, cols=1, subplot_titles=[f"<b>{g[0]}</b>" for g in groups],
                         vertical_spacing=0.16)
     colours = [CONTEXT, "#8f9aa0", ORANGE]
+    save_csv(pd.DataFrame([
+        {"Group": name, "Eligible": eligible, "Responses received": received, "Valid responses": valid,
+         "Valid response rate (%)": valid / eligible * 100}
+        for name, eligible, received, valid in groups
+    ]).assign(Source=f"Primary School Survey results summary report (June 2026), sections 2.1 and 4.1, pp. 5-6 and 25, {REPORT_PDF}#page=5"),
+        "survey_numbers.csv")
     for i, (name, eligible, received, valid) in enumerate(groups, start=1):
         labels = ["Eligible",
                   f"Responses received<br><span style='color:{INK_3};font-size:12px'>{received / eligible * 100:.1f}% of eligible</span>",
@@ -264,6 +305,13 @@ def parents_vs_staff_by_county():
     counties = list(df.index)
     top = df[["Children_in_school_pct", "Not_yet_in_school_pct"]].max(axis=1)
     LIGHT_ORANGE, STAFF = "#f4a582", "#22343c"
+    save_csv(df.reset_index()[["County", "Not_yet_in_school_pct", "Children_in_school_pct", "MultiDenom_pref_pct"]]
+             .rename(columns={
+                 "Not_yet_in_school_pct": "Parents, child not yet in school (%)",
+                 "Children_in_school_pct": "Parents, child in school (%)",
+                 "MultiDenom_pref_pct": "School staff and boards (%)",
+             }).assign(Source=f"Primary School Survey results summary report (June 2026), Table 3 p. 19 and Table 8 p. 29, {REPORT_PDF}#page=19"),
+             "parents_vs_staff_by_county.csv")
 
     fig = go.Figure()
     # Grey area up to staff and boards, a peach band from there to the higher parent group.

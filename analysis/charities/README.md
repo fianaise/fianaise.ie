@@ -13,6 +13,7 @@ Builds `figures/charities_landscape.html`, shown on [The charities landscape](..
     python3 -I match_schools.py register.xlsx primary-schools.xlsx post-primary-schools.xlsx outputs/school_matches.csv
     python3 -I build_data.py register.xlsx outputs/school_matches.csv data.json
     python3 -I assemble.py template.html data.json ../../figures/charities_landscape.html
+    python3 -I write_csv.py data.json ../../figures/data/charities_landscape.csv
 
 When you rebuild from a newer download, update the `downloaded` date and `SCHOOLS_AS_OF` in `build_data.py`.
 

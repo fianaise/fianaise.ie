@@ -215,3 +215,41 @@
 .airspace-gif img { width: 100%; height: auto; display: block; border-radius: 4px; }
 .gif-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.6rem; }
 .gif-status { color: var(--bs-secondary-color, #555); font-size: 0.88rem; }
+
+/* Download and share buttons under each figure (figures/figure-tools.js) */
+.figure-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin: 0.35rem 0 0.6rem; }
+.figure-tools .btn { font-size: 0.82rem; padding: 0.2rem 0.6rem; }
+.figure-tools-status { color: var(--bs-secondary-color, #555); font-size: 0.85rem; }
+.figure-share { position: relative; display: inline-block; }
+.figure-share-menu {
+  position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; min-width: 11rem;
+  display: flex; flex-direction: column; padding: 0.3rem 0;
+  background: #fff; border: 1px solid #dfe3dd; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.figure-share-menu[hidden] { display: none; }
+.figure-share-menu button, .figure-share-menu a {
+  all: unset; cursor: pointer; padding: 0.35rem 0.85rem; font-size: 0.88rem; color: #0b0b0b;
+}
+.figure-share-menu button:hover, .figure-share-menu a:hover,
+.figure-share-menu button:focus-visible, .figure-share-menu a:focus-visible { background: #f3f2ee; }
+
+/* Data tables written by the analysis scripts (e.g. religion/_county-multid-table.md) */
+.data-table-wrap { overflow-x: auto; margin: 0.5rem 0 0.25rem; -webkit-overflow-scrolling: touch; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.data-table th, .data-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid #e8e7e3; text-align: right; white-space: nowrap; }
+.data-table th:first-child, .data-table td:first-child { text-align: left; }
+.data-table thead th { font-weight: 600; color: #0b0b0b; vertical-align: bottom; white-space: normal; }
+.data-table thead .group-row th { text-align: center; border-bottom: 2px solid #eb6834; }
+.data-table thead .group-row th span { font-weight: 400; color: #52514e; font-size: 0.8rem; }
+.data-table thead .group-row td { border-bottom: 0; }
+.data-table .grp { border-left: 1px solid #e8e7e3; }
+.data-table.sortable thead tr:last-child th { cursor: pointer; }
+.data-table.sortable th[aria-sort="ascending"]::after { content: " ▲"; font-size: 0.7em; }
+.data-table.sortable th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.7em; }
+.data-table tfoot tr th, .data-table tfoot tr td { font-weight: 700; border-top: 2px solid #0b0b0b; border-bottom: 0; }
+.data-table .pct-bar {
+  display: inline-block; width: 3.5rem; height: 0.55rem; margin-right: 0.4rem; vertical-align: middle; border-radius: 2px;
+  background: linear-gradient(to right, #eb6834 var(--pct), #f3f2ee var(--pct));
+}
+.data-table .pct-bar.is-pre { background: linear-gradient(to right, #f4b183 var(--pct), #f3f2ee var(--pct)); }
+@media (max-width: 575px) { .data-table .pct-bar { display: none; } }

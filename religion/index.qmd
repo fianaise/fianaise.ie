@@ -13,7 +13,7 @@ listing:
   sort-ui: false
 ---
 
-Over 90% of Irish primary schools are run by a religious patron, most of them Catholic, and the State's auditor has found that 85% of schools are built on land owned by patrons or trustees. At the same time, fewer people say they're Catholic at every census, and civil ceremonies are now as common as Catholic weddings.
+Over 90% of Irish mainstream primary schools are run by a religious patron, most of them Catholic, and the State's auditor has found that 85% of schools are built on land owned by patrons or trustees. At the same time, fewer people say they're Catholic at every census, and civil ceremonies are now as common as Catholic weddings.
 
 This project tracks the place of religion in Irish public life using open data, mainly from the Central Statistics Office, the Department of Education and the Charities Regulator. The code behind every figure is [on GitHub](https://github.com/fianaise/fianaise.ie/tree/main/analysis).
 
