@@ -263,37 +263,103 @@ def survey_school_map():
                             f"locations from Data on Individual Schools 2024-25 ({SCHOOL_LISTS})"),
              "map2_current_vs_preference.csv")
 
-    fig = go.Figure()
-    base_geo(fig)
-    for key, label, colour, symbol, size in groups:
-        g = df[(df["category"] == key) & ~unmapped]
+    # Two maps side by side, one per definition, so the distinction is plain.
+    # Each shows the schools that meet that definition (orange), with the
+    # already multi-denominational schools (green) and the schools whose result
+    # wasn't published (grey) for context.
+    panels = [
+        ("wants_multid", wants, "Parents of children in the school",
+         "more than 50% prefer multi-denominational"),
+        ("wants_with_preschool", wants_pooled, "Parents of children in the school<br>and of children not yet in school",
+         "50% or more prefer multi-denominational"),
+    ]
+    fig = make_subplots(rows=1, cols=2, specs=[[{"type": "geo"}, {"type": "geo"}]], horizontal_spacing=0.02,
+                        subplot_titles=[f"<b>{name}</b><br><span style='font-size:13px;color:{INK_2}'>"
+                                        f"{n:,} schools: {rule}</span>" for _, n, name, rule in panels])
+
+    def hover(g):
         pct = g["in_pct"].map(lambda v: "" if pd.isna(v) else f"<br>Current parents preferring multi-denominational: <b>{v:.1f}%</b>")
         n = g["in_valid"].map(lambda v: "" if pd.isna(v) else f" ({int(v):,} responses)")
+
         def more(r):
             t = "" if pd.isna(r["not_pct"]) else f"<br>Preschool parents: {r['not_pct']:.1f}% ({int(r['not_valid']):,} responses)"
             if not pd.isna(r["all_pct"]) and not pd.isna(r["not_pct"]):
                 t += f"<br>All parents: {r['all_pct']:.1f}% ({int(r['all_valid']):,} responses)"
             return t
         nyet = g.apply(more, axis=1).astype(str) if len(g) else g["in_pct"].astype(str)
-        fig.add_trace(go.Scattergeo(
-            lon=g[survey.LON_COL], lat=g[survey.LAT_COL], mode="markers",
-            name=f"{label} ({(df['category'] == key).sum():,})",
-            marker=dict(color=colour, size=size, symbol=symbol, opacity=0.9,
-                        line=dict(color=SURFACE if symbol == "circle" else colour, width=0.8 if symbol == "circle" else 1.2)),
-            customdata=np.stack([g[survey.NAME_COL].fillna("Unknown"), g[survey.COUNTY_COL].fillna(""),
-                                 g[survey.ETHOS_COL].fillna(""), pct + n + nyet], axis=-1),
-            hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]} · %{customdata[2]}%{customdata[3]}<extra></extra>",
-        ))
+        return np.stack([g[survey.NAME_COL].fillna("Unknown"), g[survey.COUNTY_COL].fillna(""),
+                         g[survey.ETHOS_COL].fillna(""), pct + n + nyet], axis=-1)
+
+    layers = [
+        # (rows, legend label, colour, size)
+        (lambda key: df["category"].eq("low_response"), f"Denominational, too few responses to publish ({(df['category'] == 'low_response').sum():,})", "#a3aab3", 5),
+        (lambda key: df["is_multi"], f"Already multi-denominational ({has:,})", "#1baf7a", 6),
+        (lambda key: df[key], "Denominational, most parents want multi-denominational", "#eb6834", 6),
+    ]
+    for col, (key, *_rest) in enumerate(panels, start=1):
+        base_geo(fig, row=1, col=col)
+        for i, (rows, label, colour, size) in enumerate(layers):
+            g = df[rows(key) & ~unmapped]
+            fig.add_trace(go.Scattergeo(
+                lon=g[survey.LON_COL], lat=g[survey.LAT_COL], mode="markers",
+                name=label, legendgroup=label, showlegend=(col == 1), legendrank=3 - i,
+                marker=dict(color=colour, size=size, opacity=0.9, line=dict(color=SURFACE, width=0.6)),
+                customdata=hover(g),
+                hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]} · %{customdata[2]}%{customdata[3]}<extra></extra>",
+            ), row=1, col=col)
     fig.update_layout(base_layout(
-        title=title(f"{wants:,} mainstream denominational schools where<br>most current parents want multi-denominational",
-                    f"More than 50% of parents of current pupils prefer a multi-denominational ethos.<br>"
-                    f"{wants_pooled:,} schools reach 50% or more when parents of preschool children are included.<br>"
-                    f"{has:,} mainstream schools are already multi-denominational"),
-        showlegend=True, legend=legend_top(),
-        margin=dict(l=10, r=10, t=240, b=10), height=860,
+        title=title(f"Denominational schools where most parents want multi-denominational: {wants:,} or {wants_pooled:,}",
+                    "Mainstream primary schools. Left: parents of current pupils only. "
+                    "Right: adding parents of children not yet in school"),
+        showlegend=True, legend=legend_top() | dict(y=1.08),
+        margin=dict(l=10, r=10, t=190, b=10), height=760,
     ))
+    for a_ in fig.layout.annotations:
+        a_.font = dict(color=INK, size=14, family=FONT)
+        a_.y = 1.0
+        a_.yanchor = "bottom"
     save(fig, "map2_current_vs_preference.html")
     return wants
+
+
+# Styles for the county table travel with it, so a cached site stylesheet
+# can't leave the table unstyled.
+COUNTY_TABLE_STYLE = """<style>
+#county-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.88rem;
+  font-variant-numeric: tabular-nums; line-height: 1.3; margin: 0; }
+#county-table th, #county-table td { padding: 0.42rem 0.6rem; text-align: right; white-space: nowrap;
+  border-bottom: 1px solid #e8e7e3; vertical-align: middle; }
+#county-table th:first-child, #county-table td:first-child { text-align: left; padding-left: 0.5rem; min-width: 6.5rem;
+  position: sticky; left: 0; background: inherit; z-index: 1; }
+#county-table thead th { font-weight: 600; color: #0b0b0b; vertical-align: bottom; white-space: normal; }
+#county-table thead tr:last-child th { border-bottom: 2px solid #0b0b0b; background: #fff; }
+#county-table .group-row th { text-align: center; font-size: 0.82rem; border-bottom: 2px solid #c9c7c0; padding-bottom: 0.3rem; }
+#county-table .group-row th span { display: block; font-weight: 400; color: #52514e; font-size: 0.76rem; }
+#county-table .group-row .is-cur { border-bottom-color: #eb6834; }
+#county-table .group-row .is-pre { border-bottom-color: #f4b183; }
+#county-table .group-row td { border-bottom: 0; background: #fff; }
+#county-table .grp { border-left: 1px solid #e8e7e3; }
+#county-table tbody tr { background: #fff; }
+#county-table tbody tr:nth-child(even) { background: #f8f7f4; }
+#county-table tbody tr:hover { background: #f1efe9; }
+#county-table tbody th { font-weight: 600; }
+#county-table tfoot tr { background: #fff; }
+#county-table tfoot th, #county-table tfoot td { font-weight: 700; border-top: 2px solid #0b0b0b; border-bottom: 0; }
+#county-table thead tr:last-child th { cursor: pointer; user-select: none; }
+#county-table th[aria-sort="ascending"]::after { content: " \\25B2"; font-size: 0.65em; }
+#county-table th[aria-sort="descending"]::after { content: " \\25BC"; font-size: 0.65em; }
+#county-table .pct-bar { display: inline-block; width: 3rem; height: 0.5rem; margin-right: 0.45rem; vertical-align: middle;
+  border-radius: 2px; background: linear-gradient(to right, #eb6834 var(--pct), #ecebe6 var(--pct)); }
+#county-table .pct-bar.is-pre { background: linear-gradient(to right, #f4b183 var(--pct), #ecebe6 var(--pct)); }
+.data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0.75rem 0 0.25rem;
+  border-top: 1px solid #e8e7e3; }
+@media (max-width: 575px) {
+  #county-table { font-size: 0.8rem; }
+  #county-table th, #county-table td { padding: 0.38rem 0.45rem; }
+  #county-table .pct-bar { display: none; }
+}
+</style>
+"""
 
 
 def county_table():
@@ -353,10 +419,11 @@ def county_table():
                 f'<td class="grp">{int(r.pre):,}</td>'
                 f'<td data-value="{r.pre_pct:.2f}"><span class="pct-bar is-pre" style="--pct:{r.pre_pct:.1f}%"></span>{r.pre_pct:.1f}%</td></tr>')
 
-    head = ('<thead><tr class="group-row"><td colspan="5"></td>'
-            '<th scope="colgroup" colspan="2" class="grp">Current parents<br><span>more than 50% want multi-den.</span></th>'
-            '<th scope="colgroup" colspan="2" class="grp">Current and preschool parents<br><span>50% or more want multi-den.</span></th></tr>\n'
-            '<tr><th scope="col">County</th><th scope="col">Denominational schools</th>'
+    head = ('<thead><tr class="group-row"><td></td>'
+            '<th scope="colgroup" colspan="4">Mainstream denominational schools</th>'
+            '<th scope="colgroup" colspan="2" class="grp is-cur">Current parents<span>more than 50% want multi-denominational</span></th>'
+            '<th scope="colgroup" colspan="2" class="grp is-pre">Current and preschool parents<span>50% or more want multi-denominational</span></th></tr>\n'
+            '<tr><th scope="col">County</th><th scope="col">All</th>'
             '<th scope="col">Catholic</th><th scope="col">Other faiths</th><th scope="col">With results</th>'
             '<th scope="col" class="grp">Schools</th><th scope="col">Share</th>'
             '<th scope="col" class="grp">Schools</th><th scope="col">Share</th></tr></thead>')
@@ -365,6 +432,7 @@ def county_table():
     with open(COUNTY_TABLE_INCLUDE, "w", encoding="utf-8") as f:
         f.write("<!-- Written by analysis/charts/make_maps.py from the school-level survey results. "
                 "Don't edit by hand. -->\n")
+        f.write(COUNTY_TABLE_STYLE)
         f.write('<div class="data-table-wrap" data-figure="county_denominational_multid">\n'
                 '<table class="data-table sortable" id="county-table">\n'
                 f"{head}\n<tbody>\n{body}\n</tbody>\n<tfoot>\n{foot}\n</tfoot>\n</table>\n</div>\n")
